@@ -2372,6 +2372,7 @@ h2.name {
     font-size: 120px;
     line-height: 120px;
     font-weight: normal;
+    margin-top: -20px;
 }
 
 h2.name span {
@@ -7386,9 +7387,10 @@ a.btn-slider:hover {
 
 .deco-big {
     display: block;
-    font-size: 140px;
+    font-size: 120px;
     font-family: "Allura";
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: 20px;
     font-weight: normal;
 }
 

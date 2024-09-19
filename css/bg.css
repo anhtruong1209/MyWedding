@@ -89,7 +89,7 @@ section,
     bottom: 0;
     background: inherit;
     /* Lấy ảnh nền */
-    filter: blur(9px);
+    filter: blur(3px);
     /* Điều chỉnh độ mờ theo ý bạn */
     z-index: -1;
     /* Đảm bảo nền mờ nằm phía sau nội dung */

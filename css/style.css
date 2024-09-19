@@ -7932,9 +7932,11 @@ img {
 
 @media only screen and (max-width: 767px) {
     #custom-owl-slider .item img {
-        width: 200% !important;
-        height: auto !important;
-        margin-left: -60%;
+        width: 250% !important;
+        height: 1000px !important;
+        margin-left: -75%;
+        margin-top: -10%;
+        object-fit: cover;
     }
     #custom-owl-slider .item {
         overflow: hidden;
@@ -7942,6 +7944,20 @@ img {
     header div#logo h2 {
         font-size: 24px;
         margin-top: 24px;
+    }
+    h2.name {
+        font-family: "Allura";
+        color: #fff;
+        font-size: 40px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+    .deco-big {
+        display: block;
+        font-size: 30px;
+        font-family: "Allura";
+        font-weight: normal;
+        margin: 40px;
     }
     #subheader h1 {
         font-size: 24px;

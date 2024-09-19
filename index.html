@@ -35,12 +35,27 @@
 </head>
 
 <body id="homepage">
-    <audio controls autoplay loop>
+    <!-- Autoplay và muted cho phép phát nhạc ngay từ đầu -->
+    <audio autoplay loop muted id="background-audio">
         <source src="music/loop.mp3" type="audio/mp3">
     </audio>
+
+    <!-- Script để bật âm thanh sau khi người dùng nhấn vào trang -->
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.getElementById("background-audio");
+            // Tắt mute để âm thanh bắt đầu phát
+            if (audio.muted) {
+                audio.muted = false;
+                audio.play();
+            }
+        });
+    </script>
+
     <style>
         audio {
             display: none;
+            /* Ẩn nút điều khiển audio */
         }
     </style>
     <div id="wrapper">

@@ -1333,7 +1333,7 @@ header.header-mobile.transparent #mainmenu li ul li a {
     -webkit-border-radius: 0px;
     -moz-appearance: none;
     appearance: none;
-    background: url('../images_02/ui/arrow-down-form.png') no-repeat 98% 60%;
+    background: url('../images_02/ui/arrow-down.png') no-repeat 98% 60%;
 }
 
 .form-underline select:focus {

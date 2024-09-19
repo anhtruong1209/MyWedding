@@ -16,7 +16,7 @@ $pp = new FormHandler();
 $validator = $pp->getValidator();
 $validator->fields(['Name', 'Email'])->areRequired()->maxLength(50);
 $validator->field('Email')->isEmail();
-$validator->field('Guest')->maxLength(6000);
+$validator->field('Số lượng tham dự')->maxLength(6000);
 $validator->field('Attend')->maxLength(6000);
 
 

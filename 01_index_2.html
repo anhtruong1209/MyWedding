@@ -57,16 +57,16 @@
                         <span id="menu-btn"></span>
                         <!-- small button close -->
 
-                        <span class="btn-rsvp">RSVP</span>
+                        <span class="btn-rsvp">Lời mời hân hạnh</span>
 
                         <!-- mainmenu begin -->
                         <nav>
                             <ul id="mainmenu">
                                 <li><a href="index.html">Trang chủ</a>
                                     <ul>
-                                        <li><a href="index.html">Wedding 1</a></li>
+                                        <!-- <li><a href="index.html">Wedding 1</a></li>
                                         <li><a href="01_index_2.html">Wedding 2</a></li>
-                                        <li><a href="01_index_3.html">Wedding 3</a></li>
+                                        <li><a href="01_index_3.html">Wedding 3</a></li> -->
                                         <!-- <li><a href="02_index.html">Wedding Planner 1</a></li>
                                         <li><a href="02_index_2.html">Wedding Planner 2</a></li>
                                         <li><a href="02_index_3.html">Wedding Planner 3</a></li> -->
@@ -125,14 +125,14 @@
 
                         <form name="rsvp" id='rsvp_form' class="form-underline" method="post" action="rsvp.php">
                             <div class="col-md-3">
-                                <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name" required maxlength="50">
+                                <input type='text' name='Name' id='name' class="form-control" placeholder="Trân trọng kính mời (ông, bà):" required maxlength="50">
                             </div>
                             <div class="col-md-3">
-                                <input type='text' name='Email' id='email' class="form-control" placeholder="Your Email" required maxlength="50">
+                                <input type='text' name='Email' id='email' class="form-control" placeholder="Gmail của (ông, bà):" required maxlength="50">
                             </div>
                             <div class="col-md-3">
-                                <select id="guest" name="Guest" size="1" class="form-control">
-                                    <option value="" disabled selected>Guests</option>
+                                <select id="guest" name="Số lượng tham dự" size="1" class="form-control">
+                                    <option value="" disabled selected>Số lượng tham dự</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -142,9 +142,9 @@
                             </div>
                             <div class="col-md-3">
                                 <select id="attend" name="Attend" size="1" class="form-control">
-                                    <option value="" disabled selected>Are you attending?</option>
-                                    <option>yes</option>
-                                    <option>no</option>
+                                    <option value="" disabled selected>(Ông, bà) có tham dự?</option>
+                                    <option>Có</option>
+                                    <option>Không</option>
                                 </select>
                             </div>
                             <div class="col-md-12 text-center">

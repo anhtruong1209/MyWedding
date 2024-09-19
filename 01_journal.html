@@ -56,16 +56,16 @@
                         <span id="menu-btn"></span>
                         <!-- small button close -->
 
-                        <span class="btn-rsvp">RSVP</span>
+                        <span class="btn-rsvp">Lời mời hân hạnh</span>
 
                         <!-- mainmenu begin -->
                         <nav>
                             <ul id="mainmenu">
                                 <li><a href="index.html">Trang chủ</a>
                                     <ul>
-                                        <li><a href="index.html">Wedding 1</a></li>
+                                        <!-- <li><a href="index.html">Wedding 1</a></li>
                                         <li><a href="01_index_2.html">Wedding 2</a></li>
-                                        <li><a href="01_index_3.html">Wedding 3</a></li>
+                                        <li><a href="01_index_3.html">Wedding 3</a></li> -->
                                         <!-- <li><a href="02_index.html">Wedding Planner 1</a></li>
                                         <li><a href="02_index_2.html">Wedding Planner 2</a></li>
                                         <li><a href="02_index_3.html">Wedding Planner 3</a></li> -->
@@ -122,33 +122,34 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <h2 class="deco id-color"><span>Chúng tôi mời bạn vào</span></h2>
-                            <h2 data-wow-delay=".2s">Chủ nhật, ngày 10 tháng 11 năm 2024</h2>
+                            <h2 data-wow-delay=".2s">Lễ hỏi, chiều 14:00h Thứ 7, ngày 2 tháng 11 năm 2024</h2>
+                            <h2 data-wow-delay=".2s">Lễ cưới, chiều 17:00h, Chủ nhật, ngày 10 tháng 11 năm 2024</h2>
                         </div>
 
                         <div class="spacer-double"></div>
 
                         <div class="col-md-5 col-md-offset-1 text-right">
-                            <h3>Tổ chức lễ cưới</h3>
-                            Chiều 17:00h, Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải Đăng Plaza<br>19 P. Trần Khánh Dư, Máy Tơ, Ngô Quyền, Hải Phòng , Việt Nam
+                            <h3>Tổ chức lễ hỏi</h3>
+                            Chiều 14:00h, Thứ 7, ngày 2 tháng 11 năm 2024<br>Tại nhà gái<br>8/61 Nguyễn Công Trứ, Hàng Kênh, Lê Chân, Hải Phòng
                         </div>
 
                         <div class="col-md-5">
-                            <h3>Tiệc cưới</h3>
-                            Chiều 17:00h, Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải Đăng Plaza<br>19 P. Trần Khánh Dư, Máy Tơ, Ngô Quyền, Hải Phòng , Việt Nam
+                            <h3>Tổ chức lễ cưới</h3>
+                            Chiều 17:00h, Chủ nhât, ngày 10 tháng 11 năm 2024 Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải Đăng Plaza<br>19 P. Trần Khánh Dư, Máy Tơ, Ngô Quyền, Hải Phòng , Việt Nam
                         </div>
 
                         <div class="spacer-double"></div>
 
                         <form name="rsvp" id='rsvp_form' class="form-underline" method="post" action="rsvp.php">
                             <div class="col-md-3">
-                                <input type='text' name='Name' id='name' class="form-control" placeholder="Your Name" required maxlength="50">
+                                <input type='text' name='Name' id='name' class="form-control" placeholder="Trân trọng kính mời (ông, bà):" required maxlength="50">
                             </div>
                             <div class="col-md-3">
-                                <input type='text' name='Email' id='email' class="form-control" placeholder="Your Email" required maxlength="50">
+                                <input type='text' name='Email' id='email' class="form-control" placeholder="Gmail của (ông, bà):" required maxlength="50">
                             </div>
                             <div class="col-md-3">
-                                <select id="guest" name="Guest" size="1" class="form-control">
-                                    <option value="" disabled selected>Guests</option>
+                                <select id="guest" name="Số lượng tham dự" size="1" class="form-control">
+                                    <option value="" disabled selected>Số lượng tham dự</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -158,14 +159,14 @@
                             </div>
                             <div class="col-md-3">
                                 <select id="attend" name="Attend" size="1" class="form-control">
-                                    <option value="" disabled selected>Are you attending?</option>
-                                    <option>yes</option>
-                                    <option>no</option>
+                                    <option value="" disabled selected>(Ông, bà) có tham dự?</option>
+                                    <option>Có</option>
+                                    <option>Không</option>
                                 </select>
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="spacer-single"></div>
-                                <input type='submit' id='submit' value='Submit' class="btn btn-custom">
+                                <input type='submit' id='submit' value='Hoàn thành' class="btn btn-custom">
                                 <div id='mail_success' class='success'>Your message has been sent successfully.</div>
                                 <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
                             </div>

@@ -75,12 +75,13 @@ section,
 }
 
 #section-quote {
-    position: relative;
+    /* position: relative; */
     background: url(../images/background/4.jpg) no-repeat center center;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
-#section-quote::before {
+
+/* #section-quote::before {
     content: "";
     position: absolute;
     top: 0;
@@ -89,54 +90,48 @@ section,
     bottom: 0;
     background: inherit;
     /* Lấy ảnh nền */
-    filter: blur(3px);
-    /* Điều chỉnh độ mờ theo ý bạn */
-    z-index: -1;
-    /* Đảm bảo nền mờ nằm phía sau nội dung */
-}
 
-#section-countdown {
+filter: blur(3px);
+
+/* Điều chỉnh độ mờ theo ý bạn */
+
+z-index: -1;
+
+/* Đảm bảo nền mờ nằm phía sau nội dung */
+
+
+}
+*/ #section-countdown {
     background: url(../images/background/6.jpg);
 }
-
 #section-guestbook {
     background: url(../images/background/5.jpg);
 }
-
 #section-bride {
     background: url(../images/background/2.jpg) top;
 }
-
 #section-groom {
     background: url(../images/background/1.jpg) top;
 }
-
 #section-event-1 {
     background: url(../images/background/7.jpg);
 }
 
-
 /* 02 */
-
 #section-package {
     background: url(../images_02/background/1.jpg);
 }
-
 #section-pricing {
     background: url(../images_02/background/2.jpg);
 }
-
 #explore-1.side-bg .background-image {
     background: url(../images_02/background/bg-side-1.jpg) top;
 }
-
 #explore-2.side-bg .background-image {
     background: url(../images_02/background/bg-side-2.jpg) top;
 }
 
-
 /* media query */
-
 @media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait) {
     section {
         -webkit-background-size: auto 100% !important;
@@ -146,7 +141,6 @@ section,
         background-attachment: scroll !important;
     }
 }
-
 @media only screen and (max-width: 992px) {
     #subheader {
         -webkit-background-size: cover !important;
@@ -156,7 +150,6 @@ section,
         background-attachment: scroll !important;
     }
 }
-
 @media only screen and (max-width: 992px) {
     section {
         -webkit-background-size: auto 100% !important;

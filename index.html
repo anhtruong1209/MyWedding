@@ -1046,6 +1046,17 @@
                         document.getElementById("mail_fail").style.display = "block";
                         document.getElementById("mail_success").style.display = "none";
                     });
+
+                emailjs.send("service_wizznxi", "template_pwcpqg2", formData)
+                    .then(function(response) {
+                        console.log("Email sent successfully:", response);
+                        document.getElementById("mail_success").style.display = "block";
+                        document.getElementById("mail_fail").style.display = "none";
+                    }, function(error) {
+                        console.log("Failed to send email:", error);
+                        document.getElementById("mail_fail").style.display = "block";
+                        document.getElementById("mail_success").style.display = "none";
+                    });
             });
         });
     </script>

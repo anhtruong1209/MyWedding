@@ -1036,7 +1036,7 @@
                     attend: document.getElementById("attend").value,
                 };
 
-                emailjs.send("service_wizznxi", "template_wvqv7ij", formData)
+                emailjs.send("service_wizznxi", "template_4a6sk0h", formData)
                     .then(function(response) {
                         console.log("Email sent successfully:", response);
                         document.getElementById("mail_success").style.display = "block";
@@ -1045,19 +1045,6 @@
                         console.log("Failed to send email:", error);
                         document.getElementById("mail_fail").style.display = "block";
                         document.getElementById("mail_success").style.display = "none";
-                    });
-
-                // Gửi email phản hồi lại cho người gửi
-                const replyData = {
-                    from_name: document.getElementById("name").value,
-                    email: document.getElementById("email").value,
-                };
-
-                emailjs.send("service_wizznxi", "template_rlux3jm", replyData)
-                    .then(function(response) {
-                        console.log("Email phản hồi gửi thành công tới người dùng:", response);
-                    }, function(error) {
-                        console.log("Gửi email phản hồi tới người dùng thất bại:", error);
                     });
             });
         });

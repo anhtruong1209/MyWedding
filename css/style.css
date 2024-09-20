@@ -769,8 +769,7 @@ section {
 /* ================================================== */
 
 footer {
-    background: #626570;
-    color: #ccc;
+    background: url(../images/background/8.jpg) no-repeat center center;
     padding: 80px 0 0px 0;
 }
 
@@ -795,7 +794,6 @@ footer a:hover {
 }
 
 .subfooter {
-    background: #595c66;
     margin-top: 80px;
     padding: 30px 0 20px 0;
 }

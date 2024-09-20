@@ -80,12 +80,28 @@ section,
     z-index: 1;
 }
 
+#section-prize {
+    position: relative;
+    background: url(../images/background/5.jpg) repeat-x center center;
+    background-attachment: fixed;
+    background-position: center center;
+    z-index: 1;
+}
+
 #section-countdown {
+    position: relative;
     background: url(../images/background/6.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    z-index: 1;
 }
 
 #section-guestbook {
-    background: url(../images/background/5.jpg);
+    position: relative;
+    background: url(../images/background/7.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    z-index: 1;
 }
 
 #section-bride {

@@ -3938,11 +3938,11 @@ a.btn-right {
 
 .text-light .de_testi.opt-2 blockquote,
 .text-light .de_testi.opt-2 blockquote .de_testi_by {
-    color: #fff;
+    color: #555;
 }
 
 .de_testi.opt-2 blockquote:before {
-    color: #fff;
+    color: #555;
 }
 
 .de_testi.opt-2 .de_testi_by {

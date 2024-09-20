@@ -8066,3 +8066,43 @@ img {
         width: 100% !important;
     }
 }
+
+#section-prize {
+    position: relative;
+    z-index: 1;
+}
+
+.box {
+    display: inline-block;
+    padding: 20px;
+    border: 3px solid #A6A6A6;
+    border-radius: 10px;
+    text-align: center;
+    animation: box-rotate-and-shake 2s ease-in-out infinite;
+    background-color: rgb(68, 66, 66);
+}
+
+@keyframes box-rotate-and-shake {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    25% {
+        transform: rotate(10deg) translateX(-5px);
+    }
+    50% {
+        transform: rotate(-10deg) translateX(5px);
+    }
+    75% {
+        transform: rotate(5deg) translateX(-3px);
+    }
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+.ladi-shape {
+    display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin: 0 auto;
+}

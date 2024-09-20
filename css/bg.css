@@ -82,7 +82,7 @@ section,
 
 #section-prize {
     position: relative;
-    background: url(../images/background/5.jpg) repeat-x center center;
+    background: url(../images/background/5.jpg) no-repeat center center;
     background-attachment: fixed;
     background-position: center center;
     z-index: 1;
@@ -90,7 +90,7 @@ section,
 
 #section-countdown {
     position: relative;
-    background: url(../images/background/6.jpg);
+    background: url(../images/background/6.jpg) no-repeat center center;
     background-attachment: fixed;
     background-position: center center;
     z-index: 1;
@@ -98,9 +98,8 @@ section,
 
 #section-guestbook {
     position: relative;
-    background: url(../images/background/7.jpg);
+    background: url(../images/background/7.jpg) no-repeat center center;
     background-attachment: fixed;
-    background-position: center center;
     z-index: 1;
 }
 

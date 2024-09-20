@@ -187,7 +187,7 @@
                                 <div class="spacer-single"></div>
                                 <input type="submit" id="submit" value="Hoàn thành" class="btn btn-custom" />
                                 <div id="mail_success" class="success">
-                                    Your message has been sent successfully.
+                                    Bạn đã phản hồi thành công
                                 </div>
                                 <div id="mail_fail" class="error">
                                     Sorry, error occured this time sending your message.
@@ -787,7 +787,10 @@
     <script src="js/countdown-custom.js"></script>
     <script src="js/animsition.min.js"></script>
     <script src="js/designesia.js"></script>
-    <script src="rsvp/form.js"></script>
+    <!-- <script src="rsvp/form.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
     <script>
         function downloadQRCode(qrCodeUrl) {
             const link = document.createElement('a');
@@ -807,6 +810,31 @@
                     console.error('Error copying STK:', err);
                 });
         }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("rsvp_form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                emailjs.init("MFD4VpF0hQKeezmoE");
+
+                const formData = {
+                    from_name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    so_luong: document.getElementById("guest").value,
+                    attend: document.getElementById("attend").value,
+                };
+
+                emailjs.send("service_wizznxi", "template_qv94tu6", formData)
+                    .then(function(response) {
+                        console.log("Email sent successfully:", response);
+                        document.getElementById("mail_success").style.display = "block";
+                        document.getElementById("mail_fail").style.display = "none";
+                    }, function(error) {
+                        console.log("Failed to send email:", error);
+                        document.getElementById("mail_fail").style.display = "block";
+                        document.getElementById("mail_success").style.display = "none";
+                    });
+            });
+        });
     </script>
 </body>
 

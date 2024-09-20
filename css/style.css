@@ -8080,6 +8080,7 @@ img {
     text-align: center;
     animation: box-rotate-and-shake 2s ease-in-out infinite;
     background-color: rgb(68, 66, 66);
+    cursor: pointer;
 }
 
 @keyframes box-rotate-and-shake {
@@ -8105,4 +8106,44 @@ img {
     width: 150px;
     height: 130px;
     margin: 0 auto;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: -426px;
+    top: 15px;
+    color: #000;
+    opacity: 0.8;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+    /* Độ mờ khi hover */
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Căn giữa nội dung */
+    text-align: center;
+    /* Căn giữa chữ */
+}
+
+.modal-header h4,
+.modal-header h5 {
+    margin: 0;
+    /* Xóa margin để căn giữa chính xác */
+}
+
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+}
+
+.qr-item {
+    margin: 0 10px;
+    /* Điều chỉnh khoảng cách giữa các ảnh */
+    text-align: center;
+    /* Giữa tiêu đề và button */
 }

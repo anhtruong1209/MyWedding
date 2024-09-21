@@ -8104,17 +8104,16 @@ img {
     .page-about-him #subheader {
         background-position: -45px -0px !important;
     }
-    #section-quote {
+    /* #section-quote {
         background-position: -430px 0px !important;
-    }
+    } */
     #section-prize,
+    #section-quote,
+    #section-countdown,
     #section-guestbook {
         background-position: center center !important;
-        /* Center the background */
-        background-size: contain !important;
-        /* Make sure the image fits within the section without zooming */
+        background-size: cover !important;
         background-repeat: no-repeat;
-        /* Prevent the background from repeating */
     }
     .box {
         width: 100px;

@@ -8104,8 +8104,10 @@ img {
     .page-about-him #subheader {
         background-position: -45px -0px !important;
     }
+    #section-quote {
+        background-position: -430px 0px !important;
+    }
     #section-prize,
-    #section-quote,
     #section-guestbook {
         background-position: center center !important;
         /* Center the background */

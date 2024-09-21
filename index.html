@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <title>Trường Trâm - Câu chuyện cổ tích</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Trường Trâm - Câu chuyện cổ tích" />
-        <meta name="keywords"
-            content="wedding,couple,ceremony,reception,rsvp,gallery,event,countdown" />
-        <meta name="author" content="Truong" />
-        <link rel="icon" type="image/png" href="images/icon1.png" />
+<head>
+    <meta charset="utf-8" />
+    <title>Trường Trâm - Câu chuyện cổ tích</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trường Trâm - Câu chuyện cổ tích" />
+    <meta name="keywords" content="wedding,couple,ceremony,reception,rsvp,gallery,event,countdown" />
+    <meta name="author" content="Truong" />
+    <link rel="icon" type="image/png" href="images/icon1.png" />
 
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
 
-        <!-- CSS Files
+    <!-- CSS Files
     ================================================== -->
-        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-        <link rel="stylesheet" href="css/animate.css" type="text/css" />
-        <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-        <link rel="stylesheet" href="css/jquery.countdown.css"
-            type="text/css" />
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="stylesheet" href="css/animsition.min.css" type="text/css" />
-        <link rel="stylesheet" href="rsvp/form.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/animsition.min.css" type="text/css" />
+    <link rel="stylesheet" href="rsvp/form.css" />
 
-        <!-- custom background -->
-        <link rel="stylesheet" href="css/bg.css" type="text/css" />
+    <!-- custom background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css" />
 
-        <!-- color scheme -->
-        <link rel="stylesheet" href="css/color.css" type="text/css"
-            id="colors" />
-    </head>
+    <!-- color scheme -->
+    <link rel="stylesheet" href="css/color.css" type="text/css" id="colors" />
+</head>
 
-    <body id="homepage">
-        <!-- Autoplay và muted cho phép phát nhạc ngay từ đầu -->
-        <audio autoplay loop muted id="background-audio">
+<body id="homepage">
+    <!-- Autoplay và muted cho phép phát nhạc ngay từ đầu -->
+    <audio autoplay loop muted id="background-audio">
             <source src="music/loop.mp3" type="audio/mp3" />
         </audio>
 
-        <!-- Script để bật âm thanh sau khi người dùng nhấn vào trang -->
-        <script>
+    <!-- Script để bật âm thanh sau khi người dùng nhấn vào trang -->
+    <script>
         document.addEventListener("click", function() {
             var audio = document.getElementById("background-audio");
             // Tắt mute để âm thanh bắt đầu phát
@@ -53,136 +50,121 @@
         });
     </script>
 
-        <style>
+    <style>
         audio {
             display: none;
             /* Ẩn nút điều khiển audio */
         }
     </style>
-        <div id="wrapper">
-            <!-- header begin -->
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- logo begin -->
-                            <div id="logo">
-                                <a href="index.html">
-                                    <h2>Trâm <span>&amp</span>Trường</h2>
-                                </a>
-                            </div>
-                            <!-- logo close -->
+    <div id="wrapper">
+        <!-- header begin -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="index.html">
+                                <h2>Trâm <span>&amp</span>Trường</h2>
+                            </a>
+                        </div>
+                        <!-- logo close -->
 
-                            <!-- small button begin -->
-                            <span id="menu-btn"></span>
-                            <!-- small button close -->
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
 
-                            <span class="btn-rsvp">Lời mời hân hạnh</span>
+                        <span class="btn-rsvp">Lời mời hân hạnh</span>
 
-                            <!-- mainmenu begin -->
-                            <nav>
-                                <ul id="mainmenu">
-                                    <li>
-                                        <a href="index.html">Trang chủ</a>
-                                        <ul>
-                                            <!-- <li><a href="index.html">Wedding 1</a></li>
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li>
+                                    <a href="index.html">Trang chủ</a>
+                                    <ul>
+                                        <!-- <li><a href="index.html">Wedding 1</a></li>
                                         <li><a href="01_index_2.html">Wedding 2</a></li>
                                         <li><a href="01_index_3.html">Wedding 3</a></li> -->
-                                            <!-- <li><a href="02_index.html">Wedding Planner 1</a></li>
+                                        <!-- <li><a href="02_index.html">Wedding Planner 1</a></li>
                                         <li><a href="02_index_2.html">Wedding Planner 2</a></li>
                                         <li><a href="02_index_3.html">Wedding Planner 3</a></li> -->
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Giới thiệu</a>
-                                        <ul>
-                                            <li><a href="01_about-her.html">Giới
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Giới thiệu</a>
+                                    <ul>
+                                        <li><a href="01_about-her.html">Giới
                                                     thiệu cô dâu</a></li>
-                                            <li><a href="01_about-him.html">Giới
+                                        <li><a href="01_about-him.html">Giới
                                                     thiệu chú rể</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="01_story.html">Câu
+                                    </ul>
+                                </li>
+                                <li><a href="01_story.html">Câu
                                             chuyện</a></li>
-                                    <li><a href="01_events.html">Sự
+                                <li><a href="01_events.html">Sự
                                             kiện</a></li>
-                                    <li><a href="01_people.html">Con
+                                <li><a href="01_people.html">Con
                                             người</a></li>
-                                    <li><a href="01_gallery.html">Bộ sưu
+                                <li><a href="01_gallery.html">Bộ sưu
                                             tập</a></li>
-                                    <li><a href="01_journal.html">Hành
+                                <li><a href="01_journal.html">Hành
                                             Trình</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- mainmenu close -->
+                            </ul>
+                        </nav>
                     </div>
+                    <!-- mainmenu close -->
                 </div>
-            </header>
-            <!-- header close -->
+            </div>
+        </header>
+        <!-- header close -->
 
-            <!-- content begin -->
-            <div id="content" class="no-bottom no-top">
-                <!-- rsvp popup begin -->
-                <div id="popup-box" class="full-height">
-                    <span class="btn-close">
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <!-- rsvp popup begin -->
+            <div id="popup-box" class="full-height">
+                <span class="btn-close">
                         <i class="icon_close"></i>
                     </span>
 
-                    <div class="container center-y">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h2 class="deco id-color">
-                                    <span>Chúng tôi mời bạn vào</span>
-                                </h2>
-                                <h2 data-wow-delay=".2s">
-                                    Lễ hỏi, chiều 14:00h, Thứ 7, ngày 2 tháng 11
-                                    năm 2024
-                                </h2>
-                                <h2 data-wow-delay=".2s">
-                                    Lễ cưới, chiều 17:00h, Chủ nhật, ngày 10
-                                    tháng 11 năm 2024
-                                </h2>
+                <div class="container center-y">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="deco id-color">
+                                <span>Chúng tôi mời bạn vào</span>
+                            </h2>
+                            <h2 data-wow-delay=".2s">
+                                Lễ hỏi, chiều 14:00h, Thứ 7, ngày 2 tháng 11 năm 2024
+                            </h2>
+                            <h2 data-wow-delay=".2s">
+                                Lễ cưới, chiều 17:00h, Chủ nhật, ngày 10 tháng 11 năm 2024
+                            </h2>
+                        </div>
+
+                        <div class="spacer-double"></div>
+
+                        <div class="col-md-5 col-md-offset-1 text-right">
+                            <h3>Tổ chức lễ hỏi</h3>
+                            Chiều 14:00h, Thứ 7, ngày 2 tháng 11 năm 2024
+                            <br />Tại nhà gái
+                            <br />8/61 Nguyễn Công Trứ, Hàng Kênh, Lê Chân, Hải Phòng
+                        </div>
+
+                        <div class="col-md-5">
+                            <h3>Tổ chức lễ cưới</h3>
+                            Chiều 17:00h, Chủ nhât, ngày 10 tháng 11 năm 2024 Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải Đăng Plaza<br />19 P. Trần Khánh Dư, Máy Tơ, Ngô Quyền, Hải Phòng , Việt Nam
+                        </div>
+
+                        <div class="spacer-double"></div>
+
+                        <form name="rsvp" id="rsvp_form" class="form-underline" method="post" action="rsvp.php">
+                            <div class="col-md-3">
+                                <input type="text" name="Name" id="name" class="form-control" placeholder="Trân trọng kính mời (ông, bà):" required maxlength="50" />
                             </div>
-
-                            <div class="spacer-double"></div>
-
-                            <div class="col-md-5 col-md-offset-1 text-right">
-                                <h3>Tổ chức lễ hỏi</h3>
-                                Chiều 14:00h, Thứ 7, ngày 2 tháng 11 năm 2024
-                                <br />Tại nhà gái
-                                <br />8/61 Nguyễn Công Trứ, Hàng Kênh, Lê Chân,
-                                Hải Phòng
+                            <div class="col-md-3">
+                                <input type="text" name="Email" id="email" class="form-control" placeholder="Gmail của (ông, bà):" required maxlength="50" />
                             </div>
-
-                            <div class="col-md-5">
-                                <h3>Tổ chức lễ cưới</h3>
-                                Chiều 17:00h, Chủ nhât, ngày 10 tháng 11 năm
-                                2024 Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải
-                                Đăng Plaza<br />19 P. Trần Khánh Dư, Máy Tơ, Ngô
-                                Quyền, Hải Phòng , Việt Nam
-                            </div>
-
-                            <div class="spacer-double"></div>
-
-                            <form name="rsvp" id="rsvp_form"
-                                class="form-underline" method="post"
-                                action="rsvp.php">
-                                <div class="col-md-3">
-                                    <input type="text" name="Name" id="name"
-                                        class="form-control"
-                                        placeholder="Trân trọng kính mời (ông, bà):"
-                                        required maxlength="50" />
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="text" name="Email" id="email"
-                                        class="form-control"
-                                        placeholder="Gmail của (ông, bà):"
-                                        required maxlength="50" />
-                                </div>
-                                <div class="col-md-3">
-                                    <select id="guest" name="Số lượng tham dự"
-                                        size="1" class="form-control">
+                            <div class="col-md-3">
+                                <select id="guest" name="Số lượng tham dự" size="1" class="form-control">
                                         <option value disabled selected>Số lượng
                                             tham dự</option>
                                         <option>1</option>
@@ -191,820 +173,654 @@
                                         <option>4</option>
                                         <option>5</option>
                                     </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select id="attend" name="Attend" size="1"
-                                        class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <select id="attend" name="Attend" size="1" class="form-control">
                                         <option value disabled selected>
                                             (Ông, bà) có tham dự?
                                         </option>
                                         <option>Có</option>
                                         <option>Không</option>
                                     </select>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <div class="spacer-single"></div>
-                                    <input type="submit" id="submit"
-                                        value="Hoàn thành"
-                                        class="btn btn-custom" />
-                                    <div id="mail_success" class="success">
-                                        Bạn đã phản hồi thành công
-                                    </div>
-                                    <div id="mail_fail" class="error">
-                                        Sorry, error occured this time sending
-                                        your message.
-                                    </div>
-                                </div>
-                            </form>
-                            <div id="success_message">
-                                <h1>Thank You!</h1>
-                                <p>We will get back to you soon.</p>
                             </div>
-                            <div id="error_message">
-                                <h1>Error</h1>
-                                Sorry there was an error sending your form.
+                            <div class="col-md-12 text-center">
+                                <div class="spacer-single"></div>
+                                <input type="submit" id="submit" value="Hoàn thành" class="btn btn-custom" />
+                                <div id="mail_success" class="success">
+                                    Bạn đã phản hồi thành công
+                                </div>
+                                <div id="mail_fail" class="error">
+                                    Sorry, error occured this time sending your message.
+                                </div>
                             </div>
+                        </form>
+                        <div id="success_message">
+                            <h1>Thank You!</h1>
+                            <p>We will get back to you soon.</p>
+                        </div>
+                        <div id="error_message">
+                            <h1>Error</h1>
+                            Sorry there was an error sending your form.
+                        </div>
 
-                            <div class="spacer-single"></div>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- rsvp popup close -->
+
+            <!-- section begin -->
+            <section id="section-hero" class="full-height relative z1 owl-slide-wrapper no-top no-bottom text-light" data-stellar-background-ratio=".2">
+                <div class="owl-slider-nav">
+                    <div class="next"></div>
+                    <div class="prev"></div>
+                </div>
+
+                <div class="center-y fadeScroll relative" data-scroll-speed="4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="row">
+                                    <div class="spacer-single"></div>
+                                    <div class="col-md-5 text-right text-center-sm relative">
+                                        <h2 class="name">Quỳnh Trâm</h2>
+                                    </div>
+                                    <div class="col-md-2 text-center">
+                                        <span class="deco-big" data-scroll-speed="2">&amp;</span>
+                                    </div>
+                                    <div class="col-md-5 text-left text-center-sm relative">
+                                        <h2 class="name">Anh Trường</h2>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- rsvp popup close -->
 
-                <!-- section begin -->
-                <section id="section-hero"
-                    class="full-height relative z1 owl-slide-wrapper no-top no-bottom text-light"
-                    data-stellar-background-ratio=".2">
-                    <div class="owl-slider-nav">
-                        <div class="next"></div>
-                        <div class="prev"></div>
+                <div id="custom-owl-slider" class="owl-slide" data-scroll-speed="3">
+                    <div class="item">
+                        <img src="images/slider/1.jpg" alt />
                     </div>
-
-                    <div class="center-y fadeScroll relative"
-                        data-scroll-speed="4">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2">
-                                    <div class="row">
-                                        <div class="spacer-single"></div>
-                                        <div
-                                            class="col-md-5 text-right text-center-sm relative">
-                                            <h2 class="name">Quỳnh Trâm</h2>
-                                        </div>
-                                        <div class="col-md-2 text-center">
-                                            <span class="deco-big"
-                                                data-scroll-speed="2">&amp;</span>
-                                        </div>
-                                        <div
-                                            class="col-md-5 text-left text-center-sm relative">
-                                            <h2 class="name">Anh Trường</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="item">
+                        <img src="images/slider/2.jpg" alt />
                     </div>
-
-                    <div id="custom-owl-slider" class="owl-slide"
-                        data-scroll-speed="3">
-                        <div class="item">
-                            <img src="images/slider/1.jpg" alt />
-                        </div>
-                        <div class="item">
-                            <img src="images/slider/2.jpg" alt />
-                        </div>
-                        <div class="item">
-                            <img src="images/slider/3.jpg" alt />
-                        </div>
+                    <div class="item">
+                        <img src="images/slider/3.jpg" alt />
                     </div>
-                </section>
-                <!-- section close -->
+                </div>
+            </section>
+            <!-- section close -->
 
-                <!-- section begin -->
-                <section id="section-couple" class="no-top">
-                    <div class="container relative mt-60 z-index">
-                        <div class="row">
-                            <div class="col-md-5 col-md-offset-1 text-center">
-                                <img src="images/misc/2.jpg" alt
-                                    class="img-responsive img-rounded wow fadeInLeft"
-                                    data-wow-delay=".2s" />
-                                <div class="padding40">
-                                    <h2>Quỳnh Trâm</h2>
-                                    <p>
-                                        Cô gái nhỏ mang trong mình ước mơ về một
-                                        câu chuyện cổ tích. “Em là người lớn của
-                                        cả thế giới, nhưng chỉ là bạn nhỏ của 1
-                                        người thôi.” ❤️
-                                    </p>
-                                    <!-- social icons -->
-                                    <div class="social-icons-sm">
-                                        <a
-                                            href="https://www.facebook.com/profile.php?id=100006943964259"><i
+            <!-- section begin -->
+            <section id="section-couple" class="no-top">
+                <div class="container relative mt-60 z-index">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1 text-center">
+                            <img src="images/misc/2.jpg" alt class="img-responsive img-rounded wow fadeInLeft" data-wow-delay=".2s" />
+                            <div class="padding40">
+                                <h2>Quỳnh Trâm</h2>
+                                <p>
+                                    Cô gái nhỏ mang trong mình ước mơ về một câu chuyện cổ tích. “Em là người lớn của cả thế giới, nhưng chỉ là bạn nhỏ của 1 người thôi.” ❤️
+                                </p>
+                                <!-- social icons -->
+                                <div class="social-icons-sm">
+                                    <a href="https://www.facebook.com/profile.php?id=100006943964259"><i
                                                 class="fa fa-facebook"></i></a>
-                                        <a href="#"><i
+                                    <a href="#"><i
                                                 class="fa fa-twitter"></i></a>
-                                        <a href="#"><i
+                                    <a href="#"><i
                                                 class="fa fa-rss"></i></a>
-                                        <a href="#"><i
+                                    <a href="#"><i
                                                 class="fa fa-google-plus"></i></a>
-                                        <a href="#"><i
+                                    <a href="#"><i
                                                 class="fa fa-envelope-o"></i></a>
-                                    </div>
-                                    <!-- social icons close -->
                                 </div>
+                                <!-- social icons close -->
                             </div>
+                        </div>
 
-                            <div class="col-md-5 text-center">
-                                <img src="images/misc/1.jpg" alt
-                                    class="img-responsive img-rounded wow fadeInRight"
-                                    data-wow-delay=".2s" />
-                                <div class="padding40">
-                                    <h2>Anh Trường</h2>
-                                    <p>
-                                        Lập trình viên vui tính, luôn yêu đời,
-                                        yêu âm nhạc và thích phiêu lưu.
-                                        "Trên đời này chỉ có một thứ hạnh phúc duy nhất là yêu và được yêu em."
-                                        ❤️
-                                    </p>
-                                    <!-- social icons -->
-                                    <div class="social-icons-sm">
-                                        <a
-                                            href="https://www.facebook.com/anhtruong1209"><i
+                        <div class="col-md-5 text-center">
+                            <img src="images/misc/1.jpg" alt class="img-responsive img-rounded wow fadeInRight" data-wow-delay=".2s" />
+                            <div class="padding40">
+                                <h2>Anh Trường</h2>
+                                <p>
+                                    Lập trình viên vui tính, luôn yêu đời, yêu âm nhạc và thích phiêu lưu. "Trên đời này chỉ có một thứ hạnh phúc duy nhất là yêu và được yêu em." ❤️
+                                </p>
+                                <!-- social icons -->
+                                <div class="social-icons-sm">
+                                    <a href="https://www.facebook.com/anhtruong1209"><i
                                                 class="fa fa-facebook"></i></a>
-                                        <a href="#"><i
+                                    <a href="#"><i
                                                 class="fa fa-twitter"></i></a>
-                                        <a href="#"><i
+                                    <a href="#"><i
                                                 class="fa fa-rss"></i></a>
-                                        <a href="sdlla0911114819@gmail.com"><i
+                                    <a href="sdlla0911114819@gmail.com"><i
                                                 class="fa fa-google-plus"></i></a>
-                                        <a href="sdlla0911114819@gmail.com"><i
+                                    <a href="sdlla0911114819@gmail.com"><i
                                                 class="fa fa-envelope-o"></i></a>
-                                    </div>
-                                    <!-- social icons close -->
                                 </div>
+                                <!-- social icons close -->
                             </div>
+                        </div>
 
-                            <div
-                                class="col-md-2 col-md-offset-5 text-center absolute">
-                                <span class="circle wow zoomIn"
-                                    data-wow-delay=".8s">
+                        <div class="col-md-2 col-md-offset-5 text-center absolute">
+                            <span class="circle wow zoomIn" data-wow-delay=".8s">
                                     <i class="fa fa-heart"></i>
                                 </span>
-                            </div>
-
-                            <div class="clearfix"></div>
                         </div>
+
+                        <div class="clearfix"></div>
                     </div>
-                </section>
-                <!-- section close -->
+                </div>
+            </section>
+            <!-- section close -->
 
-                <!-- section begin -->
-                <section id="section-quote" aria-label="section-quote-1"
-                    class="text-light" data-stellar-background-ratio=".2">
-                    <div class="container">
-                        <div class="row wow fadeInUp">
-                            <div class="col-md-8 col-md-offset-2">
-                                <blockquote
-                                    class="very-big text-light wow fadeIn">
-                                    "Tuổi 17 năm ấy, em có anh, anh như có cả thế giới trong vòng tay của mình. Giờ thì chúng ta đều tin rồi, tin rằng người mà ta nắm tay ngày đó sẽ đi cùng ta đi đến suốt cuộc đời."
-                                    <span>~ ❤️ ~</span>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- section close -->
-
-                <!-- section begin -->
-                <section aria-label="section" class="no-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h2 class="deco id-color">
-                                    <span>Chúng tôi mời bạn vào</span>
-                                </h2>
-                                <h2 data-wow-delay=".2s">
-                                    Chủ nhật, ngày 10 tháng 11 năm 2024
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- section close -->
-
-                <!-- section begin -->
-                <section id="section-event">
-                    <div class="container">
-                        <div class="row">
-                            <div
-                                class="col-md-5 pt40 pb40 text-right wow fadeIn"
-                                data-wow-delay=".5s">
-                                <h3>Tổ chức lễ hỏi</h3>
-                                Chiều 14:00h, Thứ 7, ngày 2 tháng 11 năm 2024
-                                <br />Tư gia nhà Gái, 8/61 Nguyễn Công Trứ, Hàng
-                                Kênh, Lê Chân, Hải Phòng
-                                <br />
-                                <iframe class="iframe-responsive" width="450"
-                                    height="300" style="border: 20px"
-                                    allowfullscreen loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=vi&amp;q=61%20P.%20Nguyễn%20Công%20Trứ+(Nhà%20Gái)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                                </iframe>
-
-                            </div>
-                            <div class="col-md-6 col-md-offset-1">
-                                <img src="images/misc/4.jpg" alt
-                                    class="img-responsive img-rounded wow fadeInRight" />
-                            </div>
-                        </div>
-                        <div class="spacer-double"></div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="images/misc/3.jpg" alt
-                                    class="img-responsive img-rounded wow fadeInLeft"
-                                    style="height: 450px" />
-                            </div>
-
-                            <div
-                                class="col-md-5 col-md-offset-1 pt40 pb40 wow fadeIn"
-                                data-wow-delay=".5s">
-                                <h3>Tổ chức lễ cưới</h3>
-                                Chiều 17:00h, Chủ nhật, ngày 10 tháng 11 năm
-                                2024
-                                <br />Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải
-                                Đăng Plaza <br />19 P. Trần Khánh Dư, Máy Tơ,
-                                Ngô Quyền, Hải Phòng , Việt Nam
-                                <br />
-                                <iframe class="iframe-responsive"
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59651.66197957352!2d106.6510736!3d20.8628232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7be3b26b7f15%3A0xfb767616d10e5e50!2zVHJ1bmcgdMOibSB0aeG7h2MgY8aw4bubaSBI4bqjaSDEkMSDbmcgUGxhemEgSOG6o2kgUGjDsm5n!5e0!3m2!1svi!2s!4v1726651008685!5m2!1svi!2s"
-                                    width="450" height="300"
-                                    style="border: 20px" allowfullscreen
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- section close -->
-                <!-- section begin -->
-
-                <!-- section begin -->
-                <section id="section-countdown" aria-label="section-countdown"
-                    class="pt60 pb60 text-light"
-                    data-stellar-background-ratio=".2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h3>Thời gian còn lại lễ hỏi</h3>
-                            </div>
-                            <div class="col-md-8 col-md-offset-2">
-                                <div class="spacer-double"></div>
-                                <div id="defaultCountdownHoi"
-                                    class="wow fadeIn"></div>
-                                <div class="spacer-single"></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h3>Thời gian còn lại lễ cưới</h3>
-                            </div>
-                            <div class="col-md-8 col-md-offset-2">
-                                <div class="spacer-double"></div>
-                                <div id="defaultCountdown"
-                                    class="wow fadeIn"></div>
-                                <div class="spacer-single"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- section begin -->
-                <section id="section-guestbook" class="text-light"
-                    data-stellar-background-ratio=".2">
-                    <div class="container relative">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h2 style="color: #555 !important">
-                                    Lời tâm tình từ bạn bè, gia đình
-                                </h2>
-                                <div class="spacer-single"></div>
-                            </div>
-
-                            <div id="testimonial-carousel" class="de_carousel"
-                                data-wow-delay=".3s">
-                                <div class="col-md-6 item">
-                                    <div class="de_testi opt-2">
-                                        <blockquote>
-                                            <p>
-                                                Gửi đến một cặp đôi đặc biệt,
-                                                những người đã chứng tỏ rằng
-                                                tình yêu có thể là sự thật và
-                                                mãi mãi. Chúc cuộc sống của các
-                                                bạn tiếp tục phát triển trong
-                                                tình yêu và hạnh phúc cùng nhau!
-                                            </p>
-                                            <div class="de_testi_by">Dương Anh,
-                                                Bạn Thân</div>
-                                        </blockquote>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 item">
-                                    <div class="de_testi opt-2">
-                                        <blockquote>
-                                            <p>
-                                                Lời chúc đám cưới cho những
-                                                người bạn thân yêu của tôi. Tôi
-                                                hy vọng cuộc sống của bạn sẽ
-                                                tràn ngập niềm vui, hạnh phúc và
-                                                nhiều tình yêu!
-                                            </p>
-                                            <div class="de_testi_by">Lê Tiến Tú,
-                                                Bạn thân</div>
-                                        </blockquote>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 item">
-                                    <div class="de_testi opt-2">
-                                        <blockquote>
-                                            <p>
-                                                Mong các bạn sẽ có một cuộc sống
-                                                lâu dài và hạnh phúc bên nhau.
-                                                Luôn đối xử với nhau tốt hơn mức
-                                                bạn muốn được đối xử.
-                                            </p>
-                                            <div class="de_testi_by">Độ Trần,
-                                                Bạn thân</div>
-                                        </blockquote>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 item">
-                                    <div class="de_testi opt-2">
-                                        <blockquote>
-                                            <p>
-                                                Tôi chúc các bạn có một cuộc
-                                                sống tuyệt vời bên nhau khi cùng
-                                                nhau đi đến con đường hạnh phúc
-                                                hôn nhân. Thật hạnh phúc cho
-                                                bạn!
-                                            </p>
-                                            <div class="de_testi_by">Tùng Anh,
-                                                Bạn thân</div>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- section close -->
-                <section id="section-prize" aria-label="section-quote-1"
-                    class="text-light" data-stellar-background-ratio=".1">
-                    <div class="container relative mt-60 z-index">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <br />
-                                <br />
-                                <br />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <h2>Hộp mừng cưới</h2>
-                                <h3>
-                                    Cảm ơn tất cả các tình cảm mà mọi người đã
-                                    dành cho Trâm & Trường
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <div class="col-md-12 text-center">
-                                <br />
-                                <br />
-                            </div>
-
-                            <div class="box" data-toggle="modal"
-                                data-target="#qrModal">
-                                <div id="SHAPE391" class="ladi-element">
-                                    <div class="ladi-shape">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            version="1.1" x="0px" y="0px"
-                                            viewBox="0 0 100 100"
-                                            enable-background="new 0 0 100 100"
-                                            xml:space="preserve"
-                                            preserveAspectRatio="none"
-                                            width="130px" height="130px" class
-                                            fill="rgba(255, 255, 255, 1)">
-                                            <path
-                                                d="M82.1,71.121l0.002-25.077l2.422-1.565c0.357-0.231,0.57-0.624,0.57-1.05V32.822c0-0.426-0.213-0.818-0.57-1.05  l-5.975-3.861l0.012-0.241c0.014-0.297,0.029-0.594,0.029-0.905c0-7.402-3.789-11-11.584-11c-1.742,0-3.535,0.373-5.332,1.11  l-0.121,0.05l-0.109-0.071L50.679,9.895c-0.406-0.262-0.951-0.262-1.357,0l-10.872,7.029l-0.121-0.05  c-1.796-0.736-3.59-1.109-5.333-1.109c-7.794,0-11.583,3.598-11.583,11c0,0.344,0.017,0.669,0.032,0.996l0.008,0.144l-0.121,0.084  l-5.854,3.784c-0.357,0.231-0.571,0.624-0.571,1.05v10.606c0,0.426,0.214,0.818,0.571,1.05l2.421,1.565v25.068  c-0.041,0.426,0.153,0.771,0.563,1.042l30.86,19.951c0.406,0.262,0.951,0.262,1.357,0l30.851-19.943  C81.873,71.913,82.092,71.632,82.1,71.121z M78.158,30.636l3.385,2.187L61.701,45.647l-3.637-10.942l0.592,0.374  c2.82,1.782,5.629,2.686,8.35,2.686c6.176,0,9.795-2.225,11.063-6.801L78.158,30.636z M46.395,26.766  c0-2.719,1.011-3.729,3.729-3.729c2.719,0,3.729,1.011,3.729,3.729s-1.01,3.729-3.729,3.729  C47.405,30.495,46.395,29.484,46.395,26.766z M49.233,36.499l-0.023,0.064l-4.251,12.011l-3.32,1.779l-1.142-5.157L46.764,32.3  l0.221,0.097c0.418,0.183,0.87,0.323,1.343,0.416l0.164,0.032L49.233,36.499z M51.33,32.91c1.117-0.135,2.068-0.475,2.828-1.012  l0.275-0.194l5.078,15.28l-1.555,3.427l-4.039-3.406L53.9,46.92l-2.838-13.978L51.33,32.91z M67.006,18.265  c7.982,0,9.084,4.085,9.084,8.5c0,5.102-1.545,8.5-9.084,8.5c-4.41,0-8.422-2.981-11.012-5.482l-0.115-0.111l0.053-0.151  c0.223-0.63,0.352-1.409,0.389-2.315l0.01-0.234l0.234-0.006c2.715-0.067,9.615-0.576,15.018-3.834  c0.59-0.356,0.779-1.127,0.424-1.717c-0.346-0.573-1.141-0.771-1.717-0.425c-4.945,2.983-11.465,3.426-14.039,3.478l-0.189,0.004  l-0.055-0.183c-0.014-0.044-0.023-0.09-0.035-0.135c-0.012-0.049-0.023-0.098-0.039-0.142l-0.053-0.152l0.115-0.111  C58.584,21.246,62.596,18.266,67.006,18.265z M50,12.433l8.986,5.809l-0.33,0.209c-1.385,0.875-2.766,1.958-4.105,3.219  l-0.152,0.144l-0.168-0.124c-1.039-0.765-2.422-1.152-4.107-1.152c-1.76,0-3.185,0.422-4.235,1.253l-0.17,0.135l-0.157-0.15  c-1.368-1.301-2.786-2.419-4.216-3.323l-0.33-0.209L50,12.433z M32.995,18.265c4.417,0,8.709,3.064,11.3,5.571l-0.234,0.594  c-2.545-0.065-9.215-0.774-14.087-3.715c-0.578-0.347-1.372-0.147-1.717,0.425c-0.355,0.591-0.165,1.361,0.425,1.718  c5.386,3.248,12.271,3.763,14.981,3.833l0.239,0.006l0.004,0.24c0.013,0.892,0.133,1.7,0.356,2.404l0.047,0.146l-0.11,0.107  c-2.643,2.587-6.731,5.67-11.204,5.67c-7.538,0-9.083-3.398-9.083-8.5C23.912,22.35,25.013,18.265,32.995,18.265z M21.842,30.636  l0.091,0.328c1.267,4.576,4.886,6.801,11.063,6.801c3.1,0,6.291-1.158,9.484-3.443l0.801-0.573l-5.222,10.747  c-0.063,0.132-0.101,0.289-0.111,0.48l-0.025,0.428L18.459,32.822L21.842,30.636z M29.503,76.317l-9.104-5.886V47.66l9.104,5.885  V76.317z M34.378,79.469l-2.375-1.536V55.161l2.375,1.535V79.469z M48.75,88.759l-11.872-7.675V58.313l11.872,7.675V88.759z   M48.75,63.01L17.406,42.748v-7.629l21.355,13.805l0.793,3.581c0.084,0.38,0.345,0.704,0.698,0.865  c0.349,0.161,0.771,0.148,1.113-0.033l2.308-1.238l5.076,3.281V63.01z M50,53.211l-3.821-2.471l0.395-0.194  c0.269-0.145,0.478-0.388,0.582-0.682L50.2,41.26l1.353,6.669c0.057,0.274,0.207,0.526,0.42,0.707l2.215,1.868L50,53.211z   M63.107,81.094L51.25,88.759V65.987l11.857-7.665V81.094z M67.982,77.942l-2.375,1.535V56.706l2.375-1.535V77.942z M79.602,70.432  l-9.119,5.895V53.555l9.119-5.895V70.432z M80.158,44.323L51.25,63.01v-7.63l4.938-3.192l1.42,1.197  c0.295,0.249,0.691,0.35,1.082,0.264c0.379-0.085,0.701-0.349,0.863-0.703l1.883-4.147l0.061-0.04l21.098-13.639v7.629  L80.158,44.323z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 text-center">
-                                <br />
-                                <br />
-                                <br />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <!-- Modal cho QR Codes -->
-                </section>
-                <div id="qrModal" class="modal fade" tabindex="-1" role="dialog"
-                    aria-labelledby="qrModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header text-center">
-                                <h2 class="modal-title" id="qrModalLabel"
-                                    style="font-family: 'Allura', cursive;">Hộp
-                                    mừng cưới</h2>
-                                <h3 style="margin: 0;">Vợ chồng chúng em xin cảm
-                                    ơn tất cả tình cảm của mọi người ạ ♥</h3>
-                                <button type="button" class="close"
-                                    data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body text-center">
-                                <div
-                                    class="qr-code-container d-flex justify-content-center"
-                                    style="margin-bottom: 20px;">
-                                    <div class="qr-item"
-                                        style="margin-right: 20px;">
-                                        <h4>MỪNG CƯỚI ĐẾN CHÚ RỂ</h4>
-                                        <img src="images/qrcode_chure.png"
-                                            alt="QR Code 1"
-                                            class="img-responsive"
-                                            style="max-width: 100%;" />
-                                        <div>
-                                            <button class="btn btn-primary"
-                                                onclick="downloadQRCode('images/qrcode_chure.png')">Tải
-                                                ảnh QR</button>
-                                            <button class="btn btn-secondary"
-                                                onclick="copySTK('02315915901')">Copy
-                                                STK</button>
-                                        </div>
-                                        <a
-                                            href="https://m.me/anhtruong1209?message=G%E1%BB%ADi%20%C3%A1nh%20QR%20m%E1%BB%9Bi%20nh%C3%A2n%20c%C6%B0%E1%BB%9Bi%20c%C6%B0%C6%A1i"
-                                            target="_blank"
-                                            class="btn btn-success">
-                                            Gửi ảnh qua Messenger
-                                        </a>
-                                        <a href="https://zalo.me/0832206397"
-                                            target="_blank"
-                                            class="btn btn-success">Gửi ảnh qua
-                                            Zalo</a>
-
-                                    </div>
-                                    <div class="qr-item">
-                                        <h4>MỪNG CƯỚI ĐẾN CÔ DÂU</h4>
-                                        <img src="images/qrcode_codau.png"
-                                            alt="QR Code 2"
-                                            class="img-responsive"
-                                            style="max-width: 100%;" />
-                                        <div>
-                                            <button class="btn btn-primary"
-                                                onclick="downloadQRCode('images/qrcode_codau.png')">Tải
-                                                ảnh QR</button>
-                                            <button class="btn btn-secondary"
-                                                onclick="copySTK('0031000378125')">Copy
-                                                STK</button>
-                                        </div>
-                                        <a href="https://m.me/100006943964259"
-                                            target="_blank"
-                                            class="btn btn-success">
-                                            Gửi ảnh qua Messenger
-                                        </a>
-                                        <a href="https://zalo.me/0352432186
-                                    " target="_blank"
-                                            class="btn btn-success">Gửi ảnh qua
-                                            Zalo</a>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- section begin -->
+            <section id="section-quote" aria-label="section-quote-1" class="text-light" data-stellar-background-ratio=".2">
+                <div class="container">
+                    <div class="row wow fadeInUp">
+                        <div class="col-md-8 col-md-offset-2">
+                            <blockquote class="very-big text-light wow fadeIn">
+                                "Tuổi 17 năm ấy, em có anh, anh như có cả thế giới trong vòng tay của mình. Giờ thì chúng ta đều tin rồi, tin rằng người mà ta nắm tay ngày đó sẽ đi cùng ta đi đến suốt cuộc đời."
+                                <span>~ ❤️ ~</span>
+                            </blockquote>
                         </div>
                     </div>
                 </div>
-                <section id="section-gallery">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h2>Bộ sưu tập</h2>
-                                <div class="spacer-single"></div>
-                            </div>
+            </section>
+            <!-- section close -->
 
-                            <div class="col-md-12">
-                                <div class="de_tab tab_style_3 text-center">
-                                    <ul class="de_nav">
-                                        <li class="active"
-                                            data-link="#section-services-tab">
-                                            <span>Ảnh cưới</span>
-                                        </li>
-                                        <li data-link="#section-services-tab">
-                                            <span>Gia đình, Bạn bè</span>
-                                        </li>
-                                    </ul>
-
-                                    <div class="de_tab_content">
-                                        <div id="tab1"
-                                            class="tab_single_content">
-                                            <div class="row">
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-1/1.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-1/1.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-1/2.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-1/2.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-1/3.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-1/3.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-1/4.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-1/4.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-1/5.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-1/5.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-1/6.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-1/6.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-
-                                        <div id="tab2"
-                                            class="tab_single_content">
-                                            <div class="row">
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-3/1.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-3/1.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-3/2.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-3/2.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-3/3.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-3/3.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-3/4.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-3/4.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-3/5.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-3/5.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div
-                                                    class="col-md-4 text-center mb10">
-                                                    <figure
-                                                        class="picframe img-rounded mb20">
-                                                        <a class="image-popup"
-                                                            href="images/gallery/category-3/6.jpg">
-                                                            <span
-                                                                class="overlay-v">
-                                                                <i></i>
-                                                            </span>
-                                                        </a>
-                                                        <img
-                                                            src="images/gallery/category-3/6.jpg"
-                                                            class="img-responsive img-rounded"
-                                                            alt />
-                                                    </figure>
-                                                </div>
-
-                                                <div class="clearfix"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <!-- content close -->
-
-            <!-- footer begin -->
-            <footer>
-                <div class="container text-center text-dark">
+            <!-- section begin -->
+            <section aria-label="section" class="no-bottom">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="hs1 wow fadeInUp">
-                                Thank you!
-                            </h1>
-                        </div>
-                        <div class="col-md-12">
-                            <h2 class="hs1 wow fadeInUp">
-                                Quỳnh Trâm <span>&amp;</span>Anh Trường
+                        <div class="col-md-12 text-center">
+                            <h2 class="deco id-color">
+                                <span>Chúng tôi mời bạn vào</span>
+                            </h2>
+                            <h2 data-wow-delay=".2s">
+                                Chủ nhật, ngày 10 tháng 11 năm 2024
                             </h2>
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- section close -->
 
-                <div class="subfooter">
-                    <div class="container text-center text-dark">
-                        <div class="row">
-                            <div class="col-md-12">
-                                &copy; Copyright 2024 - Thiết kế bởi Anh Trường
+            <!-- section begin -->
+            <section id="section-event">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 pt40 pb40 text-right wow fadeIn" data-wow-delay=".5s">
+                            <h3>Tổ chức lễ hỏi</h3>
+                            Chiều 14:00h, Thứ 7, ngày 2 tháng 11 năm 2024
+                            <br />Tư gia nhà Gái, 8/61 Nguyễn Công Trứ, Hàng Kênh, Lê Chân, Hải Phòng
+                            <br />
+                            <iframe class="iframe-responsive" width="450" height="300" style="border: 20px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=vi&amp;q=61%20P.%20Nguyễn%20Công%20Trứ+(Nhà%20Gái)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                                </iframe>
+
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                            <img src="images/misc/4.jpg" alt class="img-responsive img-rounded wow fadeInRight" />
+                        </div>
+                    </div>
+                    <div class="spacer-double"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/misc/3.jpg" alt class="img-responsive img-rounded wow fadeInLeft" style="height: 450px" />
+                        </div>
+
+                        <div class="col-md-5 col-md-offset-1 pt40 pb40 wow fadeIn" data-wow-delay=".5s">
+                            <h3>Tổ chức lễ cưới</h3>
+                            Chiều 17:00h, Chủ nhật, ngày 10 tháng 11 năm 2024
+                            <br />Tại Sảnh Sapphier, Trung tâm tiệc cưới Hải Đăng Plaza <br />19 P. Trần Khánh Dư, Máy Tơ, Ngô Quyền, Hải Phòng , Việt Nam
+                            <br />
+                            <iframe class="iframe-responsive" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59651.66197957352!2d106.6510736!3d20.8628232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7be3b26b7f15%3A0xfb767616d10e5e50!2zVHJ1bmcgdMOibSB0aeG7h2MgY8aw4bubaSBI4bqjaSDEkMSDbmcgUGxhemEgSOG6o2kgUGjDsm5n!5e0!3m2!1svi!2s!4v1726651008685!5m2!1svi!2s"
+                                width="450" height="300" style="border: 20px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+            <!-- section begin -->
+
+            <!-- section begin -->
+            <section id="section-countdown" aria-label="section-countdown" class="pt60 pb60 text-light" data-stellar-background-ratio=".2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3>Thời gian còn lại lễ hỏi</h3>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="spacer-double"></div>
+                            <div id="defaultCountdownHoi" class="wow fadeIn"></div>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3>Thời gian còn lại lễ cưới</h3>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="spacer-double"></div>
+                            <div id="defaultCountdown" class="wow fadeIn"></div>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section begin -->
+            <section id="section-guestbook" class="text-light" data-stellar-background-ratio=".2">
+                <div class="container relative">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 style="color: #555 !important">
+                                Lời tâm tình từ bạn bè, gia đình
+                            </h2>
+                            <div class="spacer-single"></div>
+                        </div>
+
+                        <div id="testimonial-carousel" class="de_carousel" data-wow-delay=".3s">
+                            <div class="col-md-6 item">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <p>
+                                            Gửi đến một cặp đôi đặc biệt, những người đã chứng tỏ rằng tình yêu có thể là sự thật và mãi mãi. Chúc cuộc sống của các bạn tiếp tục phát triển trong tình yêu và hạnh phúc cùng nhau!
+                                        </p>
+                                        <div class="de_testi_by">Dương Anh, Bạn Thân</div>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <p>
+                                            Lời chúc đám cưới cho những người bạn thân yêu của tôi. Tôi hy vọng cuộc sống của bạn sẽ tràn ngập niềm vui, hạnh phúc và nhiều tình yêu!
+                                        </p>
+                                        <div class="de_testi_by">Lê Tiến Tú, Bạn thân</div>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <p>
+                                            Mong các bạn sẽ có một cuộc sống lâu dài và hạnh phúc bên nhau. Luôn đối xử với nhau tốt hơn mức bạn muốn được đối xử.
+                                        </p>
+                                        <div class="de_testi_by">Độ Trần, Bạn thân</div>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 item">
+                                <div class="de_testi opt-2">
+                                    <blockquote>
+                                        <p>
+                                            Tôi chúc các bạn có một cuộc sống tuyệt vời bên nhau khi cùng nhau đi đến con đường hạnh phúc hôn nhân. Thật hạnh phúc cho bạn!
+                                        </p>
+                                        <div class="de_testi_by">Tùng Anh, Bạn thân</div>
+                                    </blockquote>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
-            <!-- footer close -->
+            </section>
+            <!-- section close -->
+            <section id="section-prize" aria-label="section-quote-1" class="text-light" data-stellar-background-ratio=".1">
+                <div class="container relative mt-60 z-index">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <h2>Hộp mừng cưới</h2>
+                            <h3>
+                                Cảm ơn tất cả các tình cảm mà mọi người đã dành cho Trâm & Trường
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <div class="col-md-12 text-center">
+                            <br />
+                            <br />
+                        </div>
 
-            <a href="#" id="back-to-top"></a>
-            <div id="preloader">
-                <div class="preloader1"></div>
+                        <div class="box" data-toggle="modal" data-target="#qrModal">
+                            <div id="SHAPE391" class="ladi-element">
+                                <div class="ladi-shape">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" preserveAspectRatio="none" width="130px" height="130px" class
+                                        fill="rgba(255, 255, 255, 1)">
+                                            <path
+                                                d="M82.1,71.121l0.002-25.077l2.422-1.565c0.357-0.231,0.57-0.624,0.57-1.05V32.822c0-0.426-0.213-0.818-0.57-1.05  l-5.975-3.861l0.012-0.241c0.014-0.297,0.029-0.594,0.029-0.905c0-7.402-3.789-11-11.584-11c-1.742,0-3.535,0.373-5.332,1.11  l-0.121,0.05l-0.109-0.071L50.679,9.895c-0.406-0.262-0.951-0.262-1.357,0l-10.872,7.029l-0.121-0.05  c-1.796-0.736-3.59-1.109-5.333-1.109c-7.794,0-11.583,3.598-11.583,11c0,0.344,0.017,0.669,0.032,0.996l0.008,0.144l-0.121,0.084  l-5.854,3.784c-0.357,0.231-0.571,0.624-0.571,1.05v10.606c0,0.426,0.214,0.818,0.571,1.05l2.421,1.565v25.068  c-0.041,0.426,0.153,0.771,0.563,1.042l30.86,19.951c0.406,0.262,0.951,0.262,1.357,0l30.851-19.943  C81.873,71.913,82.092,71.632,82.1,71.121z M78.158,30.636l3.385,2.187L61.701,45.647l-3.637-10.942l0.592,0.374  c2.82,1.782,5.629,2.686,8.35,2.686c6.176,0,9.795-2.225,11.063-6.801L78.158,30.636z M46.395,26.766  c0-2.719,1.011-3.729,3.729-3.729c2.719,0,3.729,1.011,3.729,3.729s-1.01,3.729-3.729,3.729  C47.405,30.495,46.395,29.484,46.395,26.766z M49.233,36.499l-0.023,0.064l-4.251,12.011l-3.32,1.779l-1.142-5.157L46.764,32.3  l0.221,0.097c0.418,0.183,0.87,0.323,1.343,0.416l0.164,0.032L49.233,36.499z M51.33,32.91c1.117-0.135,2.068-0.475,2.828-1.012  l0.275-0.194l5.078,15.28l-1.555,3.427l-4.039-3.406L53.9,46.92l-2.838-13.978L51.33,32.91z M67.006,18.265  c7.982,0,9.084,4.085,9.084,8.5c0,5.102-1.545,8.5-9.084,8.5c-4.41,0-8.422-2.981-11.012-5.482l-0.115-0.111l0.053-0.151  c0.223-0.63,0.352-1.409,0.389-2.315l0.01-0.234l0.234-0.006c2.715-0.067,9.615-0.576,15.018-3.834  c0.59-0.356,0.779-1.127,0.424-1.717c-0.346-0.573-1.141-0.771-1.717-0.425c-4.945,2.983-11.465,3.426-14.039,3.478l-0.189,0.004  l-0.055-0.183c-0.014-0.044-0.023-0.09-0.035-0.135c-0.012-0.049-0.023-0.098-0.039-0.142l-0.053-0.152l0.115-0.111  C58.584,21.246,62.596,18.266,67.006,18.265z M50,12.433l8.986,5.809l-0.33,0.209c-1.385,0.875-2.766,1.958-4.105,3.219  l-0.152,0.144l-0.168-0.124c-1.039-0.765-2.422-1.152-4.107-1.152c-1.76,0-3.185,0.422-4.235,1.253l-0.17,0.135l-0.157-0.15  c-1.368-1.301-2.786-2.419-4.216-3.323l-0.33-0.209L50,12.433z M32.995,18.265c4.417,0,8.709,3.064,11.3,5.571l-0.234,0.594  c-2.545-0.065-9.215-0.774-14.087-3.715c-0.578-0.347-1.372-0.147-1.717,0.425c-0.355,0.591-0.165,1.361,0.425,1.718  c5.386,3.248,12.271,3.763,14.981,3.833l0.239,0.006l0.004,0.24c0.013,0.892,0.133,1.7,0.356,2.404l0.047,0.146l-0.11,0.107  c-2.643,2.587-6.731,5.67-11.204,5.67c-7.538,0-9.083-3.398-9.083-8.5C23.912,22.35,25.013,18.265,32.995,18.265z M21.842,30.636  l0.091,0.328c1.267,4.576,4.886,6.801,11.063,6.801c3.1,0,6.291-1.158,9.484-3.443l0.801-0.573l-5.222,10.747  c-0.063,0.132-0.101,0.289-0.111,0.48l-0.025,0.428L18.459,32.822L21.842,30.636z M29.503,76.317l-9.104-5.886V47.66l9.104,5.885  V76.317z M34.378,79.469l-2.375-1.536V55.161l2.375,1.535V79.469z M48.75,88.759l-11.872-7.675V58.313l11.872,7.675V88.759z   M48.75,63.01L17.406,42.748v-7.629l21.355,13.805l0.793,3.581c0.084,0.38,0.345,0.704,0.698,0.865  c0.349,0.161,0.771,0.148,1.113-0.033l2.308-1.238l5.076,3.281V63.01z M50,53.211l-3.821-2.471l0.395-0.194  c0.269-0.145,0.478-0.388,0.582-0.682L50.2,41.26l1.353,6.669c0.057,0.274,0.207,0.526,0.42,0.707l2.215,1.868L50,53.211z   M63.107,81.094L51.25,88.759V65.987l11.857-7.665V81.094z M67.982,77.942l-2.375,1.535V56.706l2.375-1.535V77.942z M79.602,70.432  l-9.119,5.895V53.555l9.119-5.895V70.432z M80.158,44.323L51.25,63.01v-7.63l4.938-3.192l1.42,1.197  c0.295,0.249,0.691,0.35,1.082,0.264c0.379-0.085,0.701-0.349,0.863-0.703l1.883-4.147l0.061-0.04l21.098-13.639v7.629  L80.158,44.323z"></path>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- Modal cho QR Codes -->
+            </section>
+            <div id="qrModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="qrModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h2 class="modal-title" id="qrModalLabel" style="font-family: 'Allura', cursive;">Hộp mừng cưới</h2>
+                            <h3 style="margin: 0;">Vợ chồng chúng em xin cảm ơn tất cả tình cảm của mọi người ạ ♥</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <div class="qr-code-container d-flex justify-content-center" style="margin-bottom: 20px;">
+                                <div class="qr-item" style="margin-right: 20px;">
+                                    <h4>MỪNG CƯỚI ĐẾN CHÚ RỂ</h4>
+                                    <img src="images/qrcode_chure.png" alt="QR Code 1" class="img-responsive" style="max-width: 100%;" />
+                                    <div>
+                                        <button class="btn btn-primary" onclick="downloadQRCode('images/qrcode_chure.png')">Tải
+                                                ảnh QR</button>
+                                        <button class="btn btn-secondary" onclick="copySTK('02315915901')">Copy
+                                                STK</button>
+                                    </div>
+                                    <a href="https://m.me/anhtruong1209?message=G%E1%BB%ADi%20%C3%A1nh%20QR%20m%E1%BB%9Bi%20nh%C3%A2n%20c%C6%B0%E1%BB%9Bi%20c%C6%B0%C6%A1i" target="_blank" class="btn btn-success">
+                                            Gửi ảnh qua Messenger
+                                        </a>
+                                    <a href="https://zalo.me/0832206397" target="_blank" class="btn btn-success">Gửi ảnh qua
+                                            Zalo</a>
+
+                                </div>
+                                <div class="qr-item">
+                                    <h4>MỪNG CƯỚI ĐẾN CÔ DÂU</h4>
+                                    <img src="images/qrcode_codau.png" alt="QR Code 2" class="img-responsive" style="max-width: 100%;" />
+                                    <div>
+                                        <button class="btn btn-primary" onclick="downloadQRCode('images/qrcode_codau.png')">Tải
+                                                ảnh QR</button>
+                                        <button class="btn btn-secondary" onclick="copySTK('0031000378125')">Copy
+                                                STK</button>
+                                    </div>
+                                    <a href="https://m.me/100006943964259" target="_blank" class="btn btn-success">
+                                            Gửi ảnh qua Messenger
+                                        </a>
+                                    <a href="https://zalo.me/0352432186
+                                    " target="_blank" class="btn btn-success">Gửi ảnh qua
+                                            Zalo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <section id="section-gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2>Bộ sưu tập</h2>
+                            <div class="spacer-single"></div>
+                        </div>
 
-        <!-- Javascript Files
+                        <div class="col-md-12">
+                            <div class="de_tab tab_style_3 text-center">
+                                <ul class="de_nav">
+                                    <li class="active" data-link="#section-services-tab">
+                                        <span>Ảnh cưới</span>
+                                    </li>
+                                    <li data-link="#section-services-tab">
+                                        <span>Gia đình, Bạn bè</span>
+                                    </li>
+                                </ul>
+
+                                <div class="de_tab_content">
+                                    <div id="tab1" class="tab_single_content">
+                                        <div class="row">
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/1.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/1.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/2.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/2.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/3.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/3.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/4.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/4.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/5.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/5.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/6.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/6.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/7.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/7.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/8.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/8.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-1/9.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-1/9.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+
+                                    <div id="tab2" class="tab_single_content">
+                                        <div class="row">
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-3/1.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-3/1.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-3/2.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-3/2.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-3/3.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-3/3.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-3/4.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-3/4.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-3/5.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-3/5.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="col-md-4 text-center mb10">
+                                                <figure class="picframe img-rounded mb20">
+                                                    <a class="image-popup" href="images/gallery/category-3/6.jpg">
+                                                        <span class="overlay-v">
+                                                                <i></i>
+                                                            </span>
+                                                    </a>
+                                                    <img src="images/gallery/category-3/6.jpg" class="img-responsive img-rounded" alt />
+                                                </figure>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container text-center text-dark">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="hs1 wow fadeInUp">
+                            Thank you!
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <h2 class="hs1 wow fadeInUp">
+                            Quỳnh Trâm <span>&amp;</span>Anh Trường
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter">
+                <div class="container text-center text-dark">
+                    <div class="row">
+                        <div class="col-md-12">
+                            &copy; Copyright 2024 - Thiết kế bởi Anh Trường
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+
+        <a href="#" id="back-to-top"></a>
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+    </div>
+
+    <!-- Javascript Files
     ================================================== -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/easing.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/jquery.countTo.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/enquire.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/jquery.countdown.js"></script>
-        <script src="js/countdown-custom.js"></script>
-        <script src="js/animsition.min.js"></script>
-        <script src="js/designesia.js"></script>
-        <!-- <script src="rsvp/form.js"></script> -->
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script src="js/designesia.js"></script>
+    <!-- <script src="rsvp/form.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 
-        <script>
+    <script>
         function downloadQRCode(qrCodeUrl) {
             const link = document.createElement('a');
             link.href = qrCodeUrl;
@@ -1060,6 +876,6 @@
             });
         });
     </script>
-    </body>
+</body>
 
 </html>

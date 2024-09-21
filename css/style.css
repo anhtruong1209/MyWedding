@@ -8045,6 +8045,69 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
+    .box {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+    }
+    .ladi-shape {
+        display: inline-block;
+        width: 50px !important;
+        height: 130px;
+        margin: 0 auto;
+    }
+    .ladi-shape svg {
+        width: 50px;
+        height: 50px;
+    }
+    #qrModal {
+        width: 80%;
+        height: auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        /* Ensure there's no default margin */
+    }
+    #qrModal .modal-content .modal-header h2 {
+        font-size: 40px;
+    }
+    #qrModal .modal-content .modal-header button {
+        position: absolute;
+        right: -125px;
+        top: 15px;
+        color: #000;
+        opacity: 0.8;
+    }
+    #qrModal .modal-content .modal-header h3 {
+        font-size: 20px;
+    }
+    #qrModal .modal-body .qr-code-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+    }
+    #qrModal .modal-body .qr-code-container .qr-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #qrModal .modal-body .qr-code-container .qr-item img {
+        width: 80%;
+        height: 80%;
+    }
+    #qrModal .modal-body .qr-code-container .qr-item button {
+        width: 80%;
+        height: 80%;
+        margin: 5px;
+    }
+    #qrModal .modal-body .qr-code-container .qr-item a {
+        width: 80%;
+        height: 80%;
+        margin: 5px;
+    }
     .pf_full_width .item {
         float: left;
         width: 100% !important;

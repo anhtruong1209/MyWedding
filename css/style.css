@@ -8096,7 +8096,7 @@ img {
         /* Hide this button on small screens */
     }
     #section-event img {
-        height: 210px !important;
+        height: 235px !important;
     }
     .page-about-her #subheader {
         background-position: -90px 0px !important;
@@ -8105,8 +8105,14 @@ img {
         background-position: -45px -0px !important;
     }
     #section-prize,
+    #section-quote,
     #section-guestbook {
-        background-position: -120px 0px !important;
+        background-position: center center !important;
+        /* Center the background */
+        background-size: contain !important;
+        /* Make sure the image fits within the section without zooming */
+        background-repeat: no-repeat;
+        /* Prevent the background from repeating */
     }
     .box {
         width: 100px;

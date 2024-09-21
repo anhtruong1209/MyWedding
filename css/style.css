@@ -7782,6 +7782,7 @@ img {
     header.header-mobile #mainmenu li ul li a {
         display: block;
         border-bottom: solid 1px #333;
+        padding: 75px;
     }
     header.header-mobile #mainmenu li ul li:last-child {
         border-bottom: none;
@@ -8045,6 +8046,68 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
+    .pagination {
+        display: none;
+    }
+    .wm {
+        font-family: "Allura";
+        font-size: 50px;
+        font-weight: 100;
+        position: absolute;
+        width: 200%;
+        left: -50%;
+        top: 30px;
+    }
+    #menu-btn {
+        display: block;
+        /* Ensure the menu button shows on small screens */
+        cursor: pointer;
+        background: url('menu-icon.png') no-repeat;
+        /* You can use an icon */
+        width: 90px;
+        height: 30px;
+    }
+    nav {
+        display: none;
+        /* Hide the menu by default */
+    }
+    nav.open {
+        display: block;
+        /* Show menu when 'open' class is added */
+        background-color: #fff;
+        /* Set a background color for the mobile menu */
+        width: 100%;
+        /* Make sure the menu covers the screen width */
+    }
+    nav ul {
+        flex-direction: column;
+        /* Stack the menu items vertically */
+        text-align: center;
+        padding: 0;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        /* Add spacing between menu items */
+    }
+    .btn-rsvp {
+        width: 90px;
+        /* Hide this button on small screens */
+    }
+    #section-event img {
+        height: 210px !important;
+    }
+    .page-about-her #subheader {
+        background-position: -90px 0px !important;
+    }
+    .page-about-him #subheader {
+        background-position: -45px -0px !important;
+    }
+    #section-prize,
+    #section-guestbook {
+        background-position: -120px 0px !important;
+    }
     .box {
         width: 100px;
         height: 100px;

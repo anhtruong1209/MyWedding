@@ -25,8 +25,10 @@ section.call-to-action,
 .date-post,
 .team-list .small-border,
 .de-team-list .small-border,
-.btn-line:hover,a.btn-line:hover,
-.btn-line.hover,a.btn-line.hover,
+.btn-line:hover,
+a.btn-line:hover,
+.btn-line.hover,
+a.btn-line.hover,
 .owl-arrow span,
 .de-progress .progress-bar,
 #btn-close-x:hover,
@@ -46,12 +48,12 @@ section.call-to-action,
 .de_tab.tab_style_2 .de_nav li.active span,
 .de_tab.tab_steps.style-2 .de_nav li.active span,
 .feature-box-small-icon.style-2 .number.bg-color,
-a.btn-custom,.btn-custom,
+a.btn-custom,
+.btn-custom,
 span.overlay,
 .owl-custom-nav .btn-next:before,
-.owl-custom-nav .btn-prev:before
-{
-	background-color:#e16060 ;
+.owl-custom-nav .btn-prev:before {
+  background-color: #e16060;
 }
 
 .feature-box i,
@@ -77,14 +79,17 @@ a.btn-slider:after,
 a.btn-line:after,
 .team-list .social a,
 .de_contact_info i,
-.dark .btn-line:hover:after, .dark a.btn-line:hover:after, .dark a.btn-line.hover:after,
+.dark .btn-line:hover:after,
+.dark a.btn-line:hover:after,
+.dark a.btn-line.hover:after,
 a.btn-text:after,
-.separator span  i,
+.separator span i,
 address span strong,
 .de_tab.tab_steps .de_nav li span:hover,
 .de_testi_by,
 .widget_tags li a,
-.dark .btn-line:after, .dark  a.btn-line:after,
+.dark .btn-line:after,
+.dark a.btn-line:after,
 .crumb a,
 .btn-right:after,
 .btn-left:before,
@@ -94,9 +99,8 @@ header .info .social i:hover,
 #services-list li.active,
 #services-list li.active a:after,
 .testimonial-list:before,
-#filters a.selected
-{
-	color:#e16060 ;
+#filters a.selected {
+  color: #e16060;
 }
 
 .feature-box i,
@@ -105,54 +109,54 @@ header .info .social i:hover,
 .pagination > .active > a:hover,
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
-.pagination > .active > span:focus
-.feature-box-big-icon i:after,
+.pagination > .active > span:focus .feature-box-big-icon i:after,
 .social-icons i,
-.btn-line:hover,a.btn-line:hover,
-.btn-line.hover,a.btn-line.hover,
+.btn-line:hover,
+a.btn-line:hover,
+.btn-line.hover,
+a.btn-line.hover,
 .product img:hover,
-#contact_form input[type=text]:focus,#contact_form textarea:focus, #search:focus,
-#contact_form .de_light input[type=text]:focus, #contact_form .de_lighttextarea:focus, #contact_form .de_light #search:focus,
-.form-transparent input[type=text]:focus, .form-transparent textarea:focus, .form-transparent input[type=email]:focus,
+#contact_form input[type="text"]:focus,
+#contact_form textarea:focus,
+#search:focus,
+#contact_form .de_light input[type="text"]:focus,
+#contact_form .de_lighttextarea:focus,
+#contact_form .de_light #search:focus,
+.form-transparent input[type="text"]:focus,
+.form-transparent textarea:focus,
+.form-transparent input[type="email"]:focus,
 .de_tab.tab_steps.style-2 .de_nav li.active span,
-#filters a.selected
-{
-
-	border-color:#e16060 ;
+#filters a.selected {
+  border-color: #e16060;
 }
 
 .box-fx .inner,
 .dark .box-fx .inner,
 .blog-list img,
-.arrow-up
-{
-	border-bottom-color:#e16060 ;
+.arrow-up {
+  border-bottom-color: #e16060;
 }
 
-.arrow-down{
-	border-top-color:#e16060 ;
+.arrow-down {
+  border-top-color: #e16060;
 }
 
 .callbacks_nav {
-	background-color:#e16060 ;
+  background-color: #e16060;
 }
 
-
 .de_tab .de_nav li span {
-border-top: 3px solid #e16060 ;
+  border-top: 3px solid #e16060;
 }
 
 .feature-box-big-icon i:after {
-border-color: #e16060  transparent; /*same colour as the lower of the bubble's gradient*/
+  border-color: #e16060 transparent; /*same colour as the lower of the bubble's gradient*/
 }
 
-.de_review li.active img{
-	border:solid 4px #e16060 ;
+.de_review li.active img {
+  border: solid 4px #e16060;
 }
 
-
-blockquote{
-border-left-color:#e16060 ;
+blockquote {
+  border-left-color: #e16060;
 }
-
-

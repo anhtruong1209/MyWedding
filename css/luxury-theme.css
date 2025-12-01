@@ -931,23 +931,26 @@ blockquote span {
 }
 
 #section-prize h2 {
-  color: var(--text-primary) !important;
+  color: #ffffff !important;
   font-family: 'Playfair Display', 'Georgia', serif !important;
   font-style: normal !important;
   font-weight: 400 !important;
   font-size: 64px !important;
   margin-bottom: 30px !important;
-  text-shadow: none !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6) !important;
   letter-spacing: 1px !important;
 }
 
 #section-prize p {
-  color: var(--elegant-grey) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   font-family: 'Playfair Display', 'Georgia', serif !important;
   font-weight: 400 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
   margin-bottom: 50px !important;
+  max-width: 650px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 #section-prize .box {
@@ -1171,11 +1174,11 @@ footer::before {
 
 footer h1,
 footer h2 {
-  color: var(--text-primary);
+  color: #ffffff;
   font-family: 'Playfair Display', 'Georgia', serif;
   font-style: normal;
   font-weight: 400;
-  text-shadow: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
 }
 
@@ -1185,6 +1188,14 @@ footer h1 {
 
 footer h2 {
   font-size: 42px;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.3px;
 }
 
 .subfooter {

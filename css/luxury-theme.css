@@ -1,0 +1,603 @@
+/* ==================================================
+   Luxury Wedding Theme
+   Beautiful & Elegant Color Scheme
+   ================================================== */
+
+/* Luxury Color Palette */
+:root {
+  --gold: #d4af37;
+  --gold-light: #f4e5aa;
+  --gold-dark: #b8941f;
+  --rose-pink: #f8e5e5;
+  --rose-dark: #e8a5a5;
+  --ivory: #faf8f3;
+  --cream: #f5ede0;
+  --champagne: #f7e7ce;
+  --soft-gold: #fff8e7;
+  --elegant-grey: #4a4a4a;
+  --pure-white: #ffffff;
+}
+
+/* Global Overrides for Luxury Feel */
+body {
+  color: var(--elegant-grey);
+}
+
+/* Header Enhancements */
+header {
+  background: rgba(212, 175, 55, 0.15) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+header.smaller {
+  background: rgba(255, 248, 231, 0.95) !important;
+  box-shadow: 0 2px 20px rgba(212, 175, 55, 0.1);
+}
+
+header div#logo h2 {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Hero Section Luxury Styling */
+#section-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#section-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.15) 0%,
+    rgba(248, 229, 229, 0.25) 50%,
+    rgba(212, 175, 55, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+#section-hero .center-y {
+  position: relative;
+  z-index: 2;
+}
+
+.name {
+  font-family: 'Allura', cursive;
+  font-size: 72px;
+  color: var(--gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.5);
+  }
+  50% {
+    text-shadow: 4px 4px 20px rgba(212, 175, 55, 0.9), 
+                 0 0 30px rgba(212, 175, 55, 0.5);
+  }
+}
+
+.deco-big {
+  color: var(--gold);
+  font-size: 120px;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+/* Couple Section Luxury Styling */
+#section-couple {
+  background: linear-gradient(180deg, var(--ivory) 0%, #ffffff 100%);
+  padding: 80px 0;
+}
+
+#section-couple img {
+  border: 8px solid var(--cream);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2),
+              0 0 0 10px var(--soft-gold);
+  transition: all 0.5s ease;
+}
+
+#section-couple img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 60px rgba(212, 175, 55, 0.4),
+              0 0 0 15px var(--gold-light);
+}
+
+#section-couple h2 {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 48px;
+  margin: 20px 0 10px 0;
+}
+
+#section-couple p {
+  color: var(--elegant-grey);
+  line-height: 1.8;
+}
+
+.circle {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: white;
+  border: 8px solid var(--soft-gold);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+/* Quote Section */
+#section-quote {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    rgba(248, 229, 229, 0.2) 50%,
+    rgba(212, 175, 55, 0.1) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#section-quote::before {
+  content: '❝';
+  position: absolute;
+  font-size: 200px;
+  color: rgba(212, 175, 55, 0.05);
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Times New Roman', serif;
+}
+
+blockquote {
+  color: var(--elegant-grey);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 5px solid var(--gold);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+blockquote span {
+  color: var(--gold);
+  font-size: 32px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Event Section Luxury */
+#section-event {
+  background: linear-gradient(180deg, #ffffff 0%, var(--ivory) 100%);
+  padding: 80px 0;
+}
+
+#section-event h2 {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+#section-event h3 {
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+#section-event iframe {
+  border: 5px solid var(--cream);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  transition: all 0.5s ease;
+}
+
+#section-event iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+/* Countdown Section */
+#section-countdown {
+  background: linear-gradient(
+    135deg,
+    var(--gold-light) 0%,
+    var(--cream) 50%,
+    var(--rose-pink) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+#section-countdown::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hearts" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><text x="10" y="15" font-size="10" text-anchor="middle" fill="%23d4af37" opacity="0.1">♥</text></pattern></defs><rect width="100" height="100" fill="url(%23hearts)"/></svg>');
+}
+
+#section-countdown h3 {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 48px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Guestbook Section */
+#section-guestbook {
+  background: linear-gradient(180deg, var(--ivory) 0%, #ffffff 100%);
+  padding: 80px 0;
+}
+
+#section-guestbook h2 {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 40px;
+}
+
+.de_testi {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid var(--cream);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  transition: all 0.5s ease;
+}
+
+.de_testi:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+  border-color: var(--gold);
+}
+
+.de_testi blockquote p {
+  color: var(--elegant-grey);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.de_testi .de_testi_by {
+  color: var(--gold);
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Prize Section */
+#section-prize {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--cream) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#section-prize::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 50px,
+    rgba(212, 175, 55, 0.03) 50px,
+    rgba(212, 175, 55, 0.03) 100px
+  );
+  pointer-events: none;
+}
+
+#section-prize h2 {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 56px;
+}
+
+#section-prize h3 {
+  color: var(--elegant-grey);
+  font-size: 24px;
+}
+
+.box {
+  background: radial-gradient(circle, var(--gold) 0%, var(--gold-dark) 100%);
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.5),
+              inset 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 15px 60px rgba(212, 175, 55, 0.8),
+              inset 0 -5px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery Section */
+#section-gallery {
+  background: linear-gradient(180deg, #ffffff 0%, var(--soft-gold) 100%);
+  padding: 80px 0;
+}
+
+#section-gallery h2 {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 56px;
+  margin-bottom: 40px;
+}
+
+.picframe {
+  border: 5px solid var(--cream);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+.picframe:hover {
+  transform: scale(1.05) rotate(2deg);
+  border-color: var(--gold);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.4);
+}
+
+.picframe img {
+  transition: all 0.5s ease;
+}
+
+.picframe:hover img {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--elegant-grey) 0%, #2a2a2a 100%);
+  padding: 60px 0 30px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+footer h1,
+footer h2 {
+  color: var(--gold);
+  font-family: 'Allura', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer h1 {
+  font-size: 56px;
+}
+
+footer h2 {
+  font-size: 42px;
+}
+
+.subfooter {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Button Enhancements */
+.btn {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-rsvp {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: white !important;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-rsvp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+/* Menu Styling */
+#mainmenu a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+#mainmenu a:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Popup Box Luxury Styling */
+#popup-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, var(--ivory) 100%);
+}
+
+#popup-box .btn-close {
+  color: var(--gold-dark);
+  font-size: 32px;
+  transition: all 0.3s ease;
+}
+
+#popup-box .btn-close:hover {
+  transform: rotate(90deg);
+  color: var(--gold);
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border: 5px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--cream) 100%);
+  border-bottom: 3px solid var(--gold);
+  padding: 30px;
+}
+
+.modal-title {
+  color: var(--gold-dark);
+  font-family: 'Allura', cursive;
+  font-size: 48px;
+}
+
+/* Form Enhancements */
+.form-control {
+  border: 2px solid var(--cream);
+  border-radius: 10px;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+
+/* Tab Styling */
+.de_nav li {
+  background: var(--cream);
+  border-radius: 50px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.de_nav li.active,
+.de_nav li:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Custom Animations for Luxury Theme */
+@keyframes goldShimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark), var(--gold));
+  background-size: 200% auto;
+  animation: goldShimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name {
+    font-size: 48px;
+  }
+  
+  .deco-big {
+    font-size: 80px;
+  }
+  
+  #section-couple img {
+    border-width: 5px;
+  }
+  
+  footer h1 {
+    font-size: 40px;
+  }
+  
+  footer h2 {
+    font-size: 32px;
+  }
+}
+
+/* Scroll-to-top button */
+#back-to-top {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.5);
+  transition: all 0.5s ease;
+}
+
+#back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.7);
+}

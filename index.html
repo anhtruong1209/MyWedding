@@ -38,6 +38,56 @@
     
     <!-- Luxury Wedding Theme -->
     <link rel="stylesheet" href="css/luxury-theme.css" type="text/css" />
+    
+    <!-- Force text visibility in hero section -->
+    <style>
+      #section-hero h2.name,
+      #section-hero .name {
+        color: #d4af37 !important;
+        font-size: 72px !important;
+        font-family: 'Allura', cursive !important;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 1), 
+                     0 0 50px rgba(0, 0, 0, 0.9),
+                     0 0 80px rgba(212, 175, 55, 0.5),
+                     3px 3px 6px rgba(0, 0, 0, 1) !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 1001 !important;
+        position: relative !important;
+        -webkit-text-fill-color: #d4af37 !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        background-clip: unset !important;
+      }
+      
+      #section-hero .deco-big {
+        color: #d4af37 !important;
+        font-size: 120px !important;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
+                     0 0 50px rgba(0, 0, 0, 0.9),
+                     0 0 80px rgba(212, 175, 55, 0.5),
+                     3px 3px 6px rgba(0, 0, 0, 1) !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 1001 !important;
+        position: relative !important;
+        -webkit-text-fill-color: #d4af37 !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        background-clip: unset !important;
+      }
+      
+      #section-hero .center-y {
+        z-index: 1000 !important;
+        position: relative !important;
+      }
+      
+      #section-hero #custom-owl-slider {
+        z-index: 1 !important;
+      }
+    </style>
   </head>
 
   <body id="homepage">
@@ -250,20 +300,20 @@
             <div class="prev"></div>
           </div>
 
-          <div class="center-y fadeScroll relative" data-scroll-speed="4">
+          <div class="center-y fadeScroll relative" data-scroll-speed="4" style="z-index: 100; position: relative;">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                  <div class="row">
+                  <div class="row" style="display: flex; align-items: center; justify-content: center;">
                     <div class="spacer-single"></div>
-                    <div class="col-md-5 text-right text-center-sm relative">
-                      <h2 class="name fade-in-left wow zoomIn" data-wow-delay=".5s">Lê Thị Ngọc Minh</h2>
+                    <div class="col-md-5 text-right text-center-sm relative" style="padding-right: 15px; display: flex; align-items: center; justify-content: flex-end; z-index: 1000; position: relative;">
+                      <h2 class="name fade-in-left wow zoomIn" data-wow-delay=".5s" style="white-space: normal; word-wrap: break-word; line-height: 1.2; margin: 0; text-align: right; color: #d4af37 !important; font-size: 72px !important; font-family: 'Allura', cursive !important; text-shadow: 4px 4px 12px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 0.8), 0 0 60px rgba(212, 175, 55, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.9) !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-weight: 600 !important; z-index: 1001 !important; position: relative !important;">Lê Thị Ngọc Minh</h2>
                     </div>
-                    <div class="col-md-2 text-center">
-                      <span class="deco-big beating-heart pulse" data-scroll-speed="2" data-animation="zoom-in">&amp;</span>
+                    <div class="col-md-2 text-center" style="padding: 0 10px; display: flex; align-items: center; justify-content: center; z-index: 1000; position: relative;">
+                      <span class="deco-big beating-heart pulse" data-scroll-speed="2" data-animation="zoom-in" style="display: inline-block !important; color: #d4af37 !important; font-size: 120px !important; text-shadow: 4px 4px 12px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 0.8), 0 0 60px rgba(212, 175, 55, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.9) !important; visibility: visible !important; opacity: 1 !important; z-index: 1001 !important; position: relative !important;">&amp;</span>
                     </div>
-                    <div class="col-md-5 text-left text-center-sm relative">
-                      <h2 class="name fade-in-right wow zoomIn" data-wow-delay=".7s">Vũ Tuấn Minh</h2>
+                    <div class="col-md-5 text-left text-center-sm relative" style="padding-left: 15px; display: flex; align-items: center; justify-content: flex-start; z-index: 1000; position: relative;">
+                      <h2 class="name fade-in-right wow zoomIn" data-wow-delay=".7s" style="white-space: normal; word-wrap: break-word; line-height: 1.2; margin: 0; text-align: left; color: #d4af37 !important; font-size: 72px !important; font-family: 'Allura', cursive !important; text-shadow: 4px 4px 12px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 0.8), 0 0 60px rgba(212, 175, 55, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.9) !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-weight: 600 !important; z-index: 1001 !important; position: relative !important;">Vũ Tuấn Minh</h2>
                     </div>
                   </div>
                 </div>
@@ -774,10 +824,7 @@
                 <div class="de_tab tab_style_3 text-center">
                   <ul class="de_nav">
                     <li class="active" data-link="#section-services-tab">
-                      <span>Ảnh cưới 1</span>
-                    </li>
-                    <li data-link="#section-services-tab">
-                      <span>Ảnh cưới 2</span>
+                      <span>Ảnh cưới</span>
                     </li>
                   </ul>
 

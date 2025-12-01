@@ -23,15 +23,14 @@ const Hero = () => {
           items: 1,
           loop: true,
           autoplay: true,
-          autoplayTimeout: 4000,
-          autoplayHoverPause: true,
-          nav: true,
-          navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+          autoplayTimeout: 5000,
+          autoplayHoverPause: false,
+          nav: false,
           dots: false,
           animateOut: 'fadeOut',
           animateIn: 'fadeIn',
-          smartSpeed: 1000,
-          autoplaySpeed: 1000,
+          smartSpeed: 800,
+          autoplaySpeed: 800,
         })
       } else {
         // Retry if jQuery not ready

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
 
 const Header = ({ onRSVPClick }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,7 +15,11 @@ const Header = ({ onRSVPClick }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Handle smooth scroll for homepage sections
   const handleNavClick = (e, targetId) => {
+    if (location.pathname !== '/') {
+      return // Let Link handle navigation
+    }
     e.preventDefault()
     const element = document.getElementById(targetId)
     if (element) {
@@ -50,18 +56,20 @@ const Header = ({ onRSVPClick }) => {
             <nav>
               <ul id="mainmenu" className={isMobileMenuOpen ? 'open' : ''}>
                 <li>
-                  <a href="#section-hero" onClick={(e) => handleNavClick(e, 'section-hero')}>Trang chủ</a>
+                  <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Trang chủ</Link>
                 </li>
                 <li>
-                  <a href="#section-couple" onClick={(e) => handleNavClick(e, 'section-couple')}>Giới thiệu</a>
-                  <ul>
-                    <li><a href="#section-couple" onClick={(e) => handleNavClick(e, 'section-couple')}>Giới thiệu cô dâu</a></li>
-                    <li><a href="#section-couple" onClick={(e) => handleNavClick(e, 'section-couple')}>Giới thiệu chú rể</a></li>
-                  </ul>
+                  <Link to="/gioi-thieu" onClick={() => setIsMobileMenuOpen(false)}>Giới thiệu</Link>
                 </li>
-                <li><a href="#section-quote" onClick={(e) => handleNavClick(e, 'section-quote')}>Câu chuyện</a></li>
-                <li><a href="#section-event" onClick={(e) => handleNavClick(e, 'section-event')}>Sự kiện</a></li>
-                <li><a href="#section-gallery" onClick={(e) => handleNavClick(e, 'section-gallery')}>Bộ sưu tập</a></li>
+                <li>
+                  <Link to="/cau-chuyen" onClick={() => setIsMobileMenuOpen(false)}>Câu chuyện</Link>
+                </li>
+                <li>
+                  <Link to="/su-kien" onClick={() => setIsMobileMenuOpen(false)}>Sự kiện</Link>
+                </li>
+                <li>
+                  <Link to="/bo-suu-tap" onClick={() => setIsMobileMenuOpen(false)}>Bộ sưu tập</Link>
+                </li>
               </ul>
             </nav>
           </div>

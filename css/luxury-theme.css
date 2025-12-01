@@ -1,31 +1,35 @@
+@charset "utf-8";
+
 /* ==================================================
    Luxury Wedding Theme
    Beautiful & Elegant Color Scheme
    ================================================== */
 
-/* Luxury Color Palette - Soft Blue/Lavender Theme */
+/* Vintage Color Palette - Slate Blue Serif Theme */
 :root {
-  --primary: #7b9acc;
-  --primary-light: #a5b8d9;
-  --primary-dark: #5a7ba8;
-  --secondary: #e8eef5;
-  --secondary-dark: #b8c8d9;
-  --accent: #9db4d4;
-  --accent-light: #c5d4e8;
-  --ivory: #fafbfc;
-  --cream: #f5f7fa;
-  --soft-bg: #f8f9fb;
+  --primary: #5a6c7d;
+  --primary-light: #7a8a9a;
+  --primary-dark: #3d4a57;
+  --secondary: #8b9ba8;
+  --secondary-dark: #6b7a87;
+  --accent: #9db4c4;
+  --accent-light: #b8c8d4;
+  --ivory: #faf8f3;
+  --cream: #f5ede0;
+  --soft-bg: #f8f9fa;
   --elegant-grey: #4a4a4a;
   --pure-white: #ffffff;
+  --text-primary: #5a6c7d;
+  --text-light: #8b9ba8;
   
-  /* Legacy vars for compatibility - now using primary */
-  --gold: #7b9acc;
-  --gold-light: #a5b8d9;
-  --gold-dark: #5a7ba8;
-  --rose-pink: #e8eef5;
-  --rose-dark: #b8c8d9;
-  --champagne: #f5f7fa;
-  --soft-gold: #f8f9fb;
+  /* Legacy vars for compatibility */
+  --gold: #5a6c7d;
+  --gold-light: #7a8a9a;
+  --gold-dark: #3d4a57;
+  --rose-pink: #8b9ba8;
+  --rose-dark: #6b7a87;
+  --champagne: #f5ede0;
+  --soft-gold: #f8f9fa;
 }
 
 /* Global Overrides for Luxury Feel */
@@ -50,8 +54,8 @@ header.smaller {
   background: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(25px) !important;
   -webkit-backdrop-filter: blur(25px) !important;
-  border-bottom: 2px solid rgba(123, 154, 204, 0.25) !important;
-  box-shadow: 0 4px 30px rgba(123, 154, 204, 0.2) !important;
+  border-bottom: 1px solid rgba(90, 108, 125, 0.15) !important;
+  box-shadow: 0 2px 20px rgba(90, 108, 125, 0.1) !important;
 }
 
 header.smaller {
@@ -132,9 +136,10 @@ header #mainmenu li {
 
 header #mainmenu li a {
   color: #fff !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
-  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 400;
   font-size: 15px;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -142,14 +147,15 @@ header #mainmenu li a {
   border-radius: 20px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   position: relative;
   line-height: 1.5;
 }
 
 header.smaller #mainmenu li a {
-  color: #4a4a4a !important;
+  color: var(--text-primary) !important;
   text-shadow: none !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
 }
 
 header #mainmenu li a::before {
@@ -159,15 +165,15 @@ header #mainmenu li a::before {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  height: 1px;
+  background: var(--text-primary);
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
 }
 
 header #mainmenu li a:hover {
   color: var(--primary-dark) !important;
-  background: rgba(123, 154, 204, 0.08);
+  background: rgba(90, 108, 125, 0.08);
   transform: translateY(-1px);
 }
 
@@ -184,7 +190,7 @@ header.smaller #mainmenu li a {
 header.header-light #mainmenu li a:hover,
 header.smaller #mainmenu li a:hover {
   color: var(--primary-dark) !important;
-  background: rgba(123, 154, 204, 0.08);
+  background: rgba(90, 108, 125, 0.08);
 }
 
 /* Ensure proper layout spacing - FIXED FOR SCROLL */
@@ -228,15 +234,16 @@ header .btn-rsvp {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
   white-space: nowrap !important;
   display: inline-block !important;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
-  border: none !important;
+  background: var(--text-primary) !important;
+  border: 1px solid var(--text-primary) !important;
   padding: 10px 28px !important;
   top: -5px !important;
-  border-radius: 50px !important;
-  font-weight: 600 !important;
+  border-radius: 2px !important;
+  font-weight: 400 !important;
   font-size: 13px !important;
-  letter-spacing: 0.8px !important;
-  box-shadow: 0 3px 12px rgba(123, 154, 204, 0.35), 0 0 20px rgba(123, 154, 204, 0.2) !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
+  letter-spacing: 1px !important;
+  box-shadow: 0 2px 8px rgba(90, 108, 125, 0.2) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   cursor: pointer !important;
   line-height: 1.5 !important;
@@ -247,19 +254,20 @@ header .btn-rsvp {
 header.smaller .btn-rsvp {
   text-shadow: none !important;
   padding: 9px 26px !important;
-  box-shadow: 0 4px 15px rgba(123, 154, 204, 0.4) !important;
+  box-shadow: 0 2px 8px rgba(90, 108, 125, 0.2) !important;
 }
 
 header .btn-rsvp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 18px rgba(123, 154, 204, 0.5);
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(90, 108, 125, 0.3);
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
 }
 
 header.smaller .btn-rsvp {
   padding: 9px 26px !important;
   font-size: 12px !important;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(201, 125, 96, 0.4) !important;
   height: auto !important;
   padding-top: 9px !important;
   line-height: 1.5 !important;
@@ -354,16 +362,16 @@ header div#logo {
 }
 
 header div#logo h2 {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  font-weight: 700 !important;
-  font-size: 34px !important;
-  color: var(--primary) !important; /* Fallback color if gradient doesn't work */
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  font-weight: 400 !important;
+  font-size: 32px !important;
+  color: var(--text-primary) !important;
   margin: 0 !important;
   padding: 0 !important;
-  letter-spacing: 2px !important;
+  letter-spacing: 1px !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   line-height: 1.2 !important;
   white-space: nowrap !important;
@@ -385,11 +393,12 @@ header.smaller div#logo h2 {
 /* Ensure logo text is visible */
 header div#logo h2,
 header div#logo h2 span {
-  color: var(--primary) !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
   font-style: normal !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
+  letter-spacing: 1px !important;
 }
 
 header.smaller div#logo h2,
@@ -428,9 +437,9 @@ header div#logo h2 span {
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(123, 154, 204, 0.15) 0%,
-    rgba(232, 238, 245, 0.25) 50%,
-    rgba(123, 154, 204, 0.15) 100%
+    rgba(90, 108, 125, 0.1) 0%,
+    rgba(139, 155, 168, 0.15) 50%,
+    rgba(90, 108, 125, 0.1) 100%
   );
   z-index: 2;
   pointer-events: none;
@@ -576,59 +585,52 @@ header div#logo h2 span {
 #section-hero .col-md-5.text-left h2 {
   position: relative !important;
   z-index: 1001 !important;
-  color: var(--primary) !important;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 1), 
-               0 0 50px rgba(0, 0, 0, 0.9),
-               0 0 80px rgba(123, 154, 204, 0.5),
-               3px 3px 6px rgba(0, 0, 0, 1),
-               -2px -2px 4px rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5) !important;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  font-weight: 700 !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+  font-weight: 400 !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
   font-style: normal !important;
-  font-size: 72px !important;
+  font-size: clamp(48px, 8vw, 96px) !important;
   line-height: 1.2 !important;
   margin: 0 !important;
   padding: 0 !important;
   background: none !important;
-  -webkit-text-fill-color: var(--primary) !important;
+  -webkit-text-fill-color: #ffffff !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
+  letter-spacing: 1px !important;
 }
 
 #section-hero .deco-big,
 #section-hero .col-md-2 .deco-big {
   position: relative !important;
   z-index: 1001 !important;
-  color: var(--primary) !important;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 1),
-               0 0 50px rgba(0, 0, 0, 0.9),
-               0 0 80px rgba(123, 154, 204, 0.5),
-               3px 3px 6px rgba(0, 0, 0, 1),
-               -2px -2px 4px rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8) !important;
   display: inline-block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  font-weight: 700 !important;
-  font-size: 120px !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
-  font-style: normal !important;
+  font-weight: 300 !important;
+  font-size: clamp(72px, 12vw, 144px) !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
+  font-style: italic !important;
   background: none !important;
-  -webkit-text-fill-color: var(--primary) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
 }
 
 .name {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
   font-style: normal !important;
-  font-size: 72px !important;
-  color: var(--primary) !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
-  letter-spacing: 2px;
-  animation: textGlow 3s ease-in-out infinite;
+  font-size: clamp(48px, 8vw, 96px) !important;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5) !important;
+  letter-spacing: 1px;
+  animation: none !important;
   white-space: normal !important;
   overflow: visible !important;
   word-wrap: break-word !important;
@@ -637,6 +639,7 @@ header div#logo h2 span {
   line-height: 1.2 !important;
   margin: 0 !important;
   padding: 10px 0 !important;
+  font-weight: 400 !important;
 }
 
 /* Responsive font size for longer names */
@@ -661,20 +664,21 @@ header div#logo h2 span {
 
 @keyframes textGlow {
   0%, 100% {
-    text-shadow: 2px 2px 4px rgba(123, 154, 204, 0.5);
+    text-shadow: 2px 2px 4px rgba(201, 125, 96, 0.5);
   }
   50% {
-    text-shadow: 4px 4px 20px rgba(123, 154, 204, 0.9), 
-                 0 0 30px rgba(123, 154, 204, 0.5);
+    text-shadow: 4px 4px 20px rgba(201, 125, 96, 0.9), 
+                 0 0 30px rgba(201, 125, 96, 0.5);
   }
 }
 
 .deco-big {
-  color: var(--primary);
-  font-size: 120px;
-  filter: drop-shadow(0 0 10px rgba(123, 154, 204, 0.5));
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  font-style: normal;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(72px, 12vw, 144px);
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-style: italic;
+  font-weight: 300;
 }
 
 /* Fix quote section - make text clear and visible */
@@ -709,45 +713,48 @@ blockquote.very-big.text-light {
 
 #section-couple img {
   border: 8px solid var(--cream);
-  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2),
-              0 0 0 10px var(--soft-gold);
+  box-shadow: 0 10px 40px rgba(90, 108, 125, 0.2),
+              0 0 0 10px var(--cream-light);
   transition: all 0.5s ease;
 }
 
 #section-couple img:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 60px rgba(212, 175, 55, 0.4),
-              0 0 0 15px var(--gold-light);
+  box-shadow: 0 15px 60px rgba(90, 108, 125, 0.4),
+              0 0 0 15px var(--primary-light);
 }
 
 #section-couple h2 {
-  color: var(--primary-dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 48px;
   margin: 20px 0 10px 0;
+  letter-spacing: 1px;
 }
 
 #section-couple p {
   color: var(--elegant-grey);
   line-height: 1.8;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 400;
 }
 
 .circle {
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
   color: white;
-  border: 8px solid var(--soft-gold);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+  border: 8px solid var(--cream-light);
+  box-shadow: 0 0 30px rgba(90, 108, 125, 0.6);
 }
 
 /* Quote Section */
 #section-quote {
   background: linear-gradient(
     135deg,
-    rgba(212, 175, 55, 0.1) 0%,
-    rgba(248, 229, 229, 0.2) 50%,
-    rgba(212, 175, 55, 0.1) 100%
+    rgba(90, 108, 125, 0.1) 0%,
+    rgba(139, 155, 168, 0.2) 50%,
+    rgba(90, 108, 125, 0.1) 100%
   );
   position: relative;
   overflow: hidden;
@@ -757,7 +764,7 @@ blockquote.very-big.text-light {
   content: '❝';
   position: absolute;
   font-size: 200px;
-  color: rgba(212, 175, 55, 0.05);
+  color: rgba(90, 108, 125, 0.05);
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
@@ -771,13 +778,13 @@ blockquote {
   z-index: 1;
   padding: 40px;
   background: rgba(255, 255, 255, 0.7);
-  border-left: 5px solid var(--gold);
+  border-left: 5px solid var(--primary);
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 5px 20px rgba(90, 108, 125, 0.1);
 }
 
 blockquote span {
-  color: var(--gold);
+  color: var(--primary);
   font-size: 32px;
   display: block;
   text-align: center;
@@ -791,39 +798,43 @@ blockquote span {
 }
 
 #section-event h2 {
-  color: var(--primary-dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 56px;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 #section-event h3 {
-  color: var(--gold);
+  color: var(--text-primary);
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-weight: 400;
   font-size: 32px;
   margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
 
 #section-event iframe {
   border: 5px solid var(--cream);
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 30px rgba(90, 108, 125, 0.2);
   transition: all 0.5s ease;
 }
 
 #section-event iframe:hover {
   transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 15px 40px rgba(90, 108, 125, 0.4);
 }
 
 /* Countdown Section */
 #section-countdown {
   background: linear-gradient(
     135deg,
-    var(--gold-light) 0%,
+    var(--primary-light) 0%,
     var(--cream) 50%,
-    var(--rose-pink) 100%
+    var(--secondary) 100%
   );
   position: relative;
   overflow: hidden;
@@ -840,14 +851,15 @@ blockquote span {
 }
 
 #section-countdown h3 {
-  color: var(--primary-dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 48px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
+  letter-spacing: 1px;
 }
 
 /* Guestbook Section */
@@ -857,8 +869,10 @@ blockquote span {
 }
 
 #section-guestbook h2 {
-  color: var(--gold-dark);
-  font-family: 'Allura', cursive;
+  color: var(--primary-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-style: normal;
+  font-weight: 600;
   font-size: 52px;
   margin-bottom: 40px;
 }
@@ -868,14 +882,14 @@ blockquote span {
   border: 3px solid var(--cream);
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 10px 30px rgba(90, 108, 125, 0.15);
   transition: all 0.5s ease;
 }
 
 .de_testi:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
-  border-color: var(--gold);
+  box-shadow: 0 20px 50px rgba(90, 108, 125, 0.3);
+  border-color: var(--primary);
 }
 
 .de_testi blockquote p {
@@ -893,7 +907,7 @@ blockquote span {
 
 /* Prize Section */
 #section-prize {
-  background: linear-gradient(180deg, var(--soft-gold) 0%, var(--cream) 50%, var(--elegant-grey) 100%);
+  background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 50%, var(--secondary) 100%);
   position: relative;
   overflow: hidden;
   padding: 100px 0;
@@ -910,31 +924,34 @@ blockquote span {
     45deg,
     transparent,
     transparent 50px,
-    rgba(212, 175, 55, 0.03) 50px,
-    rgba(212, 175, 55, 0.03) 100px
+    rgba(90, 108, 125, 0.03) 50px,
+    rgba(90, 108, 125, 0.03) 100px
   );
   pointer-events: none;
 }
 
 #section-prize h2 {
-  color: var(--primary-dark) !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+  color: var(--text-primary) !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
   font-style: normal !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   font-size: 64px !important;
   margin-bottom: 30px !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) !important;
+  text-shadow: none !important;
+  letter-spacing: 1px !important;
 }
 
 #section-prize p {
-  color: #4a4a4a !important;
+  color: var(--elegant-grey) !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
+  font-weight: 400 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
   margin-bottom: 50px !important;
 }
 
 #section-prize .box {
-  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%) !important;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--secondary) 50%, var(--text-primary) 100%) !important;
   background-size: 200% 200% !important;
   width: 220px !important;
   height: 220px !important;
@@ -946,7 +963,7 @@ blockquote span {
   justify-content: center !important;
   cursor: pointer !important;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  box-shadow: 0 15px 50px rgba(212, 175, 55, 0.6),
+  box-shadow: 0 15px 50px rgba(90, 108, 125, 0.6),
               0 0 0 8px rgba(255, 255, 255, 0.3),
               inset 0 -10px 30px rgba(0, 0, 0, 0.2) !important;
   position: relative !important;
@@ -973,7 +990,7 @@ blockquote span {
 
 #section-prize .box:hover {
   transform: scale(1.12) translateY(-10px) !important;
-  box-shadow: 0 20px 70px rgba(212, 175, 55, 0.9),
+  box-shadow: 0 20px 70px rgba(90, 108, 125, 0.9),
               0 0 0 12px rgba(255, 255, 255, 0.4),
               inset 0 -15px 40px rgba(0, 0, 0, 0.3) !important;
 }
@@ -1016,7 +1033,7 @@ blockquote span {
 
 /* Gallery Section */
 #section-gallery {
-  background: linear-gradient(180deg, #ffffff 0%, var(--ivory) 50%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--cream-light) 50%, #ffffff 100%);
   padding: 100px 0;
   position: relative;
 }
@@ -1033,15 +1050,16 @@ blockquote span {
 }
 
 #section-gallery h2 {
-  color: var(--primary-dark) !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
+  color: var(--text-primary) !important;
+  font-family: 'Playfair Display', 'Georgia', serif !important;
   font-style: normal !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   font-size: 64px !important;
   margin-bottom: 60px !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) !important;
+  text-shadow: none !important;
   position: relative;
   z-index: 1;
+  letter-spacing: 1px !important;
 }
 
 #section-gallery .container {
@@ -1054,7 +1072,7 @@ blockquote span {
   border-radius: 15px !important;
   overflow: hidden !important;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  box-shadow: 0 10px 35px rgba(212, 175, 55, 0.2),
+  box-shadow: 0 10px 35px rgba(90, 108, 125, 0.2),
               0 0 0 3px rgba(255, 255, 255, 0.8) !important;
   position: relative !important;
   background: #fff !important;
@@ -1068,7 +1086,7 @@ blockquote span {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0) 0%, rgba(212, 175, 55, 0.1) 100%) !important;
+  background: linear-gradient(135deg, rgba(90, 108, 125, 0) 0%, rgba(90, 108, 125, 0.1) 100%) !important;
   opacity: 0 !important;
   transition: opacity 0.5s ease !important;
   z-index: 1 !important;
@@ -1081,8 +1099,8 @@ blockquote span {
 
 #section-gallery .picframe:hover {
   transform: scale(1.08) translateY(-10px) !important;
-  border-color: var(--gold) !important;
-  box-shadow: 0 25px 60px rgba(212, 175, 55, 0.5),
+  border-color: var(--primary) !important;
+  box-shadow: 0 25px 60px rgba(90, 108, 125, 0.5),
               0 0 0 5px rgba(255, 255, 255, 0.9) !important;
 }
 
@@ -1103,7 +1121,7 @@ blockquote span {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background: rgba(212, 175, 55, 0.7) !important;
+  background: rgba(90, 108, 125, 0.7) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1153,11 +1171,12 @@ footer::before {
 
 footer h1,
 footer h2 {
-  color: var(--primary);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-style: normal;
-  font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  text-shadow: none;
+  letter-spacing: 1px;
 }
 
 footer h1 {
@@ -1171,7 +1190,7 @@ footer h2 {
 .subfooter {
   background: rgba(0, 0, 0, 0.3);
   padding: 20px 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-top: 1px solid rgba(90, 108, 125, 0.2);
 }
 
 /* Button Enhancements */
@@ -1185,7 +1204,7 @@ footer h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 50px;
-  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 5px 20px rgba(90, 108, 125, 0.4);
   transition: all 0.5s ease;
   position: relative;
   overflow: hidden;
@@ -1193,7 +1212,7 @@ footer h2 {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 10px 30px rgba(90, 108, 125, 0.6);
 }
 
 .btn::before {
@@ -1224,12 +1243,12 @@ footer h2 {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.5s ease;
-  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 5px 20px rgba(90, 108, 125, 0.4);
 }
 
 .btn-rsvp:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 10px 30px rgba(90, 108, 125, 0.6);
 }
 
 /* Menu Styling */
@@ -1263,23 +1282,24 @@ footer h2 {
 
 /* Modal Enhancements */
 .modal-content {
-  border: 5px solid var(--gold);
+  border: 5px solid var(--primary);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 60px rgba(90, 108, 125, 0.3);
 }
 
 .modal-header {
   background: linear-gradient(135deg, var(--gold-light) 0%, var(--cream) 100%);
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 3px solid var(--primary);
   padding: 30px;
 }
 
 .modal-title {
-  color: var(--primary-dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 48px;
+  letter-spacing: 1px;
 }
 
 /* Form Enhancements */
@@ -1291,8 +1311,8 @@ footer h2 {
 }
 
 .form-control:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(90, 108, 125, 0.2);
   outline: none;
 }
 
@@ -1309,7 +1329,7 @@ footer h2 {
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 5px 15px rgba(90, 108, 125, 0.4);
 }
 
 /* Custom Animations for Luxury Theme */
@@ -1398,7 +1418,7 @@ img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 5px 20px rgba(90, 108, 125, 0.5);
   transition: all 0.5s ease;
 }
 

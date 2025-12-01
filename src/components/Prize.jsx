@@ -95,7 +95,7 @@ const Prize = () => {
                 background: 'none',
                 border: 'none',
                 fontSize: '30px',
-                color: '#d4af37',
+                color: '#5a6c7d',
                 cursor: 'pointer',
                 width: '40px',
                 height: '40px',
@@ -106,7 +106,7 @@ const Prize = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(212, 175, 55, 0.1)'
+                e.target.style.background = 'rgba(90, 108, 125, 0.1)'
                 e.target.style.transform = 'rotate(90deg)'
               }}
               onMouseLeave={(e) => {
@@ -117,10 +117,12 @@ const Prize = () => {
               ×
             </button>
             <h3 style={{ 
-              color: '#d4af37', 
+              color: '#5a6c7d', 
               fontSize: '28px', 
               marginBottom: '20px',
-              fontFamily: "'Allura', cursive"
+              fontFamily: "'Playfair Display', 'Georgia', serif",
+              fontWeight: 400,
+              letterSpacing: '1px'
             }}>
               {selectedQR === 'codau' ? 'Ngọc Minh' : 'Tuấn Minh'}
             </h3>
@@ -145,7 +147,9 @@ const Prize = () => {
             <p style={{ 
               marginTop: '20px', 
               color: '#4a4a4a', 
-              fontSize: '16px' 
+              fontSize: '16px',
+              fontFamily: "'Playfair Display', 'Georgia', serif",
+              fontWeight: 400
             }}>
               Quét mã QR để chuyển khoản hoặc gửi lời chúc mừng
             </p>
@@ -170,7 +174,7 @@ const Prize = () => {
         }
         .box:hover {
           transform: scale(1.1) !important;
-          box-shadow: 0 15px 60px rgba(212, 175, 55, 0.8), inset 0 -5px 30px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 0 15px 60px rgba(90, 108, 125, 0.8), inset 0 -5px 30px rgba(0, 0, 0, 0.3) !important;
         }
       `}</style>
     </>

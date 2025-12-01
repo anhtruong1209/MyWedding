@@ -82,7 +82,6 @@ const Hero = () => {
                   justifyContent: 'center', 
                   width: '100%',
                   margin: 0,
-                  flexDirection: 'column',
                   gap: '15px',
                   top: '220px'
                 }}
@@ -96,7 +95,6 @@ const Hero = () => {
                     position: 'relative',
                     animation: isVisible ? 'fadeInUp 1.5s ease-out' : 'none',
                     animationFillMode: 'both',
-                    flexDirection: 'column',
                     gap: '15px',
                     width: '100%'
                   }}
@@ -106,45 +104,46 @@ const Hero = () => {
                     style={{
                       whiteSpace: 'normal',
                       wordWrap: 'break-word',
-                      lineHeight: '1.3',
+                      lineHeight: '1.2',
                       margin: 0,
                       padding: 0,
                       textAlign: 'center',
-                      color: '#7b9acc',
-                      fontSize: 'clamp(36px, 6vw, 72px)',
-                      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
+                      color: '#ffffff',
+                      fontSize: 'clamp(48px, 8vw, 96px)',
+                      fontFamily: "'Playfair Display', 'Georgia', serif",
                       fontStyle: 'normal',
-                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(123, 154, 204, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
+                      textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5)',
                       display: 'block',
                       visibility: 'visible',
                       opacity: 1,
-                      fontWeight: 700,
+                      fontWeight: 400,
                       zIndex: 1001,
                       position: 'relative',
-                      letterSpacing: '2px',
+                      letterSpacing: '1px',
                       width: '100%'
                     }}
                   >
-                    Ngọc Minh
+                    Ngọc<br />Minh
                   </h2>
                   <span 
                     className="deco-big beating-heart" 
                     style={{
                       display: 'block',
-                      color: '#7b9acc',
-                      fontSize: 'clamp(60px, 10vw, 120px)',
-                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(123, 154, 204, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
+                      color: 'rgba(255, 255, 255, 0.7)',
+                      fontSize: 'clamp(72px, 12vw, 144px)',
+                      textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
                       visibility: 'visible',
                       opacity: 1,
                       zIndex: 1001,
                       position: 'relative',
-                      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
-                      fontStyle: 'normal',
+                      fontFamily: "'Playfair Display', 'Georgia', serif",
+                      fontStyle: 'italic',
                       lineHeight: 1,
                       animation: isVisible ? 'zoomIn 1.5s ease-out 0.5s, pulse 2s ease-in-out infinite 2s' : 'none',
                       animationFillMode: 'both',
                       textAlign: 'center',
-                      margin: '10px 0'
+                      margin: '20px 0',
+                      fontWeight: 300
                     }}
                   >
                     &amp;
@@ -154,28 +153,28 @@ const Hero = () => {
                     style={{
                       whiteSpace: 'normal',
                       wordWrap: 'break-word',
-                      lineHeight: '1.3',
+                      lineHeight: '1.2',
                       margin: 0,
                       padding: 0,
                       textAlign: 'center',
-                      color: '#7b9acc',
-                      fontSize: 'clamp(36px, 6vw, 72px)',
-                      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
+                      color: '#ffffff',
+                      fontSize: 'clamp(48px, 8vw, 96px)',
+                      fontFamily: "'Playfair Display', 'Georgia', serif",
                       fontStyle: 'normal',
-                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(123, 154, 204, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
+                      textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5)',
                       display: 'block',
                       visibility: 'visible',
                       opacity: 1,
-                      fontWeight: 700,
+                      fontWeight: 400,
                       zIndex: 1001,
                       position: 'relative',
-                      letterSpacing: '2px',
+                      letterSpacing: '1px',
                       animation: isVisible ? 'fadeInUp 1.5s ease-out 0.7s' : 'none',
                       animationFillMode: 'both',
                       width: '100%'
                     }}
                   >
-                    Tuấn Minh
+                    Tuấn<br />Minh
                   </h2>
                 </div>
               </div>

@@ -26,7 +26,7 @@ const Quote = () => {
                 boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
                 margin: 0,
                 fontSize: '18px',
-                fontFamily: "'Georgia', 'Times New Roman', serif",
+                fontFamily: "'Playfair Display', 'Georgia', serif",
                 letterSpacing: '0.5px',
                 border: 'none',
                 width: '100%'
@@ -51,12 +51,13 @@ const Quote = () => {
                 textAlign: 'right', 
                 marginTop: '30px',
                 paddingTop: '20px',
-                borderTop: '1px solid rgba(212, 175, 55, 0.3)'
+                borderTop: '1px solid rgba(90, 108, 125, 0.3)'
               }}>
                 <span style={{ 
                   fontStyle: 'italic', 
                   fontSize: '16px',
-                  color: '#d4af37',
+                  color: '#5a6c7d',
+                  fontFamily: "'Playfair Display', 'Georgia', serif",
                   fontWeight: 500
                 }}>
                   — Ngọc Minh & Tuấn Minh

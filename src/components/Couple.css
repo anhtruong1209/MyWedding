@@ -1,0 +1,68 @@
+/* Couple Section Layout */
+#section-couple {
+  padding: 80px 0;
+}
+
+#section-couple .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+#section-couple .col-md-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+  padding: 20px;
+}
+
+#section-couple .col-md-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heart icon animation */
+#section-couple .circle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+#section-couple .circle i {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #section-couple .col-md-5,
+  #section-couple .col-md-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  #section-couple .col-md-2 {
+    order: 2;
+    margin: 20px 0;
+  }
+  
+  #section-couple .col-md-5:first-child {
+    order: 1;
+  }
+  
+  #section-couple .col-md-5:last-child {
+    order: 3;
+  }
+}
+

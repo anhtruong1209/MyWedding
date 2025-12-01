@@ -1,0 +1,141 @@
+/* Header/Navbar Fixes */
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+header .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+header .col-md-12 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+/* Logo */
+header #logo {
+  flex: 0 0 auto;
+  margin-right: auto;
+  float: none;
+}
+
+header #logo h2 {
+  margin: 0;
+  line-height: 70px;
+  white-space: nowrap;
+}
+
+/* Navigation */
+header nav {
+  flex: 0 0 auto;
+  margin: 0 20px;
+  float: none;
+}
+
+header #mainmenu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+header #mainmenu li {
+  position: relative;
+  float: none;
+  display: inline-block;
+}
+
+header #mainmenu li a {
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* RSVP Button */
+header .btn-rsvp {
+  flex: 0 0 auto;
+  margin-left: 20px;
+  margin-right: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  float: none;
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Mobile Menu Button */
+header #menu-btn {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  header .col-md-12 {
+    flex-wrap: wrap;
+  }
+  
+  header nav {
+    order: 3;
+    width: 100%;
+    margin: 10px 0 0 0;
+    clear: both;
+  }
+  
+  header #mainmenu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  header .btn-rsvp {
+    order: 2;
+    margin-left: auto;
+  }
+  
+  header #menu-btn {
+    display: block;
+    order: 1;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header #logo h2 {
+    font-size: 24px !important;
+  }
+  
+  header #mainmenu li a {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  
+  header .btn-rsvp {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+

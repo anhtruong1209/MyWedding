@@ -13,17 +13,25 @@ const Hero = () => {
     const initSlider = () => {
       if (window.jQuery && window.jQuery.fn.owlCarousel && sliderRef.current) {
         const $slider = window.jQuery(sliderRef.current)
+        
+        // Destroy existing instance if any
+        if ($slider.data('owlCarousel')) {
+          $slider.data('owlCarousel').destroy()
+        }
+        
         $slider.owlCarousel({
           items: 1,
           loop: true,
           autoplay: true,
-          autoplayTimeout: 5000,
+          autoplayTimeout: 4000,
           autoplayHoverPause: true,
           nav: true,
+          navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
           dots: false,
           animateOut: 'fadeOut',
           animateIn: 'fadeIn',
           smartSpeed: 1000,
+          autoplaySpeed: 1000,
         })
       } else {
         // Retry if jQuery not ready
@@ -31,7 +39,8 @@ const Hero = () => {
       }
     }
     
-    initSlider()
+    // Wait a bit for scripts to load
+    setTimeout(initSlider, 500)
   }, [])
 
   const sliderImages = [
@@ -62,18 +71,31 @@ const Hero = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-md-offset-2">
-              <div className="row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '400px' }}>
+              <div 
+                className="row" 
+                style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  minHeight: '400px',
+                  width: '100%',
+                  margin: 0,
+                  flexDirection: 'column'
+                }}
+              >
                 <div className="spacer-single"></div>
                 <div 
-                  className="col-md-5 text-right text-center-sm relative" 
                   style={{ 
-                    paddingRight: '15px', 
                     display: 'flex', 
                     alignItems: 'center', 
-                    justifyContent: 'flex-end', 
+                    justifyContent: 'center', 
                     zIndex: 1000, 
                     position: 'relative',
-                    animation: isVisible ? 'fadeInLeft 1.5s ease-out' : 'none'
+                    animation: isVisible ? 'fadeInUp 1.5s ease-out' : 'none',
+                    animationFillMode: 'both',
+                    flexDirection: 'row',
+                    gap: '20px',
+                    flexWrap: 'wrap'
                   }}
                 >
                   <h2 
@@ -83,12 +105,13 @@ const Hero = () => {
                       wordWrap: 'break-word',
                       lineHeight: '1.3',
                       margin: 0,
-                      textAlign: 'right',
+                      padding: 0,
+                      textAlign: 'center',
                       color: '#d4af37',
                       fontSize: 'clamp(36px, 6vw, 72px)',
                       fontFamily: "'Allura', cursive",
                       textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
-                      display: 'block',
+                      display: 'inline-block',
                       visibility: 'visible',
                       opacity: 1,
                       fontWeight: 700,
@@ -99,20 +122,6 @@ const Hero = () => {
                   >
                     Lê Thị Ngọc Minh
                   </h2>
-                </div>
-                <div 
-                  className="col-md-2 text-center" 
-                  style={{ 
-                    padding: '0 15px', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center', 
-                    zIndex: 1000, 
-                    position: 'relative',
-                    animation: isVisible ? 'zoomIn 1.5s ease-out 0.5s, pulse 2s ease-in-out infinite 2s' : 'none',
-                    animationFillMode: 'both'
-                  }}
-                >
                   <span 
                     className="deco-big beating-heart" 
                     style={{
@@ -125,24 +134,13 @@ const Hero = () => {
                       zIndex: 1001,
                       position: 'relative',
                       fontFamily: "'Allura', cursive",
+                      lineHeight: 1,
+                      animation: isVisible ? 'zoomIn 1.5s ease-out 0.5s, pulse 2s ease-in-out infinite 2s' : 'none',
+                      animationFillMode: 'both'
                     }}
                   >
                     &amp;
                   </span>
-                </div>
-                <div 
-                  className="col-md-5 text-left text-center-sm relative" 
-                  style={{ 
-                    paddingLeft: '15px', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'flex-start', 
-                    zIndex: 1000, 
-                    position: 'relative',
-                    animation: isVisible ? 'fadeInRight 1.5s ease-out 0.7s' : 'none',
-                    animationFillMode: 'both'
-                  }}
-                >
                   <h2 
                     className="name" 
                     style={{
@@ -150,18 +148,21 @@ const Hero = () => {
                       wordWrap: 'break-word',
                       lineHeight: '1.3',
                       margin: 0,
-                      textAlign: 'left',
+                      padding: 0,
+                      textAlign: 'center',
                       color: '#d4af37',
                       fontSize: 'clamp(36px, 6vw, 72px)',
                       fontFamily: "'Allura', cursive",
                       textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
-                      display: 'block',
+                      display: 'inline-block',
                       visibility: 'visible',
                       opacity: 1,
                       fontWeight: 700,
                       zIndex: 1001,
                       position: 'relative',
                       letterSpacing: '2px',
+                      animation: isVisible ? 'fadeInUp 1.5s ease-out 0.7s' : 'none',
+                      animationFillMode: 'both'
                     }}
                   >
                     Vũ Tuấn Minh

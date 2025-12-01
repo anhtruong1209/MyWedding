@@ -1,16 +1,19 @@
 import React from 'react'
+import './Couple.css'
 
 const Couple = () => {
   return (
     <section id="section-couple" className="no-top no-bottom">
       <div className="container">
-        <div className="row">
-          <div className="col-md-5 text-center">
+        <div className="row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+          {/* Cô dâu - Bên trái */}
+          <div className="col-md-5 text-center" style={{ padding: '20px' }}>
             <img
               src="/images/misc/2.jpg"
               alt="Lê Thị Ngọc Minh"
               className="img-responsive img-rounded wow fadeInLeft zoom-in"
               data-wow-delay=".2s"
+              style={{ width: '100%', maxWidth: '400px', height: 'auto', borderRadius: '10px' }}
             />
             <div className="padding40 wow slideUpFade" data-wow-delay=".4s">
               <h2>Lê Thị Ngọc Minh</h2>
@@ -34,18 +37,36 @@ const Couple = () => {
             </div>
           </div>
 
-          <div className="col-md-2 col-md-offset-5 text-center absolute">
-            <span className="circle wow zoomIn pulse beating-heart" data-wow-delay=".8s">
-              <i className="fa fa-heart float-animation"></i>
+          {/* Trái tim ở giữa */}
+          <div className="col-md-2 text-center" style={{ padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span 
+              className="circle wow zoomIn pulse beating-heart" 
+              data-wow-delay=".8s"
+              style={{
+                display: 'inline-block',
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #d4af37, #f4d03f)',
+                boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                animation: 'pulse 2s ease-in-out infinite'
+              }}
+            >
+              <i className="fa fa-heart" style={{ color: '#fff', fontSize: '40px' }}></i>
             </span>
           </div>
 
-          <div className="col-md-5 text-center col-md-offset-7">
+          {/* Chú rể - Bên phải */}
+          <div className="col-md-5 text-center" style={{ padding: '20px' }}>
             <img
               src="/images/misc/1.jpg"
               alt="Vũ Tuấn Minh"
               className="img-responsive img-rounded wow fadeInRight zoom-in"
               data-wow-delay=".2s"
+              style={{ width: '100%', maxWidth: '400px', height: 'auto', borderRadius: '10px' }}
             />
             <div className="padding40 wow slideUpFade" data-wow-delay=".6s">
               <h2>Vũ Tuấn Minh</h2>

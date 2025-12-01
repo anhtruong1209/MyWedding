@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Header.css'
 
 const Header = ({ onRSVPClick }) => {
   const [isScrolled, setIsScrolled] = useState(false)

@@ -50,6 +50,57 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section Layout Fixes */
+#section-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#section-hero .center-y {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+}
+
+#section-hero .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#section-hero .row {
+  margin: 0;
+  width: 100%;
+}
+
+#section-hero .col-md-8 {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#section-hero .col-md-8 .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+}
+
 /* Ensure text is always visible */
 #section-hero .name {
   animation-fill-mode: both;
@@ -60,6 +111,29 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+  #section-hero .col-md-8 .row {
+    flex-wrap: wrap;
+  }
+  
+  #section-hero .col-md-5,
+  #section-hero .col-md-2 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    justify-content: center !important;
+  }
+  
+  #section-hero .name {
+    text-align: center !important;
+    font-size: 48px !important;
+  }
+  
+  #section-hero .deco-big {
+    font-size: 80px !important;
+  }
+}
+
 @media (max-width: 768px) {
   #section-hero .name {
     font-size: 36px !important;
@@ -69,4 +143,3 @@
     font-size: 60px !important;
   }
 }
-

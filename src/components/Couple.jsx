@@ -4,16 +4,16 @@ import './Couple.css'
 const Couple = () => {
   return (
     <section id="section-couple" className="no-top no-bottom">
-      <div className="container">
-        <div className="row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div className="container" style={{ maxWidth: '1400px', width: '100%' }}>
+        <div className="row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', margin: 0 }}>
           {/* Cô dâu - Bên trái */}
-          <div className="col-md-5 text-center" style={{ padding: '20px' }}>
+          <div className="col-md-5 text-center" style={{ padding: '30px' }}>
             <img
               src="/images/misc/2.jpg"
               alt="Lê Thị Ngọc Minh"
               className="img-responsive img-rounded wow fadeInLeft zoom-in"
               data-wow-delay=".2s"
-              style={{ width: '100%', maxWidth: '400px', height: 'auto', borderRadius: '10px' }}
+              style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '15px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)' }}
             />
             <div className="padding40 wow slideUpFade" data-wow-delay=".4s">
               <h2>Lê Thị Ngọc Minh</h2>
@@ -22,7 +22,7 @@ const Couple = () => {
                 là ngôi sao sáng nhất trên bầu trời đêm." ❤️
               </p>
               <div className="social-icons-sm">
-                <a href="https://www.facebook.com/profile.php?id=100006943964259">
+                <a href="#">
                   <i className="fa fa-facebook"></i>
                 </a>
                 <a href="#"><i className="fa fa-twitter"></i></a>
@@ -60,22 +60,22 @@ const Couple = () => {
           </div>
 
           {/* Chú rể - Bên phải */}
-          <div className="col-md-5 text-center" style={{ padding: '20px' }}>
+          <div className="col-md-5 text-center" style={{ padding: '30px' }}>
             <img
               src="/images/misc/1.jpg"
               alt="Vũ Tuấn Minh"
               className="img-responsive img-rounded wow fadeInRight zoom-in"
               data-wow-delay=".2s"
-              style={{ width: '100%', maxWidth: '400px', height: 'auto', borderRadius: '10px' }}
+              style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '15px', boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)' }}
             />
             <div className="padding40 wow slideUpFade" data-wow-delay=".6s">
               <h2>Vũ Tuấn Minh</h2>
               <p>
-                Lập trình viên vui tính, luôn yêu đời, yêu âm nhạc và thích phiêu lưu. 
+                Chàng trai dịu dàng, thân thiện, luôn yêu đời, yêu âm nhạc và thích phiêu lưu. 
                 "Trên đời này chỉ có một thứ hạnh phúc duy nhất là yêu và được yêu em." ❤️
               </p>
               <div className="social-icons-sm">
-                <a href="https://www.facebook.com/anhtruong1209">
+                <a href="$">
                   <i className="fa fa-facebook"></i>
                 </a>
                 <a href="#"><i className="fa fa-twitter"></i></a>

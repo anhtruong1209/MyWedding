@@ -35,9 +35,7 @@ const Header = ({ onRSVPClick }) => {
         <div className="row">
           <div className="col-md-12">
             <div id="logo">
-              <a href="#home">
                 <h2>Minh <span>&amp;</span> Minh</h2>
-              </a>
             </div>
 
             <span 

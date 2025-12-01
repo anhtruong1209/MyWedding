@@ -66,10 +66,17 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-hero .center-y {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 100;
   width: 100%;
 }
@@ -79,26 +86,38 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-hero .row {
   margin: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-hero .col-md-8 {
   width: 100%;
+  max-width: 800px;
   padding: 0 15px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-hero .col-md-8 .row {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
   width: 100%;
   margin: 0;
+  gap: 15px;
 }
 
 /* Ensure text is always visible */

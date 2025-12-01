@@ -25,9 +25,64 @@ body {
 
 /* Header Enhancements */
 header {
-  background: rgba(212, 175, 55, 0.15) !important;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  top: 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px 0;
+}
+
+header.smaller {
+  padding: 12px 0 !important;
+  box-shadow: 0 4px 30px rgba(212, 175, 55, 0.2) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.25) !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Override style.css conflicting rules */
+header.smaller div#logo {
+  line-height: 1.2 !important;
+  height: auto !important;
+}
+
+header.smaller div#logo h2 {
+  line-height: 1.2 !important;
+  height: auto !important;
+}
+
+/* Ensure container and row maintain layout when scrolled */
+header.smaller .container,
+header.smaller .row {
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+header.smaller .container {
+  max-width: 1200px !important;
+  padding: 0 15px !important;
+}
+
+header.smaller .row {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Fix menu items when scrolled */
+header.smaller #mainmenu li a {
+  line-height: 1.5 !important;
+  padding: 8px 18px !important;
+  height: auto !important;
 }
 
 /* Ensure menu items are visible */
@@ -39,100 +94,278 @@ header #mainmenu li a {
   z-index: 1001;
 }
 
+header #mainmenu {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+header.smaller #mainmenu {
+  gap: 4px !important;
+}
+
+header #mainmenu li {
+  position: relative !important;
+  list-style: none !important;
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
 header #mainmenu li a {
-  color: #fff !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  font-weight: 600;
+  color: #4a4a4a !important;
+  text-shadow: none;
+  font-weight: 500;
+  font-size: 15px;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  padding: 8px 18px !important;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  position: relative;
+  line-height: 1.5;
+}
+
+header #mainmenu li a::before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+header #mainmenu li a:hover {
+  color: var(--gold-dark) !important;
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-1px);
+}
+
+header #mainmenu li a:hover::before {
+  width: 70%;
 }
 
 header.header-light #mainmenu li a,
 header.smaller #mainmenu li a {
-  color: #333 !important;
+  color: #4a4a4a !important;
   text-shadow: none;
+}
+
+header.header-light #mainmenu li a:hover,
+header.smaller #mainmenu li a:hover {
+  color: var(--gold-dark) !important;
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* Ensure proper layout spacing - FIXED FOR SCROLL */
+header .col-md-12 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+}
+
+header.smaller .col-md-12 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+
+header nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 15px !important;
+  min-width: 0 !important;
+  order: 2 !important;
+}
+
+header.smaller nav {
+  margin: 0 12px !important;
 }
 
 /* Fix navbar layout - only adjust button position, keep original layout */
 header .btn-rsvp {
-  float: right;
-  margin-left: 20px;
-  margin-right: 0;
-  position: relative;
-  z-index: 1001;
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  position: relative !important;
+  z-index: 1001 !important;
   color: #fff !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  white-space: nowrap;
-  display: inline-block;
+  text-shadow: none !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%) !important;
+  border: none !important;
+  top: -5px !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.8px !important;
+  box-shadow: 0 3px 12px rgba(212, 175, 55, 0.35) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+  line-height: 1.5 !important;
+  flex: 0 0 auto !important;
+  order: 3 !important;
+}
+
+header .btn-rsvp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%) !important;
+}
+
+header.smaller .btn-rsvp {
+  padding: 9px 26px !important;
+  font-size: 12px !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4) !important;
+  height: auto !important;
+  padding-top: 9px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
 }
 
 /* Responsive fixes for navbar */
 @media (max-width: 992px) {
+  header {
+    padding: 12px 0;
+  }
+  
   header div#logo {
-    float: left;
+    float: none;
     width: auto;
+    flex: 0 0 auto;
+  }
+  
+  header div#logo h2 {
+    font-size: 28px;
   }
   
   header .btn-rsvp {
-    float: right;
+    float: none;
     margin: 0 10px;
+    padding: 10px 25px !important;
+    font-size: 13px;
   }
   
   header nav {
     clear: both;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
     float: none;
+    order: 3;
   }
   
   header #mainmenu {
     width: 100%;
     text-align: center;
     float: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
   }
   
   header #mainmenu li {
     float: none;
     display: inline-block;
   }
+  
+  header #mainmenu li a {
+    padding: 8px 15px !important;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+  
   header div#logo h2 {
-    font-size: 28px !important;
+    font-size: 24px !important;
+  }
+  
+  header #mainmenu {
+    gap: 2px;
   }
   
   header #mainmenu li a {
-    padding: 15px 10px !important;
-    font-size: 12px;
+    padding: 8px 12px !important;
+    font-size: 13px;
   }
   
   header .btn-rsvp {
     font-size: 12px;
-    padding: 8px 15px;
+    padding: 8px 20px !important;
+    margin: 0 5px;
   }
 }
 
-header.smaller {
-  background: rgba(255, 248, 231, 0.95) !important;
-  box-shadow: 0 2px 20px rgba(212, 175, 55, 0.1);
+header div#logo {
+  display: flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  margin-right: 0 !important;
+  z-index: 1002 !important;
+  position: relative !important;
+  order: 1 !important;
+  min-width: 0 !important;
 }
 
 header div#logo h2 {
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 700 !important;
+  font-size: 34px !important;
   color: var(--gold) !important; /* Fallback color if gradient doesn't work */
+  margin: 0 !important;
+  padding: 0 !important;
+  letter-spacing: 2px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+header div#logo h2:hover {
+  transform: scale(1.03) !important;
+  filter: brightness(1.1) !important;
+}
+
+header.smaller div#logo {
+  flex: 0 0 auto !important;
+}
+
+header.smaller div#logo h2 {
+  font-size: 28px !important;
 }
 
 /* Ensure logo text is visible */
 header div#logo h2,
 header div#logo h2 span {
   color: var(--gold) !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+  font-family: 'Allura', cursive;
+}
+
+header div#logo h2 span {
+  margin: 0 5px;
 }
 
 /* Fallback for browsers that don't support background-clip */
@@ -148,6 +381,9 @@ header div#logo h2 span {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-hero::before {
@@ -168,7 +404,11 @@ header div#logo h2 span {
 }
 
 #section-hero .center-y {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
   z-index: 100 !important;
   pointer-events: none;
 }
@@ -177,37 +417,68 @@ header div#logo h2 span {
   pointer-events: auto;
 }
 
-#section-hero .row {
+#section-hero .center-y .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#section-hero .center-y .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
   position: relative;
   z-index: 10;
+}
+
+#section-hero .col-md-8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#section-hero .col-md-8 .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
 }
 
 #section-hero .col-md-5 {
   display: flex;
   align-items: center;
-  min-height: 120px;
+  justify-content: center;
+  min-height: auto;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
 #section-hero .col-md-5.text-right {
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #section-hero .col-md-5.text-left {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #section-hero .col-md-2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
+  min-height: auto;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
 /* Ensure slider is behind text */
@@ -856,6 +1127,7 @@ footer h2 {
   background-size: 200% auto;
   animation: goldShimmer 3s linear infinite;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

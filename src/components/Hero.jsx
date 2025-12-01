@@ -63,27 +63,31 @@ const Hero = () => {
         className="center-y fadeScroll relative" 
         style={{ 
           zIndex: 100, 
-          position: 'relative',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '100%',
           opacity: isVisible ? 1 : 0,
           transition: 'opacity 1s ease-in-out'
         }}
       >
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+        <div className="container" style={{ width: '100%', maxWidth: '1200px', margin: '0 auto', padding: '0 15px' }}>
+          <div className="row" style={{ margin: 0, width: '100%' }}>
+            <div className="col-md-8 col-md-offset-2" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', padding: '0 15px' }}>
               <div 
                 className="row" 
                 style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
-                  minHeight: '400px',
                   width: '100%',
                   margin: 0,
-                  flexDirection: 'column'
+                  flexDirection: 'column',
+                  gap: '15px',
+                  top: '220px'
                 }}
               >
-                <div className="spacer-single"></div>
                 <div 
                   style={{ 
                     display: 'flex', 
@@ -93,9 +97,9 @@ const Hero = () => {
                     position: 'relative',
                     animation: isVisible ? 'fadeInUp 1.5s ease-out' : 'none',
                     animationFillMode: 'both',
-                    flexDirection: 'row',
-                    gap: '20px',
-                    flexWrap: 'wrap'
+                    flexDirection: 'column',
+                    gap: '15px',
+                    width: '100%'
                   }}
                 >
                   <h2 
@@ -111,13 +115,14 @@ const Hero = () => {
                       fontSize: 'clamp(36px, 6vw, 72px)',
                       fontFamily: "'Allura', cursive",
                       textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
-                      display: 'inline-block',
+                      display: 'block',
                       visibility: 'visible',
                       opacity: 1,
                       fontWeight: 700,
                       zIndex: 1001,
                       position: 'relative',
                       letterSpacing: '2px',
+                      width: '100%'
                     }}
                   >
                     Lê Thị Ngọc Minh
@@ -125,7 +130,7 @@ const Hero = () => {
                   <span 
                     className="deco-big beating-heart" 
                     style={{
-                      display: 'inline-block',
+                      display: 'block',
                       color: '#d4af37',
                       fontSize: 'clamp(60px, 10vw, 120px)',
                       textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
@@ -136,7 +141,9 @@ const Hero = () => {
                       fontFamily: "'Allura', cursive",
                       lineHeight: 1,
                       animation: isVisible ? 'zoomIn 1.5s ease-out 0.5s, pulse 2s ease-in-out infinite 2s' : 'none',
-                      animationFillMode: 'both'
+                      animationFillMode: 'both',
+                      textAlign: 'center',
+                      margin: '10px 0'
                     }}
                   >
                     &amp;
@@ -154,7 +161,7 @@ const Hero = () => {
                       fontSize: 'clamp(36px, 6vw, 72px)',
                       fontFamily: "'Allura', cursive",
                       textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
-                      display: 'inline-block',
+                      display: 'block',
                       visibility: 'visible',
                       opacity: 1,
                       fontWeight: 700,
@@ -162,7 +169,8 @@ const Hero = () => {
                       position: 'relative',
                       letterSpacing: '2px',
                       animation: isVisible ? 'fadeInUp 1.5s ease-out 0.7s' : 'none',
-                      animationFillMode: 'both'
+                      animationFillMode: 'both',
+                      width: '100%'
                     }}
                   >
                     Vũ Tuấn Minh

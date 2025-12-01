@@ -50,7 +50,7 @@ const Header = ({ onRSVPClick }) => {
             ></span>
 
             <span className="btn-rsvp" onClick={onRSVPClick}>
-              Lời mời hân hạnh
+              Lời mời
             </span>
 
             <nav>

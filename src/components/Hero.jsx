@@ -23,14 +23,14 @@ const Hero = () => {
           items: 1,
           loop: true,
           autoplay: true,
-          autoplayTimeout: 5000,
+          autoplayTimeout: 2000,
           autoplayHoverPause: false,
           nav: false,
           dots: false,
           animateOut: 'fadeOut',
           animateIn: 'fadeIn',
-          smartSpeed: 800,
-          autoplaySpeed: 800,
+          smartSpeed: 600,
+          autoplaySpeed: 600,
         })
       } else {
         // Retry if jQuery not ready
@@ -110,10 +110,11 @@ const Hero = () => {
                       margin: 0,
                       padding: 0,
                       textAlign: 'center',
-                      color: '#d4af37',
+                      color: '#7b9acc',
                       fontSize: 'clamp(36px, 6vw, 72px)',
-                      fontFamily: "'Allura', cursive",
-                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
+                      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
+                      fontStyle: 'normal',
+                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(123, 154, 204, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
                       display: 'block',
                       visibility: 'visible',
                       opacity: 1,
@@ -130,14 +131,15 @@ const Hero = () => {
                     className="deco-big beating-heart" 
                     style={{
                       display: 'block',
-                      color: '#d4af37',
+                      color: '#7b9acc',
                       fontSize: 'clamp(60px, 10vw, 120px)',
-                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
+                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(123, 154, 204, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
                       visibility: 'visible',
                       opacity: 1,
                       zIndex: 1001,
                       position: 'relative',
-                      fontFamily: "'Allura', cursive",
+                      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
+                      fontStyle: 'normal',
                       lineHeight: 1,
                       animation: isVisible ? 'zoomIn 1.5s ease-out 0.5s, pulse 2s ease-in-out infinite 2s' : 'none',
                       animationFillMode: 'both',
@@ -156,10 +158,11 @@ const Hero = () => {
                       margin: 0,
                       padding: 0,
                       textAlign: 'center',
-                      color: '#d4af37',
+                      color: '#7b9acc',
                       fontSize: 'clamp(36px, 6vw, 72px)',
-                      fontFamily: "'Allura', cursive",
-                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(212, 175, 55, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
+                      fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
+                      fontStyle: 'normal',
+                      textShadow: '5px 5px 15px rgba(0, 0, 0, 1), 0 0 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(123, 154, 204, 0.5), 3px 3px 6px rgba(0, 0, 0, 1)',
                       display: 'block',
                       visibility: 'visible',
                       opacity: 1,
@@ -184,7 +187,7 @@ const Hero = () => {
       <div id="custom-owl-slider" className="owl-slide" ref={sliderRef} style={{ zIndex: 1 }}>
         {sliderImages.map((img, index) => (
           <div key={index} className="item">
-            <img src={img} alt={`Slide ${index + 1}`} style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
+            <img src={img} alt={`Slide ${index + 1}`} style={{ width: '100%', height: '100vh', objectFit: 'cover', maxWidth: '100%' }} />
           </div>
         ))}
       </div>

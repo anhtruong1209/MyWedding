@@ -43,7 +43,6 @@ const Couple = () => {
               className="circle wow zoomIn pulse beating-heart" 
               data-wow-delay=".8s"
               style={{
-                display: 'inline-block',
                 width: '80px',
                 height: '80px',
                 borderRadius: '50%',

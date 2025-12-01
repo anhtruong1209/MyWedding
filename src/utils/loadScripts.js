@@ -1,6 +1,6 @@
 // Load external JavaScript libraries
 export const loadScripts = () => {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     // Check if jQuery is already loaded
     if (window.jQuery) {
       loadPlugins()
@@ -13,6 +13,11 @@ export const loadScripts = () => {
     jqueryScript.src = '/js/jquery.min.js'
     jqueryScript.onload = () => {
       loadPlugins()
+      resolve()
+    }
+    jqueryScript.onerror = () => {
+      console.warn('jQuery failed to load, continuing without it')
+      // Continue even if jQuery fails
       resolve()
     }
     document.body.appendChild(jqueryScript)

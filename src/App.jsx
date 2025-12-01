@@ -26,6 +26,10 @@ function App() {
           new window.WOW().init()
         }
       }, 500)
+    }).catch((error) => {
+      console.error('Error loading scripts:', error)
+      // Continue even if scripts fail to load
+      setScriptsLoaded(true)
     })
   }, [])
 

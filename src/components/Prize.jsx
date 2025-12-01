@@ -37,7 +37,7 @@ const Prize = () => {
               >
                 <i className="fa fa-gift"></i>
                 <h3>Cô dâu</h3>
-                <p>Lê Thị Ngọc Minh</p>
+                <p>Ngọc Minh</p>
               </div>
             </div>
             <div className="col-md-4 text-center">
@@ -47,7 +47,7 @@ const Prize = () => {
               >
                 <i className="fa fa-gift"></i>
                 <h3>Chú rể</h3>
-                <p>Vũ Tuấn Minh</p>
+                <p>Tuấn Minh</p>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Prize = () => {
               marginBottom: '20px',
               fontFamily: "'Allura', cursive"
             }}>
-              {selectedQR === 'codau' ? 'Lê Thị Ngọc Minh' : 'Vũ Tuấn Minh'}
+              {selectedQR === 'codau' ? 'Ngọc Minh' : 'Tuấn Minh'}
             </h3>
             <div style={{
               background: '#fff',

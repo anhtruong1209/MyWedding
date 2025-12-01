@@ -1,6 +1,6 @@
 # Wedding Website - React Version
 
-Website đám cưới cho Vũ Tuấn Minh & Lê Thị Ngọc Minh - Phiên bản ReactJS
+Website đám cưới cho Tuấn Minh & Ngọc Minh - Phiên bản ReactJS
 
 ## 🚀 Cài đặt và Chạy
 

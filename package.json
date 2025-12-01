@@ -2,7 +2,7 @@
   "name": "my-wedding-react",
   "version": "1.0.0",
   "type": "module",
-  "description": "Wedding website for Vũ Tuấn Minh & Lê Thị Ngọc Minh",
+  "description": "Wedding website for Tuấn Minh & Ngọc Minh",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

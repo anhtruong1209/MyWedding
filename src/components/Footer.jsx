@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-12 text-center">
             <h2 className="hs1 wow fadeInUp">
-              Lê Thị Ngọc Minh <span>&amp;</span> Vũ Tuấn Minh
+              Ngọc Minh <span>&amp;</span> Tuấn Minh
             </h2>
             <div className="spacer-single"></div>
             <p className="wow fadeInUp">
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <div className="spacer-single"></div>
             <div className="copyright">
-              &copy; Copyright 2025 - Thiết kế bởi Vũ Tuấn Minh
+              &copy; Copyright 2025 - Thiết kế bởi Tuấn Minh
             </div>
           </div>
         </div>

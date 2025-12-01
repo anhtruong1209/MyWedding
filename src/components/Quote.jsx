@@ -59,7 +59,7 @@ const Quote = () => {
                   color: '#d4af37',
                   fontWeight: 500
                 }}>
-                  — Lê Thị Ngọc Minh & Vũ Tuấn Minh
+                  — Ngọc Minh & Tuấn Minh
                 </span>
                 <span className="beating-heart" style={{ marginLeft: '10px', fontSize: '18px' }}>❤️</span>
               </div>

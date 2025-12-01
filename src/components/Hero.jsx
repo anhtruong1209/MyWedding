@@ -124,7 +124,7 @@ const Hero = () => {
                       width: '100%'
                     }}
                   >
-                    Lê Thị Ngọc Minh
+                    Ngọc Minh
                   </h2>
                   <span 
                     className="deco-big beating-heart" 
@@ -172,7 +172,7 @@ const Hero = () => {
                       width: '100%'
                     }}
                   >
-                    Vũ Tuấn Minh
+                    Tuấn Minh
                   </h2>
                 </div>
               </div>

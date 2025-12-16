@@ -94,7 +94,7 @@ const Events = () => {
               <span>Lễ cưới nhà trai</span>
             </h2>
             <div className="big-countdown">
-          <div className="big-date">Thứ bảy, ngày 27/12/2025</div>
+          <div className="big-date">Thứ Bảy, ngày 27/12/2025</div>
           <div className="big-timer">{timers.boy}</div>
         </div>
             <div className="event-location">Đón khách: 17h00</div>

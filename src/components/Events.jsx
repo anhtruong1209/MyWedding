@@ -97,7 +97,7 @@ const Events = () => {
           <div className="big-date">Thứ Bảy, ngày 27/12/2025</div>
           <div className="big-timer">{timers.boy}</div>
         </div>
-            <div className="event-location">Đón khách: 17h00</div>
+            <div className="event-location">Đón khách: 10h30</div>
             <div className="event-location">Địa chỉ: Trung Tâm Hội Nghị Tiệc Cưới Forevermark</div>
             <div className="spacer-single"></div>
 

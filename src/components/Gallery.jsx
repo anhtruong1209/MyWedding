@@ -39,30 +39,38 @@ const Gallery = () => {
             <div className="spacer-single"></div>
           </div>
         </div>
-        <div className="row gallery-vertical" ref={galleryRef} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-          {galleryImages.map((img, index) => (
-            <div key={index} className="gallery-item-vertical" style={{ width: '100%', maxWidth: '600px' }}>
-              <div className="picframe img-rounded mb20" style={{ width: '100%', position: 'relative', overflow: 'hidden' }}>
-                <a className="image-popup" href={img}>
-                  <span className="overlay-v">
-                    <i></i>
-                  </span>
-                </a>
-                <img
-                  src={img}
-                  className="img-responsive img-rounded gallery-vertical-img"
-                  alt={`Gallery ${index + 1}`}
-                  style={{ 
-                    width: '100%', 
-                    height: 'auto', 
-                    objectFit: 'cover',
-                    display: 'block',
-                    aspectRatio: 'auto'
-                  }}
-                />
+        <div className="row gallery-grid" ref={galleryRef}>
+          {galleryImages.map((img, index) => {
+            // Add cache busting only in development or when needed
+            const imageSrc = process.env.NODE_ENV === 'development' 
+              ? `${img}?v=${Date.now()}` 
+              : img;
+            
+            return (
+              <div key={index} className="gallery-item col-md-4 col-sm-6 mb30">
+                <div className="picframe img-rounded mb20">
+                  <a className="image-popup" href={imageSrc}>
+                    <span className="overlay-v">
+                      <i></i>
+                    </span>
+                  </a>
+                  <img
+                    src={imageSrc}
+                    className="img-responsive img-rounded gallery-img"
+                    alt={`Gallery ${index + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      // Fallback: try without cache busting
+                      if (imageSrc.includes('?v=')) {
+                        e.target.src = img;
+                      }
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

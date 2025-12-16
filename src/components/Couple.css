@@ -37,6 +37,9 @@
   background: linear-gradient(135deg, #d4af37, #f4d03f);
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
   animation: pulse 2s ease-in-out infinite;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 #section-couple .circle i {
@@ -59,7 +62,10 @@
   
   #section-couple .col-md-2 {
     order: 2;
-    margin: 15px 0;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   #section-couple .col-md-5:first-child {
@@ -73,6 +79,7 @@
   #section-couple .circle {
     width: 60px;
     height: 60px;
+    margin: 12px auto;
   }
 
   #section-couple .circle i {
@@ -101,6 +108,7 @@
   #section-couple .circle {
     width: 50px;
     height: 50px;
+    margin: 12px auto;
   }
 
   #section-couple .circle i {

@@ -37,26 +37,6 @@ const Couple = () => {
             </div>
           </div>
 
-          {/* Trái tim ở giữa */}
-          <div className="col-md-2 text-center" style={{ padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <span 
-              className="circle wow zoomIn pulse beating-heart" 
-              data-wow-delay=".8s"
-              style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #5a6c7d, #8b9ba8)',
-                boxShadow: '0 4px 15px rgba(90, 108, 125, 0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                animation: 'pulse 2s ease-in-out infinite'
-              }}
-            >
-              <i className="fa fa-heart" style={{ color: '#fff', fontSize: '40px' }}></i>
-            </span>
-          </div>
 
           {/* Chú rể - Bên phải */}
           <div className="col-md-5 text-center" style={{ padding: '30px' }}>

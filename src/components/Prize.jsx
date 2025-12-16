@@ -10,6 +10,8 @@ const Prize = () => {
     setShowModal(true)
   }
 
+  const anh='/images/qrcode_chure.png'
+  const em='/images/qrcode_codau.png'
   const closeModal = () => {
     setShowModal(false)
     setSelectedQR(null)
@@ -69,7 +71,8 @@ const Prize = () => {
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 10000,
-            animation: 'fadeIn 0.3s ease'
+            animation: 'fadeIn 0.3s ease',
+            padding: '16px'
           }}
           onClick={closeModal}
         >
@@ -77,13 +80,15 @@ const Prize = () => {
             style={{
               background: '#fff',
               borderRadius: '20px',
-              padding: '40px',
-              maxWidth: '500px',
-              width: '90%',
+              padding: '28px 24px 24px',
+              maxWidth: '420px',
+              width: '100%',
               textAlign: 'center',
               position: 'relative',
               boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
-              animation: 'zoomIn 0.3s ease'
+              animation: 'zoomIn 0.3s ease',
+              maxHeight: '100%',
+              overflowY: 'auto'
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -129,19 +134,21 @@ const Prize = () => {
             </h3>
             <div style={{
               background: '#fff',
-              padding: '20px',
+              padding: '16px',
               borderRadius: '15px',
               display: 'inline-block',
-              boxShadow: '0 5px 20px rgba(0, 0, 0, 0.1)'
+              boxShadow: '0 5px 20px rgba(0, 0, 0, 0.1)',
+              maxWidth: '100%'
             }}>
               <img 
-                src={selectedQR === 'codau' ? '/images/qrcode_codau.png' : '/images/qrcode_chure.png'}
+                src={selectedQR === 'codau' ? em : anh}
                 alt={`QR Code ${selectedQR === 'codau' ? 'Cô dâu' : 'Chú rể'}`}
                 style={{
-                  width: '300px',
-                  height: '300px',
-                  maxWidth: '100%',
-                  display: 'block'
+                  width: '260px',
+                  height: 'auto',
+                  maxWidth: '80vw',
+                  display: 'block',
+                  margin: '0 auto'
                 }}
               />
             </div>

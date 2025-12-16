@@ -43,14 +43,8 @@ const Events = () => {
   return (
     <section id="section-event">
       <div className="container">
-        <div className="big-countdown">
-          <div className="big-date">Thứ Năm, ngày 25/12/2025</div>
-          <div className="big-timer">{timers.big}</div>
-        </div>
-        <div className="big-countdown">
-          <div className="big-date">Thứ bảy, ngày 27/12/2025</div>
-          <div className="big-timer">{timers.boy}</div>
-        </div>
+
+
 
         <div className="event-block">
           <div className="event-media wow fadeInRight">
@@ -64,13 +58,12 @@ const Events = () => {
             <h2 className="deco id-color">
               <span>Lễ cưới nhà gái</span>
             </h2>
-            <h2 className="event-date">Thứ Năm, ngày 25 tháng 12 năm 2025</h2>
-            <div className="event-time">Đón khách: 16:00</div>
-            <div className="event-location">Diệp Linh Plaza - Tầng 3, Sảnh Diamond</div>
-            <div className="spacer-single"></div>
-            <p>
-              Chiều 16:00h, chúng tôi rất vui mừng được chia sẻ ngày trọng đại này cùng bạn!
-            </p>
+            <div className="big-countdown">
+          <div className="big-date">Thứ Năm, ngày 25/12/2025</div>
+          <div className="big-timer">{timers.big}</div>
+        </div>
+            <div className="event-location">Đón khách: 16h00</div>
+            <div className="event-location">Địa chỉ: Diệp Linh Plaza - Tầng 3, Sảnh Diamond</div>
             <div className="spacer-single"></div>
             <div className="event-media">
               <iframe
@@ -100,13 +93,14 @@ const Events = () => {
             <h2 className="deco id-color">
               <span>Lễ cưới nhà trai</span>
             </h2>
-            <h2 className="event-date">Thứ Bảy, ngày 27 tháng 12 năm 2025</h2>
-            <div className="event-time">Đón khách: 17:00</div>
+            <div className="big-countdown">
+          <div className="big-date">Thứ bảy, ngày 27/12/2025</div>
+          <div className="big-timer">{timers.boy}</div>
+        </div>
+            <div className="event-location">Đón khách: 17h00</div>
+            <div className="event-location">Địa chỉ: Trung Tâm Hội Nghị Tiệc Cưới Forevermark</div>
             <div className="spacer-single"></div>
-            <div className="event-location">Trung Tâm Hội Nghị Tiệc Cưới Forevermark</div>
-            <p>
-              Chiều 17:00h, chúng tôi rất vui mừng được chia sẻ ngày trọng đại này cùng bạn!
-            </p>
+
             <div className="event-media">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.9317213309714!2d105.8159664!3d21.0753891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aaede963b7e7%3A0x3945a8dcf037f761!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgRm9yZXZlcm1hcms!5e0!3m2!1svi!2s!4v1765880248173!5m2!1svi!2s"

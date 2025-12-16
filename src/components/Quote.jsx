@@ -45,20 +45,19 @@ const Quote = () => {
               <br />
               <div style={{ 
                 textAlign: 'right', 
-                marginTop: '30px',
+                marginTop: '10px',
                 paddingTop: '20px',
                 borderTop: '1px solid rgba(90, 108, 125, 0.3)'
               }}>
                 <span style={{ 
                   fontStyle: 'italic', 
-                  fontSize: '16px',
+                  fontSize: '20px',
                   color: '#5a6c7d',
                   fontFamily: "'Playfair Display', 'Georgia', serif",
                   fontWeight: 500
                 }}>
-                  — Ngọc Minh & Tuấn Minh
+                  Ngọc Minh & Tuấn Minh
                 </span>
-                <span className="beating-heart" style={{ marginLeft: '10px', fontSize: '18px' }}>❤️</span>
               </div>
             </blockquote>
           </div>

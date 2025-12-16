@@ -1,6 +1,6 @@
-// Load external JavaScript libraries in sequence to guarantee dependency order
+// Load external JavaScript libraries with minimal upfront cost.
+// Only the essentials are loaded, and order is preserved where needed.
 export const loadScripts = async () => {
-  // Small helper to load one script and await finish
   const loadScript = (src) =>
     new Promise((resolve) => {
       const s = document.createElement('script')
@@ -9,34 +9,32 @@ export const loadScripts = async () => {
       s.onload = () => resolve(true)
       s.onerror = () => {
         console.warn(`Failed to load script: ${src}`)
-        resolve(false) // continue even if a script fails
+        resolve(false)
       }
       document.body.appendChild(s)
     })
 
-  // If jQuery already present, skip loading it again
+  // Ensure jQuery exists
   if (!window.jQuery) {
     await loadScript('/js/jquery.min.js')
   }
 
-  // Load plugins in a strict order so that each one sees jQuery ready
-  const plugins = [
-    '/js/bootstrap.min.js',
-    '/js/wow.min.js',
-    '/js/owl.carousel.js',
-    '/js/jquery.magnific-popup.min.js',
-    // Required by jquery.countdown.js (Keith Wood) — provides createPlugin
-    '/js/jquery.plugin.js',
-    '/js/jquery.countdown.js',
-    '/js/jquery.stellar.min.js',
-    '/js/custom.js',
-    // designesia.js depends on enquire
-    '/js/enquire.min.js',
-    '/js/designesia.js',
-  ]
+  // Minimal set actually used:
+  // - jquery.plugin.js (dependency for jquery.countdown)
+  // - jquery.countdown.js (countdown in Events)
+  // - jquery.magnific-popup.min.js (gallery lightbox)
+  // - enquire.min.js (dependency for designesia.js)
+  // - designesia.js (theme behaviors)
+  //
+  // Load dependency pairs in order, but run independent ones in parallel for speed.
+  await loadScript('/js/jquery.plugin.js')
 
-  for (const src of plugins) {
-    await loadScript(src)
-  }
+  await Promise.all([
+    loadScript('/js/jquery.magnific-popup.min.js'),
+    loadScript('/js/enquire.min.js'),
+  ])
+
+  await loadScript('/js/jquery.countdown.js')
+  await loadScript('/js/designesia.js')
 }
 

@@ -23,9 +23,9 @@ const Gallery = () => {
     '/images/gallery/category-1/1.jpg',
     '/images/gallery/category-1/2.jpg',
     '/images/gallery/category-1/3.jpg',
-    '/images/gallery/category-1/4.jpg',
     '/images/gallery/category-1/5.jpg',
     '/images/gallery/category-1/6.jpg',
+    '/images/gallery/category-1/7.jpg',
   ]
 
   return (

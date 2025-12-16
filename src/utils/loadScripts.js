@@ -25,9 +25,13 @@ export const loadScripts = async () => {
     '/js/wow.min.js',
     '/js/owl.carousel.js',
     '/js/jquery.magnific-popup.min.js',
+    // Required by jquery.countdown.js (Keith Wood) — provides createPlugin
+    '/js/jquery.plugin.js',
     '/js/jquery.countdown.js',
     '/js/jquery.stellar.min.js',
     '/js/custom.js',
+    // designesia.js depends on enquire
+    '/js/enquire.min.js',
     '/js/designesia.js',
   ]
 

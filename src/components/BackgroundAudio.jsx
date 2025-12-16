@@ -6,21 +6,40 @@ const BackgroundAudio = () => {
 
   useEffect(() => {
     const audio = audioRef.current
-    if (audio) {
-      // Unmute and allow play on first user interaction (required on mobile)
-      const handleUserInteraction = () => {
-        if (audio.muted) {
-          audio.muted = false
-        }
-      }
+    if (!audio) return
 
-      document.addEventListener('click', handleUserInteraction, { once: true })
-      document.addEventListener('touchstart', handleUserInteraction, { once: true })
+    // Cố gắng tự phát nhạc khi vừa mở trang
+    audio.muted = false
+    audio
+      .play()
+      .then(() => {
+        setIsPlaying(true)
+      })
+      .catch(() => {
+        // Nếu trình duyệt chặn autoplay, sẽ phát khi user tương tác
+        setIsPlaying(false)
+      })
 
-      return () => {
-        document.removeEventListener('click', handleUserInteraction)
-        document.removeEventListener('touchstart', handleUserInteraction)
-      }
+    // Phòng trường hợp autoplay bị chặn: khi user click/touch lần đầu sẽ phát nhạc
+    const handleUserInteraction = () => {
+      if (!audio) return
+      audio.muted = false
+      audio
+        .play()
+        .then(() => {
+          setIsPlaying(true)
+        })
+        .catch((err) => {
+          console.log('Audio play failed:', err)
+        })
+    }
+
+    document.addEventListener('click', handleUserInteraction, { once: true })
+    document.addEventListener('touchstart', handleUserInteraction, { once: true })
+
+    return () => {
+      document.removeEventListener('click', handleUserInteraction)
+      document.removeEventListener('touchstart', handleUserInteraction)
     }
   }, [])
 
@@ -47,8 +66,8 @@ const BackgroundAudio = () => {
     <>
       <audio
         ref={audioRef}
+        autoPlay
         loop
-        muted
         id="background-audio"
         style={{ display: 'none' }}
       >

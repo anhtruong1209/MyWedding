@@ -50,7 +50,7 @@ const Couple = () => {
             <div className="padding40 wow slideUpFade" data-wow-delay=".6s">
               <h2>Tuấn Minh</h2>
               <p>
-                Chàng trai dịu dàng, thân thiện, luôn yêu đời, yêu âm nhạc và thích phiêu lưu. 
+                Chàng trai dịu dàng, thân thiện, luôn yêu đời, yêu thể thao và thích phiêu lưu. 
                 "Trên đời này chỉ có một thứ hạnh phúc duy nhất là yêu và được yêu em." ❤️
               </p>
               <div className="social-icons-sm">

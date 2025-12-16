@@ -45,6 +45,67 @@
   display: block;
 }
 
+/* Big countdown block */
+.big-countdown {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05));
+  box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+}
+
+.big-countdown .big-date {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3440;
+  margin-bottom: 12px;
+}
+
+.big-countdown .big-timer {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  color: #5a6c7d;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  min-width: 240px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.big-timer.small {
+  font-size: 20px;
+  padding: 10px 14px;
+  min-width: 200px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.event-card .event-date {
+  font-size: 40px !important;
+  font-weight: 700;
+  color: #2c3440;
+  margin-top: 4px;
+}
+
+.event-card .event-time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5a6c7d;
+  margin-top: 6px;
+}
+
+.event-card .event-location {
+  font-size: 16px;
+  font-weight: 600;
+  color: #404b5a;
+  margin-top: 2px;
+}
+
 /* Responsive for Mobile */
 @media (max-width: 992px) {
   #section-event {
@@ -57,6 +118,19 @@
 
   #section-event iframe {
     height: 260px;
+  }
+
+  .big-countdown {
+    margin-bottom: 40px;
+  }
+
+  .big-countdown .big-date {
+    font-size: 24px;
+  }
+
+  .big-countdown .big-timer {
+    font-size: 22px;
+    min-width: 220px;
   }
 }
 
@@ -90,6 +164,34 @@
   #section-event .spacer-double {
     height: 16px;
   }
+
+  .big-countdown {
+    padding: 22px 16px;
+  }
+
+  .big-countdown .big-date {
+    font-size: 21px;
+  }
+
+  .big-countdown .big-timer {
+    font-size: 20px;
+    padding: 10px 16px;
+    min-width: 200px;
+  }
+
+  .event-card .event-date {
+    font-size: 20px;
+  }
+
+  .event-card .event-time,
+  .event-card .event-location {
+    font-size: 15px;
+  }
+
+  .big-timer.small {
+    font-size: 18px;
+    min-width: 180px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -115,6 +217,34 @@
 
   #section-event iframe {
     height: 200px;
+  }
+
+  .big-countdown {
+    padding: 18px 14px;
+  }
+
+  .big-countdown .big-date {
+    font-size: 19px;
+  }
+
+  .big-countdown .big-timer {
+    font-size: 18px;
+    padding: 10px 14px;
+    min-width: 180px;
+  }
+
+  .event-card .event-date {
+    font-size: 18px;
+  }
+
+  .event-card .event-time,
+  .event-card .event-location {
+    font-size: 14px;
+  }
+
+  .big-timer.small {
+    font-size: 16px;
+    min-width: 160px;
   }
 }
 

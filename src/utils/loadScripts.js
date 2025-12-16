@@ -1,30 +1,25 @@
-// Load external JavaScript libraries
-export const loadScripts = () => {
-  return new Promise((resolve, reject) => {
-    // Check if jQuery is already loaded
-    if (window.jQuery) {
-      loadPlugins()
-      resolve()
-      return
-    }
+// Load external JavaScript libraries in sequence to guarantee dependency order
+export const loadScripts = async () => {
+  // Small helper to load one script and await finish
+  const loadScript = (src) =>
+    new Promise((resolve) => {
+      const s = document.createElement('script')
+      s.src = src
+      s.defer = true
+      s.onload = () => resolve(true)
+      s.onerror = () => {
+        console.warn(`Failed to load script: ${src}`)
+        resolve(false) // continue even if a script fails
+      }
+      document.body.appendChild(s)
+    })
 
-    // Load jQuery
-    const jqueryScript = document.createElement('script')
-    jqueryScript.src = '/js/jquery.min.js'
-    jqueryScript.onload = () => {
-      loadPlugins()
-      resolve()
-    }
-    jqueryScript.onerror = () => {
-      console.warn('jQuery failed to load, continuing without it')
-      // Continue even if jQuery fails
-      resolve()
-    }
-    document.body.appendChild(jqueryScript)
-  })
-}
+  // If jQuery already present, skip loading it again
+  if (!window.jQuery) {
+    await loadScript('/js/jquery.min.js')
+  }
 
-const loadPlugins = () => {
+  // Load plugins in a strict order so that each one sees jQuery ready
   const plugins = [
     '/js/bootstrap.min.js',
     '/js/wow.min.js',
@@ -36,11 +31,8 @@ const loadPlugins = () => {
     '/js/designesia.js',
   ]
 
-  plugins.forEach((src) => {
-    const script = document.createElement('script')
-    script.src = src
-    script.async = true
-    document.body.appendChild(script)
-  })
+  for (const src of plugins) {
+    await loadScript(src)
+  }
 }
 

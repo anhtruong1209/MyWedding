@@ -39,7 +39,7 @@ const Prize = () => {
                 onClick={() => openQRModal('codau')}
               >
                 <i className="fa fa-gift"></i>
-                <h2>Cô dâu</h2>
+                <h3>Cô dâu</h3>
                 <p>Ngọc Minh</p>
               </div>
             </div>
@@ -49,7 +49,7 @@ const Prize = () => {
                 onClick={() => openQRModal('chure')}
               >
                 <i className="fa fa-gift"></i>
-                <h2>Chú rể</h2>
+                <h3>Chú rể</h3>
                 <p>Tuấn Minh</p>
               </div>
             </div>

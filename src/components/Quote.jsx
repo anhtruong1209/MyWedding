@@ -40,11 +40,7 @@ const Quote = () => {
                 color: '#2c3e50',
                 fontStyle: 'normal'
               }}>
-                "Từ những ngày đầu gặp nhau, Minh và Minh đã biết rằng đây chính là định mệnh. 
-                Mỗi khoảnh khắc bên nhau đều là một món quà, mỗi nụ cười đều là một kỷ niệm đáng trân trọng. 
-                Chúng ta đã cùng nhau trải qua bao thăng trầm, cùng nhau lớn lên và trưởng thành. 
-                Giờ đây, khi đứng trước ngưỡng cửa hôn nhân, chúng ta tin chắc rằng tình yêu này sẽ mãi mãi bền vững, 
-                và người mà ta nắm tay ngày hôm nay sẽ là người đồng hành cùng ta đi đến suốt cuộc đời."
+"Từ những ngày đầu gặp nhau, chúng mình đã biết rằng đây chính là định mệnh. Mỗi khoảnh khắc bên nhau đều là một món quà, mỗi nụ cười đều là một kỷ niệm đáng trân trọng. Cùng nhau trải qua bao thăng trầm, cùng nhau lớn lên và trưởng thành, giờ đây, khi đứng trước ngưỡng cửa hôn nhân, chúng mình tin chắc rằng tình yêu này sẽ mãi mãi bền vững. Và người mà ta nắm tay ngày hôm nay - sẽ là người đồng hành cùng ta đi đến suốt cuộc đời."
               </p>
               <br />
               <div style={{ 

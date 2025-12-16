@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
             <div className="spacer-single"></div>
             <div className="copyright footer-copy">
-              &copy; Copyright 2025 - Thiết kế bởi Tuấn Minh
+              &copy; Copyright 2025 - Thiết kế bởi Trường Trường Studio
             </div>
           </div>
         </div>

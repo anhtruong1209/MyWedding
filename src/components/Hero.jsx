@@ -1,63 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Hero.css'
 
 const Hero = () => {
-  const sliderRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     // Show content after mount
     setIsVisible(true)
-
-    // Initialize Owl Carousel for slider
-    const initSlider = () => {
-      if (window.jQuery && window.jQuery.fn.owlCarousel && sliderRef.current) {
-        const $slider = window.jQuery(sliderRef.current)
-        
-        // Destroy existing instance if any
-        if ($slider.data('owlCarousel')) {
-          $slider.data('owlCarousel').destroy()
-        }
-        
-        $slider.owlCarousel({
-          items: 1,
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 2000,
-          autoplayHoverPause: false,
-          nav: false,
-          dots: false,
-          animateOut: 'fadeOut',
-          animateIn: 'fadeIn',
-          smartSpeed: 600,
-          autoplaySpeed: 600,
-        })
-      } else {
-        // Retry if jQuery not ready
-        setTimeout(initSlider, 100)
-      }
-    }
-    
-    // Wait a bit for scripts to load
-    setTimeout(initSlider, 500)
   }, [])
 
-  const sliderImages = [
-    '/images/slider/1.jpg',
-    '/images/slider/2.jpg',
-    '/images/slider/3.jpg',
-  ]
+  const [imageError, setImageError] = useState(false)
+  const heroImage = '/images/slider/1.jpg'
+  const fallbackImage = '/images/slider/1.jpg'
 
   return (
     <section
       id="section-hero"
       className="full-height relative z1 owl-slide-wrapper no-top no-bottom text-light"
     >
-      <div className="owl-slider-nav">
-        <div className="next"></div>
-        <div className="prev"></div>
-      </div>
-
       <div 
         className="center-y fadeScroll relative" 
         style={{ 
@@ -183,12 +143,20 @@ const Hero = () => {
         </div>
       </div>
 
-      <div id="custom-owl-slider" className="owl-slide" ref={sliderRef} style={{ zIndex: 1 }}>
-        {sliderImages.map((img, index) => (
-          <div key={index} className="item">
-            <img src={img} alt={`Slide ${index + 1}`} style={{ width: '100%', height: '100vh', objectFit: 'cover', maxWidth: '100%' }} />
-          </div>
-        ))}
+      <div className="hero-background" style={{ zIndex: 1, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#f5f5f5' }}>
+        <img 
+          src={imageError ? fallbackImage : heroImage} 
+          alt="Hero" 
+          onError={() => setImageError(true)}
+          onLoad={() => setImageError(false)}
+          style={{ 
+            width: '100%', 
+            height: '100vh', 
+            objectFit: 'cover', 
+            maxWidth: '100%',
+            display: 'block'
+          }} 
+        />
       </div>
       
     </section>

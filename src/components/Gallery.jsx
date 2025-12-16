@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import './Gallery.css'
 
 const Gallery = () => {
   const galleryRef = useRef(null)
@@ -25,9 +26,6 @@ const Gallery = () => {
     '/images/gallery/category-1/4.jpg',
     '/images/gallery/category-1/5.jpg',
     '/images/gallery/category-1/6.jpg',
-    '/images/gallery/category-1/7.jpg',
-    '/images/gallery/category-1/8.jpg',
-    '/images/gallery/category-1/9.jpg',
   ]
 
   return (
@@ -35,16 +33,16 @@ const Gallery = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h2 className="deco id-color">
-              <span>Bộ sưu tập</span>
+            <h2 className="deco id-color" style={{ color: '#ffffff', textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)' }}>
+              <span style={{ color: '#ffffff', fontWeight: 600 }}>Bộ sưu tập</span>
             </h2>
             <div className="spacer-single"></div>
           </div>
         </div>
-        <div className="row" ref={galleryRef}>
+        <div className="row gallery-vertical" ref={galleryRef} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
           {galleryImages.map((img, index) => (
-            <div key={index} className="col-md-4 col-sm-6 mb30">
-              <div className="picframe img-rounded mb20">
+            <div key={index} className="gallery-item-vertical" style={{ width: '100%', maxWidth: '600px' }}>
+              <div className="picframe img-rounded mb20" style={{ width: '100%', position: 'relative', overflow: 'hidden' }}>
                 <a className="image-popup" href={img}>
                   <span className="overlay-v">
                     <i></i>
@@ -52,8 +50,15 @@ const Gallery = () => {
                 </a>
                 <img
                   src={img}
-                  className="img-responsive img-rounded"
+                  className="img-responsive img-rounded gallery-vertical-img"
                   alt={`Gallery ${index + 1}`}
+                  style={{ 
+                    width: '100%', 
+                    height: 'auto', 
+                    objectFit: 'cover',
+                    display: 'block',
+                    aspectRatio: 'auto'
+                  }}
                 />
               </div>
             </div>

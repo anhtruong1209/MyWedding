@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import './Events.css'
 
 const Events = () => {
   const countdownRef1 = useRef(null)

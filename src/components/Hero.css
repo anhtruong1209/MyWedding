@@ -154,11 +154,42 @@
 }
 
 @media (max-width: 768px) {
+  #section-hero {
+    min-height: 100vh;
+  }
+
   #section-hero .name {
     font-size: 36px !important;
+    line-height: 1.1 !important;
   }
   
   #section-hero .deco-big {
     font-size: 60px !important;
+    margin: 10px 0 !important;
+  }
+
+  #section-hero .center-y {
+    padding: 0 10px;
+  }
+
+  .hero-background img {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-hero .name {
+    font-size: 28px !important;
+    letter-spacing: 0.5px !important;
+  }
+  
+  #section-hero .deco-big {
+    font-size: 48px !important;
+    margin: 8px 0 !important;
+  }
+
+  #section-hero .center-y {
+    padding: 0 5px;
   }
 }

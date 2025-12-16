@@ -27,7 +27,7 @@ const Events = () => {
         <div className="event-block">
           <div className="event-media wow fadeInLeft">
             <img
-              src="/images/misc/3.jpg"
+              src="/images/misc/4.jpg"
               alt="Event"
               className="img-responsive img-rounded"
             />
@@ -65,7 +65,7 @@ const Events = () => {
         <div className="event-block">
           <div className="event-media wow fadeInRight">
             <img
-              src="/images/misc/4.jpg"
+              src="/images/misc/3.jpg"
               alt="Event"
               className="img-responsive img-rounded"
             />

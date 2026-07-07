@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wed-cream: #faf5ef;
+  --wed-wine: #6a2e3e;
+  --wed-gold: #bfa06a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-serif antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 15% -10%, rgba(233, 195, 196, 0.35), transparent 60%),
+      radial-gradient(1000px 700px at 100% 10%, rgba(217, 194, 154, 0.28), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-rose text-white;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-wine-deep;
+    text-wrap: balance;
+  }
+
+  /* Thanh cuộn tông vàng */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f2e8dc;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #d9c29a, #bfa06a);
+    border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .container-wed {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase tracking-widest2 text-gold-deep;
+  }
+
+  .heading-script {
+    @apply font-script text-wine;
+  }
+
+  /* Nút gold gradient */
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-8 py-3
+      font-sans text-sm font-semibold uppercase tracking-widest text-white transition-transform duration-300;
+    background: linear-gradient(120deg, #9c7e4c, #bfa06a, #d9c29a, #bfa06a);
+    background-size: 200% auto;
+    box-shadow: 0 12px 30px -12px rgba(156, 126, 76, 0.7);
+  }
+  .btn-gold:hover {
+    @apply scale-[1.03] animate-shimmer;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold/60 px-7 py-3
+      font-sans text-sm font-semibold uppercase tracking-widest text-wine transition-colors duration-300 hover:bg-gold hover:text-white;
+  }
+
+  /* Đường phân cách hình trái tim / kim cương */
+  .ornament {
+    @apply mx-auto flex items-center justify-center gap-3 text-gold;
+  }
+  .ornament::before,
+  .ornament::after {
+    content: "";
+    @apply h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-white/50 bg-white/70 shadow-soft backdrop-blur-md;
+  }
+
+  .section {
+    @apply relative py-24 sm:py-28;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(100deg, #9c7e4c, #d9c29a, #bfa06a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .drop-elegant {
+    filter: drop-shadow(0 18px 40px rgba(74, 29, 43, 0.35));
+  }
+}
+
+/* Tôn trọng người dùng tắt hiệu ứng chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

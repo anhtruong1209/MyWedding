@@ -58,7 +58,7 @@ export default function Lightbox({
           role="dialog"
           aria-modal="true"
           aria-label="Xem ảnh cưới phóng to"
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-wine-deep/90 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-forest-deep/90 backdrop-blur-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

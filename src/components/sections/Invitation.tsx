@@ -19,8 +19,8 @@ export default function Invitation() {
           {events.map((e, i) => (
             <Reveal key={e.key} delay={i * 0.12}>
               <div className="glass-card h-full px-8 py-10">
-                <p className="eyebrow text-wine">{e.label}</p>
-                <p className="mt-3 font-display text-3xl text-wine-deep">{e.time}h</p>
+                <p className="eyebrow text-forest">{e.label}</p>
+                <p className="mt-3 font-display text-3xl text-forest-deep">{e.time}h</p>
                 <p className="mt-1 font-serif text-lg text-muted">{e.dateText}</p>
                 <div className="ornament my-5 text-sm">♥</div>
                 <p className="font-serif text-lg text-ink">{e.venue}</p>

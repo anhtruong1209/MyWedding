@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "bg-cream/85 py-3 shadow-[0_10px_30px_-20px_rgba(74,29,43,0.5)] backdrop-blur-md" : "bg-transparent py-5",
+        scrolled ? "bg-mist/90 py-3 shadow-[0_10px_30px_-20px_rgba(74,29,43,0.5)] backdrop-blur-md" : "bg-transparent py-5",
       )}
     >
       <nav className="container-wed flex items-center justify-between">
@@ -44,8 +44,8 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "group relative font-sans text-sm font-medium uppercase tracking-wide text-ink/80 transition-colors hover:text-wine",
-                    active && "text-wine",
+                    "group relative font-sans text-sm font-medium uppercase tracking-wide text-ink/80 transition-colors hover:text-forest",
+                    active && "text-forest",
                   )}
                 >
                   {item.label}
@@ -72,9 +72,9 @@ export default function Navbar() {
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={cn("h-0.5 w-6 bg-wine transition", open && "translate-y-2 rotate-45")} />
-          <span className={cn("h-0.5 w-6 bg-wine transition", open && "opacity-0")} />
-          <span className={cn("h-0.5 w-6 bg-wine transition", open && "-translate-y-2 -rotate-45")} />
+          <span className={cn("h-0.5 w-6 bg-forest transition", open && "translate-y-2 rotate-45")} />
+          <span className={cn("h-0.5 w-6 bg-forest transition", open && "opacity-0")} />
+          <span className={cn("h-0.5 w-6 bg-forest transition", open && "-translate-y-2 -rotate-45")} />
         </button>
       </nav>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 font-sans text-sm uppercase tracking-wide text-ink/80 hover:bg-rose-petal/60 hover:text-wine"
+                  className="block rounded-xl px-4 py-3 font-sans text-sm uppercase tracking-wide text-ink/80 hover:bg-rose-petal/60 hover:text-forest"
                 >
                   {item.label}
                 </Link>

@@ -56,7 +56,7 @@ export default function MusicToggle() {
       <button
         aria-label={playing ? "Tắt nhạc" : "Bật nhạc"}
         onClick={toggle}
-        className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full border border-gold/50 bg-cream/80 text-wine shadow-soft backdrop-blur-md transition hover:bg-cream"
+        className="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full border border-gold/50 bg-mist/85 text-forest shadow-soft backdrop-blur-md transition hover:bg-mist"
       >
         <motion.span
           animate={playing ? { rotate: 360 } : { rotate: 0 }}

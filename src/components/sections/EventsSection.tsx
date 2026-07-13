@@ -7,7 +7,7 @@ import TiltCard from "@/components/ui/TiltCard";
 /** Chi tiết lễ hỏi & lễ cưới kèm bản đồ Google Maps. */
 export default function EventsSection({ withTitle = true }: { withTitle?: boolean }) {
   return (
-    <section id="events" className="section bg-gradient-to-b from-transparent to-rose-petal/30">
+    <section id="events" className="section bg-gradient-to-b from-transparent to-forest-pale/40">
       <div className="container-wed">
         {withTitle && (
           <SectionTitle eyebrow="When & where" script="Sự kiện cưới" title="Thời gian & Địa điểm" />
@@ -25,8 +25,8 @@ export default function EventsSection({ withTitle = true }: { withTitle?: boolea
                   <TiltCard max={8} className="overflow-hidden rounded-3xl shadow-soft">
                     <div className="relative aspect-[4/3] w-full">
                       <Image src={e.image} alt={e.label} fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-wine-deep/40 to-transparent" />
-                      <span className="absolute left-5 top-5 rounded-full bg-cream/90 px-4 py-1.5 font-sans text-xs font-semibold uppercase tracking-widest text-wine">
+                      <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/40 to-transparent" />
+                      <span className="absolute left-5 top-5 rounded-full bg-cream/90 px-4 py-1.5 font-sans text-xs font-semibold uppercase tracking-widest text-forest">
                         {e.label}
                       </span>
                     </div>
@@ -34,8 +34,8 @@ export default function EventsSection({ withTitle = true }: { withTitle?: boolea
                 </Reveal>
 
                 <Reveal direction={reversed ? "right" : "left"} className={reversed ? "lg:order-1" : ""}>
-                  <p className="eyebrow text-wine">{e.title}</p>
-                  <h3 className="mt-2 font-display text-3xl text-wine-deep sm:text-4xl">
+                  <p className="eyebrow text-forest">{e.title}</p>
+                  <h3 className="mt-2 font-display text-3xl text-forest-deep sm:text-4xl">
                     {e.time}h · {e.dateText}
                   </h3>
                   <div className="mt-5 space-y-1 font-serif text-lg text-ink">

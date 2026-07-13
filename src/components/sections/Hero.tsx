@@ -2,28 +2,37 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { site } from "@/data/site";
-import Hearts3D from "@/components/three/Hearts3D";
+import Forest3D from "@/components/three/Forest3D";
 import Rings3D from "@/components/three/Rings3D";
+
+const silk = [0.22, 1, 0.36, 1] as const;
 
 function Slides() {
   const [i, setI] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setI((p) => (p + 1) % site.hero.slides.length), 5500);
+    const t = setInterval(() => setI((p) => (p + 1) % site.hero.slides.length), 6500);
     return () => clearInterval(t);
   }, []);
   return (
     <AnimatePresence>
       <motion.div
         key={i}
-        initial={{ opacity: 0, scale: 1.15 }}
-        animate={{ opacity: 1, scale: 1.05 }}
+        initial={{ opacity: 0, scale: 1.14 }}
+        animate={{ opacity: 1, scale: 1.04 }}
         exit={{ opacity: 0 }}
-        transition={{ opacity: { duration: 1.6 }, scale: { duration: 6, ease: "linear" } }}
+        transition={{ opacity: { duration: 2.2, ease: "easeInOut" }, scale: { duration: 8, ease: "linear" } }}
         className="absolute inset-0"
       >
-        <Image src={site.hero.slides[i]} alt="" fill priority={i === 0} sizes="100vw" className="object-cover" />
+        <Image
+          src={site.hero.slides[i]}
+          alt=""
+          fill
+          priority={i === 0}
+          sizes="100vw"
+          className="object-cover"
+        />
       </motion.div>
     </AnimatePresence>
   );
@@ -32,72 +41,81 @@ function Slides() {
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  // Spring hoá parallax → chuyển động mượt như lụa, không giật theo từng pixel cuộn
+  const p = useSpring(scrollYProgress, { stiffness: 90, damping: 26, mass: 0.4 });
+  const y = useTransform(p, [0, 1], ["0%", "34%"]);
+  const opacity = useTransform(p, [0, 0.75], [1, 0]);
 
   return (
-    <section ref={ref} className="relative flex h-[100svh] min-h-[640px] items-center justify-center overflow-hidden">
+    <section
+      ref={ref}
+      className="relative flex h-[100svh] min-h-[640px] items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0">
         <Slides />
-        <div className="absolute inset-0 bg-gradient-to-b from-wine-deep/60 via-wine-deep/35 to-wine-deep/75" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(42,17,26,0.55))]" />
+        {/* Lớp phủ SÁNG: sương xanh nhạt + nắng vàng, hoà xuống nền trang */}
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/45 via-forest-deep/10 to-mist" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(255,240,184,0.42),transparent_55%)]" />
       </div>
 
-      <Hearts3D />
+      {/* Rừng cổ tích 3D */}
+      <Forest3D density="full" />
 
-      <motion.div style={{ y, opacity }} className="relative z-10 w-full px-6 text-center text-white">
+      <motion.div style={{ y, opacity }} className="relative z-10 w-full px-6 text-center">
         <motion.p
           initial={{ opacity: 0, letterSpacing: "0.1em" }}
           animate={{ opacity: 1, letterSpacing: "0.35em" }}
-          transition={{ duration: 1.2, delay: 0.2 }}
-          className="font-sans text-xs font-semibold uppercase text-gold-light"
+          transition={{ duration: 1.4, delay: 0.3, ease: silk }}
+          className="font-script text-3xl text-gold-light text-halo sm:text-4xl"
         >
           {site.hero.kicker}
         </motion.p>
 
-        <div className="mt-6 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-6">
+        <div className="mt-5 flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-6">
           <motion.h1
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.35 }}
-            className="font-display text-5xl text-white drop-shadow-xl sm:text-6xl lg:text-7xl"
+            initial={{ opacity: 0, x: -50, filter: "blur(8px)" }}
+            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.3, delay: 0.5, ease: silk }}
+            className="font-display text-5xl text-white text-halo sm:text-6xl lg:text-7xl"
           >
             Quỳnh Trâm
           </motion.h1>
 
-          <div className="relative h-24 w-24 shrink-0 sm:h-32 sm:w-32">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 120, damping: 14, delay: 0.9 }}
+            className="relative h-28 w-28 shrink-0 sm:h-36 sm:w-36"
+          >
             <Rings3D className="absolute inset-0" />
-            <span className="pointer-events-none absolute inset-0 grid place-items-center font-script text-4xl text-gold-light/40">
-              &amp;
-            </span>
-          </div>
+          </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.35 }}
-            className="font-display text-5xl text-white drop-shadow-xl sm:text-6xl lg:text-7xl"
+            initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
+            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.3, delay: 0.5, ease: silk }}
+            className="font-display text-5xl text-white text-halo sm:text-6xl lg:text-7xl"
           >
             Anh Trường
           </motion.h1>
         </div>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="mx-auto mt-8 max-w-xl font-serif text-xl italic text-cream/90 [text-shadow:0_2px_14px_rgba(42,17,26,0.75)]"
+          transition={{ duration: 1.2, delay: 1.05, ease: silk }}
+          className="mx-auto mt-6 max-w-xl font-serif text-xl italic text-white/95 text-halo"
         >
-          “{site.hero.quote}”
+          {site.hero.fairy}
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          transition={{ duration: 1.2, delay: 1.25, ease: silk }}
+          className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <span className="rounded-full border border-white/40 px-6 py-2 font-sans text-sm tracking-widest text-white">
+          <span className="rounded-full border border-white/60 bg-white/10 px-6 py-2 font-sans text-sm tracking-widest text-white backdrop-blur-sm">
             10 · 11 · 2024 — Hải Phòng
           </span>
           <a href="#rsvp" className="btn-gold">
@@ -109,13 +127,13 @@ export default function Hero() {
       <motion.a
         href="#couple"
         style={{ opacity }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white/70"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white/80"
         animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.8 }}
+        transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
         aria-label="Cuộn xuống"
       >
-        <span className="mx-auto block h-10 w-6 rounded-full border-2 border-white/50">
-          <span className="mx-auto mt-2 block h-2 w-0.5 rounded-full bg-white/80" />
+        <span className="mx-auto block h-10 w-6 rounded-full border-2 border-white/70">
+          <span className="mx-auto mt-2 block h-2 w-0.5 rounded-full bg-white" />
         </span>
       </motion.a>
     </section>

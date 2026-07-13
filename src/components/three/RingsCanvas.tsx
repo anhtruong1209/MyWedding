@@ -2,32 +2,42 @@
 
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Float, Lightformer } from "@react-three/drei";
+import { Environment, Float, Lightformer, Sparkles } from "@react-three/drei";
 import * as THREE from "three";
 
 function Rings() {
   const group = useRef<THREE.Group>(null);
   useFrame((state, delta) => {
-    if (group.current) group.current.rotation.y += delta * 0.35;
+    if (group.current) group.current.rotation.y += delta * 0.32;
   });
 
   return (
-    <Float speed={2} rotationIntensity={0.6} floatIntensity={0.9}>
+    <Float speed={1.6} rotationIntensity={0.5} floatIntensity={0.9}>
       <group ref={group} rotation={[0.5, 0, 0.2]}>
+        {/* Nhẫn vàng */}
         <mesh rotation={[Math.PI / 2, 0, 0]} position={[-0.55, 0, 0]}>
           <torusGeometry args={[1.15, 0.16, 40, 120]} />
-          <meshStandardMaterial color="#c9a96a" metalness={1} roughness={0.18} envMapIntensity={1.4} />
+          <meshStandardMaterial color="#E8C88A" metalness={1} roughness={0.14} envMapIntensity={1.8} />
         </mesh>
+        {/* Nhẫn ngọc lục bảo (rừng) */}
         <mesh rotation={[Math.PI / 2.4, 0.5, 0]} position={[0.55, 0, 0]}>
           <torusGeometry args={[1.15, 0.16, 40, 120]} />
-          <meshStandardMaterial color="#e7c3c4" metalness={0.9} roughness={0.22} envMapIntensity={1.2} />
+          <meshStandardMaterial color="#9FD9BC" metalness={0.95} roughness={0.18} envMapIntensity={1.6} />
         </mesh>
-        {/* Viên kim cương nhỏ trên nhẫn */}
+        {/* Viên đá quý */}
         <mesh position={[-0.55, 1.28, 0]}>
-          <octahedronGeometry args={[0.18, 0]} />
-          <meshStandardMaterial color="#ffffff" metalness={0.2} roughness={0} emissive="#bfe0ff" emissiveIntensity={0.5} envMapIntensity={2} />
+          <octahedronGeometry args={[0.2, 0]} />
+          <meshStandardMaterial
+            color="#FFFFFF"
+            metalness={0.15}
+            roughness={0}
+            emissive="#FFF0B8"
+            emissiveIntensity={0.9}
+            envMapIntensity={2.4}
+          />
         </mesh>
       </group>
+      <Sparkles count={26} scale={[3.6, 3.6, 3.6]} size={3} speed={0.5} color="#FFF0B8" />
     </Float>
   );
 }
@@ -41,16 +51,16 @@ export default function RingsCanvas({ frameloop = "always" }: { frameloop?: "alw
       gl={{ antialias: true, alpha: true }}
       style={{ pointerEvents: "none" }}
     >
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 6, 5]} intensity={2.2} color="#fff3e0" />
-      <pointLight position={[-5, -2, 3]} intensity={30} color="#f0b8c1" />
-      <spotLight position={[0, 8, 4]} angle={0.6} intensity={40} color="#ffffff" penumbra={1} />
+      <ambientLight intensity={0.9} />
+      <directionalLight position={[5, 6, 5]} intensity={2.4} color="#FFF3E0" />
+      <pointLight position={[-5, -2, 3]} intensity={28} color="#CFE8D4" />
+      <spotLight position={[0, 8, 4]} angle={0.6} intensity={45} color="#FFFFFF" penumbra={1} />
 
-      {/* Môi trường phản chiếu cho kim loại (không cần HDR ngoài — an toàn CSP). */}
+      {/* Môi trường phản chiếu (tự dựng — không cần HDR ngoài) */}
       <Environment resolution={64}>
-        <Lightformer intensity={2.4} position={[0, 3, 3]} scale={7} color="#fff3e0" />
-        <Lightformer intensity={1.4} position={[-4, -1, 2]} scale={5} color="#f0b8c1" />
-        <Lightformer intensity={1.2} position={[4, 1, 2]} scale={5} color="#d9c29a" />
+        <Lightformer intensity={3} position={[0, 3, 3]} scale={8} color="#FFF6DC" />
+        <Lightformer intensity={1.8} position={[-4, -1, 2]} scale={5} color="#BFE6CE" />
+        <Lightformer intensity={1.6} position={[4, 1, 2]} scale={5} color="#F1DDA6" />
       </Environment>
 
       <Rings />

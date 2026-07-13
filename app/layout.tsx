@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MusicToggle from "@/components/layout/MusicToggle";
 import Preloader from "@/components/layout/Preloader";
+import SmoothScroll from "@/components/layout/SmoothScroll";
 
 const display = Playfair_Display({
   subsets: ["latin", "vietnamese"],
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#6a2e3e",
+  themeColor: "#2F7A5C",
   width: "device-width",
   initialScale: 1,
 };
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${serif.variable} ${script.variable} ${sans.variable}`}
     >
       <body>
+        <SmoothScroll />
         <Preloader />
         <Navbar />
         <main>{children}</main>

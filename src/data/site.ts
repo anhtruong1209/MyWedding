@@ -37,7 +37,8 @@ export const site = {
   description:
     "Thiệp cưới online của Quỳnh Trâm & Anh Trường. Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của chúng tôi.",
   hero: {
-    kicker: "Save the date",
+    kicker: "Ngày xửa ngày xưa...",
+    fairy: "Trong khu rừng cổ tích ấy, hai trái tim đã tìm thấy nhau.",
     quote:
       "Tuổi 17 năm ấy, em có anh, anh như có cả thế giới trong vòng tay của mình.",
     slides: ["/images/slider/1.jpg", "/images/slider/2.jpg", "/images/slider/3.jpg"],

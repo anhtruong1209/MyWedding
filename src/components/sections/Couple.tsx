@@ -30,7 +30,7 @@ function PersonCard({ person, href, delay }: { person: Person; href: string; del
         <p className="eyebrow mt-6">{person.role}</p>
         <h3 className="heading-script mt-1 text-4xl">{person.name}</h3>
         <p className="mx-auto mt-3 max-w-sm font-serif text-lg text-muted">{person.tagline}</p>
-        <div className="mt-5 flex items-center justify-center gap-4 text-wine">
+        <div className="mt-5 flex items-center justify-center gap-4 text-forest">
           <a href={person.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="transition hover:text-gold">
             <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z" /></svg>
           </a>
@@ -54,7 +54,7 @@ export default function Couple() {
         <div className="relative mt-16 flex flex-col items-stretch gap-8 lg:flex-row">
           <PersonCard person={couple.bride} href="/about-her" delay={0} />
           <div className="hidden items-center lg:flex">
-            <span className="grid h-16 w-16 place-items-center rounded-full bg-wine text-2xl text-white shadow-glow">
+            <span className="grid h-16 w-16 place-items-center rounded-full bg-forest text-2xl text-white shadow-glow">
               ♥
             </span>
           </div>

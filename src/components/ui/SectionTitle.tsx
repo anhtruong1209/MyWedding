@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Reveal from "./Reveal";
 
-/** Tiêu đề mục: eyebrow nhỏ + tên script + tiêu đề lớn + hoạ tiết. */
+/** Tiêu đề mục: eyebrow + tên script + tiêu đề lớn + hoạ tiết lá. */
 export default function SectionTitle({
   eyebrow,
   script,
@@ -17,9 +17,9 @@ export default function SectionTitle({
 }) {
   return (
     <Reveal className={cn("text-center", className)}>
-      {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
+      {eyebrow && <p className={cn("eyebrow mb-3", light && "text-gold-light")}>{eyebrow}</p>}
       {script && (
-        <p className={cn("heading-script text-3xl sm:text-4xl", light && "text-rose-soft")}>
+        <p className={cn("heading-script text-3xl sm:text-4xl", light && "text-gold-light")}>
           {script}
         </p>
       )}
@@ -31,7 +31,7 @@ export default function SectionTitle({
       >
         {title}
       </h2>
-      <div className="ornament mt-6 text-lg">♥</div>
+      <div className={cn("ornament mt-6 text-lg", light && "text-gold-light")}>❦</div>
     </Reveal>
   );
 }

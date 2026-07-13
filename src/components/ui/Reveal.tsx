@@ -6,14 +6,14 @@ import type { ReactNode } from "react";
 type Direction = "up" | "down" | "left" | "right" | "none";
 
 const offset: Record<Direction, { x: number; y: number }> = {
-  up: { x: 0, y: 40 },
-  down: { x: 0, y: -40 },
-  left: { x: 60, y: 0 },
-  right: { x: -60, y: 0 },
+  up: { x: 0, y: 48 },
+  down: { x: 0, y: -48 },
+  left: { x: 64, y: 0 },
+  right: { x: -64, y: 0 },
   none: { x: 0, y: 0 },
 };
 
-/** Hiệu ứng hiện dần khi cuộn tới, có delay tuỳ chọn. */
+/** Hiện dần khi cuộn tới: trôi + tan blur, easing "lụa" mượt. */
 export default function Reveal({
   children,
   direction = "up",
@@ -28,12 +28,17 @@ export default function Reveal({
   once?: boolean;
 }) {
   const variants: Variants = {
-    hidden: { opacity: 0, ...offset[direction] },
+    hidden: { opacity: 0, filter: "blur(10px)", ...offset[direction] },
     show: {
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] },
+      filter: "blur(0px)",
+      transition: {
+        duration: 1.1,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      },
     },
   };
 
@@ -43,7 +48,7 @@ export default function Reveal({
       variants={variants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once, amount: 0.25 }}
+      viewport={{ once, amount: 0.2 }}
     >
       {children}
     </motion.div>

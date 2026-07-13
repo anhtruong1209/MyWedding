@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { gifts } from "@/data/site";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
+import Forest3D from "@/components/three/Forest3D";
 
 export default function Gift() {
   const [open, setOpen] = useState(false);
@@ -28,8 +29,9 @@ export default function Gift() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-wine-deep py-24 text-cream sm:py-28">
-      <div className="pointer-events-none absolute inset-0 opacity-25 [background:radial-gradient(700px_320px_at_80%_0%,#bfa06a,transparent_60%)]" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-forest-deep via-forest to-forest-soft py-24 text-cream sm:py-28">
+      <div className="pointer-events-none absolute inset-0 opacity-40 [background:radial-gradient(700px_320px_at_80%_0%,#F1DDA6,transparent_60%)]" />
+      <Forest3D density="light" className="opacity-80" />
       <div className="container-wed relative text-center">
         <SectionTitle eyebrow="With love" script="Gửi lời cảm ơn" title="Hộp mừng cưới" light />
 
@@ -63,7 +65,7 @@ export default function Gift() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-wine-deep/80 p-4 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-forest-deep/80 p-4 backdrop-blur-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -80,7 +82,7 @@ export default function Gift() {
               <button
                 aria-label="Đóng"
                 onClick={() => setOpen(false)}
-                className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full border border-wine/20 text-xl text-wine hover:bg-rose-petal/60"
+                className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full border border-forest/20 text-xl text-forest hover:bg-rose-petal/60"
               >
                 ×
               </button>
@@ -95,7 +97,7 @@ export default function Gift() {
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 {gifts.map((g) => (
                   <div key={g.label} className="glass-card flex flex-col items-center px-5 py-7 text-center">
-                    <p className="font-sans text-xs font-semibold uppercase tracking-widest text-wine">
+                    <p className="font-sans text-xs font-semibold uppercase tracking-widest text-forest">
                       {g.label}
                     </p>
                     <div className="relative mt-4 h-44 w-44 overflow-hidden rounded-xl border border-gold/30 bg-white">
@@ -111,11 +113,11 @@ export default function Gift() {
                       </button>
                     </div>
                     <div className="mt-3 flex items-center justify-center gap-2">
-                      <a href={g.messenger} target="_blank" rel="noreferrer" className="font-sans text-xs font-semibold uppercase tracking-wide text-wine underline-offset-4 hover:underline">
+                      <a href={g.messenger} target="_blank" rel="noreferrer" className="font-sans text-xs font-semibold uppercase tracking-wide text-forest underline-offset-4 hover:underline">
                         Messenger
                       </a>
                       <span className="text-gold">·</span>
-                      <a href={g.zalo} target="_blank" rel="noreferrer" className="font-sans text-xs font-semibold uppercase tracking-wide text-wine underline-offset-4 hover:underline">
+                      <a href={g.zalo} target="_blank" rel="noreferrer" className="font-sans text-xs font-semibold uppercase tracking-wide text-forest underline-offset-4 hover:underline">
                         Zalo
                       </a>
                     </div>

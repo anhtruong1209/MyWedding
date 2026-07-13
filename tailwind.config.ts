@@ -1,35 +1,46 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Hệ màu & typography cho web cưới Trâm & Trường.
- * Tông: ngà ấm + rượu vang sâu + ánh vàng gold, phong cách editorial hiện đại.
+ * Concept: "Câu chuyện cổ tích trong rừng rậm".
+ * Tông SÁNG: sương mai, ngà, xanh ngọc/rêu, nắng vàng xuyên tán lá, cánh hoa hồng phấn.
  */
 const config: Config = {
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        cream: "#FAF5EF",
-        ivory: "#FFFDFA",
-        ink: "#2A2420",
-        muted: "#6B5F57",
-        wine: {
-          DEFAULT: "#6A2E3E",
-          deep: "#4A1D2B",
-          soft: "#8C4A5C",
+        // Nền sáng
+        mist: "#F3F8F1",
+        ivory: "#FDFBF5",
+        cream: "#FAF6EC",
+
+        // Chữ (xanh rêu đậm thay vì đen)
+        ink: "#33453B",
+        muted: "#6F8377",
+
+        // Rừng
+        forest: {
+          DEFAULT: "#2F7A5C",
+          deep: "#1F5744",
+          soft: "#4F9E7A",
+          moss: "#6E9B70",
+          sage: "#A9C6AE",
+          pale: "#D9E9DB",
         },
-        rose: {
-          DEFAULT: "#C97B84",
-          soft: "#E7C3C4",
-          petal: "#F3DDD9",
-        },
+
+        // Nắng / đom đóm
         gold: {
-          DEFAULT: "#BFA06A",
-          light: "#D9C29A",
-          deep: "#9C7E4C",
+          DEFAULT: "#D4AF6A",
+          light: "#F1DDA6",
+          deep: "#A8834A",
+          glow: "#FFF0B8",
+        },
+
+        // Cánh hoa
+        rose: {
+          DEFAULT: "#E39BA0",
+          soft: "#F2C7C7",
+          petal: "#FBE6E2",
         },
       },
       fontFamily: {
@@ -38,12 +49,11 @@ const config: Config = {
         script: ["var(--font-script)", "cursive"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
-      letterSpacing: {
-        widest2: "0.35em",
-      },
+      letterSpacing: { widest2: "0.35em" },
       boxShadow: {
-        soft: "0 20px 60px -20px rgba(74, 29, 43, 0.35)",
-        glow: "0 0 40px -6px rgba(191, 160, 106, 0.55)",
+        soft: "0 24px 60px -28px rgba(31, 87, 68, 0.35)",
+        glow: "0 0 50px -8px rgba(212, 175, 106, 0.65)",
+        leaf: "0 18px 44px -22px rgba(47, 122, 92, 0.45)",
       },
       keyframes: {
         "float-slow": {
@@ -54,15 +64,18 @@ const config: Config = {
           "0%": { backgroundPosition: "-200% center" },
           "100%": { backgroundPosition: "200% center" },
         },
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.55" },
+          "50%": { opacity: "1" },
         },
       },
       animation: {
-        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-slow": "float-slow 7s ease-in-out infinite",
         shimmer: "shimmer 6s linear infinite",
-        "fade-up": "fade-up 0.9s ease forwards",
+        "glow-pulse": "glow-pulse 3.5s ease-in-out infinite",
+      },
+      transitionTimingFunction: {
+        silk: "cubic-bezier(0.22, 1, 0.36, 1)",
       },
     },
   },

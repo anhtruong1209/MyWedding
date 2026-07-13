@@ -49,7 +49,7 @@ export default function GalleryGrid({
                 masonry ? "h-auto" : "absolute inset-0 h-full",
               )}
             />
-            <span className="absolute inset-0 flex items-center justify-center bg-wine-deep/0 opacity-0 transition group-hover:bg-wine-deep/40 group-hover:opacity-100">
+            <span className="absolute inset-0 flex items-center justify-center bg-forest-deep/0 opacity-0 transition group-hover:bg-forest-deep/40 group-hover:opacity-100">
               <span className="grid h-12 w-12 place-items-center rounded-full border border-white/70 text-xl text-white">
                 +
               </span>

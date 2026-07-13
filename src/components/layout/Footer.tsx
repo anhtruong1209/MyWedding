@@ -3,8 +3,8 @@ import { nav, site } from "@/data/site";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-wine-deep text-cream">
-      <div className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(600px_300px_at_20%_0%,#bfa06a,transparent_60%)]" />
+    <footer className="relative overflow-hidden bg-gradient-to-b from-forest to-forest-deep text-cream">
+      <div className="pointer-events-none absolute inset-0 opacity-35 [background:radial-gradient(600px_300px_at_20%_0%,#F1DDA6,transparent_60%)]" />
       <div className="container-wed relative py-20 text-center">
         <p className="eyebrow text-gold-light">Thank you</p>
         <p className="heading-script mt-3 text-5xl text-rose-soft sm:text-6xl">Trâm &amp; Trường</p>

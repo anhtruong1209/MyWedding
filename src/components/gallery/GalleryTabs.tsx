@@ -20,8 +20,8 @@ export default function GalleryTabs() {
             className={cn(
               "rounded-full px-6 py-2.5 font-sans text-sm font-semibold uppercase tracking-wide transition",
               active === cat.key
-                ? "bg-wine text-white shadow-soft"
-                : "border border-gold/40 text-wine hover:bg-gold hover:text-white",
+                ? "bg-forest text-white shadow-soft"
+                : "border border-gold/40 text-forest hover:bg-gold hover:text-white",
             )}
           >
             {cat.label}

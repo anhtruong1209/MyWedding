@@ -183,7 +183,15 @@ function FallingCluster({
  * Đom đóm phát sáng (Points + texture toả sáng, blending cộng)
  * ------------------------------------------------------------------ */
 
-function Fireflies({ count, texture }: { count: number; texture: THREE.Texture }) {
+function Fireflies({
+  count,
+  texture,
+  color = "#FFF0B8",
+}: {
+  count: number;
+  texture: THREE.Texture;
+  color?: string;
+}) {
   const ref = useRef<THREE.Points>(null);
   const matRef = useRef<THREE.PointsMaterial>(null);
 
@@ -229,7 +237,7 @@ function Fireflies({ count, texture }: { count: number; texture: THREE.Texture }
         transparent
         depthWrite={false}
         blending={THREE.AdditiveBlending}
-        color="#FFF0B8"
+        color={color}
         toneMapped={false}
       />
     </points>
@@ -240,7 +248,7 @@ function Fireflies({ count, texture }: { count: number; texture: THREE.Texture }
  * Tia nắng xuyên tán lá (plane kéo dài + blending cộng)
  * ------------------------------------------------------------------ */
 
-function GodRays({ texture }: { texture: THREE.Texture }) {
+function GodRays({ texture, color = "#FFF3C8" }: { texture: THREE.Texture; color?: string }) {
   const group = useRef<THREE.Group>(null);
   const rays = useMemo(
     () =>
@@ -276,7 +284,7 @@ function GodRays({ texture }: { texture: THREE.Texture }) {
             opacity={r.o}
             depthWrite={false}
             blending={THREE.AdditiveBlending}
-            color="#FFF3C8"
+            color={color}
             toneMapped={false}
           />
         </mesh>
@@ -307,19 +315,66 @@ function CameraRig() {
  * ------------------------------------------------------------------ */
 
 type Density = "full" | "light";
+export type SceneTheme = "forest" | "blush";
 
-function Scene({ density }: { density: Density }) {
+/**
+ * Hai thế giới của site.
+ *
+ * forest — rừng cổ tích của bố mẹ: cây low-poly hai bên, nắng vàng, đom đóm.
+ * blush  — chương của con: KHÔNG có cây (cây che mất mặt bé ở ảnh hero),
+ *          thay bằng mưa cánh hoa hồng dày và bụi lấp lánh trắng hồng.
+ */
+const THEMES = {
+  forest: {
+    trees: true,
+    fog: "#E6F1E4",
+    ambient: "#EAF6E6",
+    hemi: ["#FFF3C8", "#88B79A"] as const,
+    directional: "#FFF0C4",
+    point: "#CFE8D4",
+    ray: "#FFF3C8",
+    leaves: ["#5FAE83", "#D4AF6A"] as const,
+    petals: ["#E39BA0", "#F6DAD6"] as const,
+    firefly: "#FFF0B8",
+    sparkle: "#FFF0B8",
+  },
+  blush: {
+    trees: false,
+    fog: "#FDEBF0",
+    ambient: "#FFF4F7",
+    hemi: ["#FFF7F9", "#F4A9B8"] as const,
+    directional: "#FFE8EE",
+    point: "#FBD5DE",
+    ray: "#FFE2EA",
+    // Không có lá; dùng cánh hoa hai sắc hồng cho cả bốn cụm rơi.
+    leaves: ["#F4A9B8", "#FBD5DE"] as const,
+    petals: ["#E8879B", "#FFF0F4"] as const,
+    firefly: "#FFE9F0",
+    sparkle: "#FFF7F9",
+  },
+} as const;
+
+function Scene({ density, theme }: { density: Density; theme: SceneTheme }) {
   const full = density === "full";
+  const t = THEMES[theme];
+
   const glow = useMemo(() => makeGlowTexture(), []);
   const leafGeo = useMemo(() => makeLeafGeometry(), []);
   const petalGeo = useMemo(() => makePetalGeometry(), []);
 
-  const trees = useTrees(full ? 16 : 8);
+  const trees = useTrees(t.trees ? (full ? 16 : 8) : 0);
 
-  const leavesA = useMemo(() => makeDrifters(full ? 22 : 12), [full]);
-  const leavesB = useMemo(() => makeDrifters(full ? 18 : 10), [full]);
-  const petalsA = useMemo(() => makeDrifters(full ? 18 : 10), [full]);
-  const petalsB = useMemo(() => makeDrifters(full ? 14 : 8), [full]);
+  // Chương hồng không có cây, nên tăng lượng cánh hoa để khung hình không trống.
+  const boost = t.trees ? 1 : 1.6;
+  const n = (base: number) => Math.round(base * boost);
+
+  const leavesA = useMemo(() => makeDrifters(n(full ? 22 : 12)), [full, boost]);
+  const leavesB = useMemo(() => makeDrifters(n(full ? 18 : 10)), [full, boost]);
+  const petalsA = useMemo(() => makeDrifters(n(full ? 18 : 10)), [full, boost]);
+  const petalsB = useMemo(() => makeDrifters(n(full ? 14 : 8)), [full, boost]);
+
+  // Chương hồng dùng hình cánh hoa cho cả cụm "lá" — không có lá cây nào ở đây.
+  const driftGeo = t.trees ? leafGeo : petalGeo;
 
   useEffect(() => {
     return () => {
@@ -331,32 +386,30 @@ function Scene({ density }: { density: Density }) {
 
   return (
     <>
-      {/* Sương rừng — vật thể xa tan dần vào màn sương sáng */}
-      <fog attach="fog" args={["#E6F1E4", 12, 44]} />
+      <fog attach="fog" args={[t.fog, 12, 44]} />
 
-      <ambientLight intensity={1.15} color="#EAF6E6" />
-      <hemisphereLight args={["#FFF3C8", "#88B79A", 1.1]} />
-      <directionalLight position={[-8, 12, 6]} intensity={2.1} color="#FFF0C4" />
-      <pointLight position={[9, 3, 4]} intensity={26} color="#CFE8D4" />
+      <ambientLight intensity={1.15} color={t.ambient} />
+      <hemisphereLight args={[t.hemi[0], t.hemi[1], 1.1]} />
+      <directionalLight position={[-8, 12, 6]} intensity={2.1} color={t.directional} />
+      <pointLight position={[9, 3, 4]} intensity={26} color={t.point} />
 
-      <GodRays texture={glow} />
-      <Trees trees={trees} />
+      <GodRays texture={glow} color={t.ray} />
+      {t.trees && <Trees trees={trees} />}
 
-      <FallingCluster geometry={leafGeo} color="#5FAE83" items={leavesA} />
-      <FallingCluster geometry={leafGeo} color="#D4AF6A" items={leavesB} opacity={0.95} />
-      <FallingCluster geometry={petalGeo} color="#E39BA0" items={petalsA} />
-      <FallingCluster geometry={petalGeo} color="#F6DAD6" items={petalsB} opacity={0.9} />
+      <FallingCluster geometry={driftGeo} color={t.leaves[0]} items={leavesA} />
+      <FallingCluster geometry={driftGeo} color={t.leaves[1]} items={leavesB} opacity={0.95} />
+      <FallingCluster geometry={petalGeo} color={t.petals[0]} items={petalsA} />
+      <FallingCluster geometry={petalGeo} color={t.petals[1]} items={petalsB} opacity={0.9} />
 
-      <Fireflies count={full ? 90 : 45} texture={glow} />
+      <Fireflies count={full ? 90 : 45} texture={glow} color={t.firefly} />
 
-      {/* Bụi phép thuật lấp lánh */}
       <Sparkles
         count={full ? 140 : 70}
         scale={[28, 16, 12]}
         size={3.5}
         speed={0.35}
         opacity={0.85}
-        color="#FFF0B8"
+        color={t.sparkle}
       />
 
       <CameraRig />
@@ -366,9 +419,11 @@ function Scene({ density }: { density: Density }) {
 
 export default function ForestCanvas({
   density = "full",
+  theme = "forest",
   frameloop = "always",
 }: {
   density?: Density;
+  theme?: SceneTheme;
   frameloop?: "always" | "never";
 }) {
   return (
@@ -379,7 +434,7 @@ export default function ForestCanvas({
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       style={{ pointerEvents: "none" }}
     >
-      <Scene density={density} />
+      <Scene density={density} theme={theme} />
     </Canvas>
   );
 }

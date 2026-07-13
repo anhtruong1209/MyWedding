@@ -11,7 +11,7 @@ export default function GalleryPage() {
   return (
     <>
       <PageHeader
-        image="/images/gallery/category-2/2.jpg"
+        image="/images/gallery/category-2/2.webp"
         script="Khoảnh khắc"
         title="Bộ sưu tập"
         subtitle="Những khung hình lưu giữ trọn vẹn hạnh phúc của chúng tôi."

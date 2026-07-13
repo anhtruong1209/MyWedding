@@ -29,3 +29,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Ảnh gốc chưa nén. Giữ trên máy làm bản lưu, KHÔNG đưa vào git —
+# ảnh nặng commit vào git là thứ đã làm repo phình lên 616MB.
+# Quy trình: bỏ ảnh vào _originals/<tên-album>/ rồi chạy
+#   npm run images:import -- --src _originals/<tên-album> --album <tên-album>
+/_originals/

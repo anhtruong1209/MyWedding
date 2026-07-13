@@ -11,7 +11,7 @@ export default function StoryPage() {
   return (
     <>
       <PageHeader
-        image="/images/story/3.jpg"
+        image="/images/story/3.webp"
         script="Chuyện của chúng tôi"
         title="Câu chuyện tình yêu"
         subtitle="Từ ánh mắt đầu tiên nơi sân trường đến ngày nắm tay nhau trọn đời."

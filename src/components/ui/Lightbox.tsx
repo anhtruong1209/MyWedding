@@ -10,11 +10,13 @@ export default function Lightbox({
   index,
   onClose,
   onNavigate,
+  altPrefix = "Ảnh cưới",
 }: {
   images: string[];
   index: number | null;
   onClose: () => void;
   onNavigate: (next: number) => void;
+  altPrefix?: string;
 }) {
   const open = index !== null;
   const closeBtnRef = useRef<HTMLButtonElement>(null);
@@ -58,7 +60,7 @@ export default function Lightbox({
           role="dialog"
           aria-modal="true"
           aria-label="Xem ảnh cưới phóng to"
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-forest-deep/90 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/90 backdrop-blur-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -104,9 +106,11 @@ export default function Lightbox({
           >
             <Image
               src={images[index]}
-              alt={`Ảnh cưới ${index + 1}`}
+              alt={`${altPrefix} ${index + 1}`}
               fill
-              sizes="92vw"
+              // Khung ảnh bị chặn ở 1100px (xem class w-[min(92vw,1100px)] bên trên).
+              // Khai báo đúng mốc đó, nếu không trình duyệt sẽ tải bản rộng hơn mức hiển thị.
+              sizes="(max-width: 1196px) 92vw, 1100px"
               className="rounded-2xl object-contain"
               priority
             />

@@ -42,6 +42,20 @@ const config: Config = {
           soft: "#F2C7C7",
           petal: "#FBE6E2",
         },
+
+        /**
+         * Chương của Hằng Châu — hồng phấn.
+         * Cùng độ sáng với hệ rừng ở trên để hai chương đứng cạnh nhau không lệch tông,
+         * chỉ đổi sắc: rêu -> hồng, nắng vàng -> hồng đào.
+         */
+        blush: {
+          DEFAULT: "#E8879B",
+          deep: "#B85C74",
+          soft: "#F4A9B8",
+          pale: "#FBD5DE",
+          mist: "#FDEBF0",
+          cloud: "#FFF7F9",
+        },
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
@@ -54,6 +68,8 @@ const config: Config = {
         soft: "0 24px 60px -28px rgba(31, 87, 68, 0.35)",
         glow: "0 0 50px -8px rgba(212, 175, 106, 0.65)",
         leaf: "0 18px 44px -22px rgba(47, 122, 92, 0.45)",
+        petal: "0 24px 60px -28px rgba(184, 92, 116, 0.38)",
+        "petal-glow": "0 0 50px -8px rgba(244, 169, 184, 0.75)",
       },
       keyframes: {
         "float-slow": {

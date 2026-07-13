@@ -10,9 +10,12 @@ import { cn } from "@/lib/utils";
 export default function GalleryGrid({
   images,
   masonry = true,
+  altPrefix = "Ảnh cưới",
 }: {
   images: string[];
   masonry?: boolean;
+  /** Dùng cho alt của từng ảnh — album của bé cần mô tả khác album cưới. */
+  altPrefix?: string;
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -40,7 +43,7 @@ export default function GalleryGrid({
           >
             <Image
               src={src}
-              alt={`Ảnh cưới ${i + 1}`}
+              alt={`${altPrefix} ${i + 1}`}
               width={600}
               height={800}
               sizes="(max-width: 768px) 50vw, 33vw"
@@ -58,7 +61,13 @@ export default function GalleryGrid({
         ))}
       </div>
 
-      <Lightbox images={images} index={openIndex} onClose={() => setOpenIndex(null)} onNavigate={setOpenIndex} />
+      <Lightbox
+        images={images}
+        index={openIndex}
+        altPrefix={altPrefix}
+        onClose={() => setOpenIndex(null)}
+        onNavigate={setOpenIndex}
+      />
     </>
   );
 }

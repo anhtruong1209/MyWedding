@@ -13,7 +13,7 @@ export default function EventsPage() {
   return (
     <>
       <PageHeader
-        image="/images/misc/3.jpg"
+        image="/images/misc/3.webp"
         script="Thời gian & Địa điểm"
         title="Sự kiện"
         subtitle="Rất mong được đón tiếp bạn trong hai buổi lễ trọng đại của chúng tôi."

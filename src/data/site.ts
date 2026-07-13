@@ -12,8 +12,8 @@ export const couple = {
     year: 2000,
     tagline:
       "Cô gái nhỏ mang trong mình ước mơ về một câu chuyện cổ tích. “Em là người lớn của cả thế giới, nhưng chỉ là bạn nhỏ của một người thôi.” ❤️",
-    photo: "/images/misc/2.jpg",
-    portrait: "/images/background/subheader-2.jpg",
+    photo: "/images/misc/2.webp",
+    portrait: "/images/background/subheader-2.webp",
     facebook: "https://www.facebook.com/profile.php?id=100006943964259",
     email: "doquynhtram2010@gmail.com",
   },
@@ -24,8 +24,8 @@ export const couple = {
     year: 2000,
     tagline:
       "Lập trình viên vui tính, luôn yêu đời, yêu âm nhạc và thích phiêu lưu. “Trên đời này chỉ có một thứ hạnh phúc duy nhất là yêu và được yêu em.” ❤️",
-    photo: "/images/misc/1.jpg",
-    portrait: "/images/background/subheader-1.jpg",
+    photo: "/images/misc/1.webp",
+    portrait: "/images/background/subheader-1.webp",
     facebook: "https://www.facebook.com/anhtruong1209",
     email: "sdlla0911114819@gmail.com",
   },
@@ -41,7 +41,7 @@ export const site = {
     fairy: "Trong khu rừng cổ tích ấy, hai trái tim đã tìm thấy nhau.",
     quote:
       "Tuổi 17 năm ấy, em có anh, anh như có cả thế giới trong vòng tay của mình.",
-    slides: ["/images/slider/1.jpg", "/images/slider/2.jpg", "/images/slider/3.jpg"],
+    slides: ["/images/slider/1.webp", "/images/slider/2.webp", "/images/slider/3.webp"],
   },
   music: "/music/loop.mp3",
   favicon: "/images/icon1.png",
@@ -75,7 +75,7 @@ export const events: readonly WeddingEvent[] = [
     dateISO: engagementDateISO,
     venue: "Tư gia nhà Gái",
     address: "8/61 Nguyễn Công Trứ, Hàng Kênh, Lê Chân, Hải Phòng",
-    image: "/images/misc/4.jpg",
+    image: "/images/misc/4.webp",
     mapEmbed:
       "https://maps.google.com/maps?width=100%25&height=600&hl=vi&q=61%20P.%20Nguy%E1%BB%85n%20C%C3%B4ng%20Tr%E1%BB%A9+(Nh%C3%A0%20G%C3%A1i)&t=&z=17&ie=UTF8&iwloc=B&output=embed",
   },
@@ -88,7 +88,7 @@ export const events: readonly WeddingEvent[] = [
     dateISO: weddingDateISO,
     venue: "Sảnh Sapphire · Trung tâm tiệc cưới Hải Đăng Plaza",
     address: "19 P. Trần Khánh Dư, Máy Tơ, Ngô Quyền, Hải Phòng, Việt Nam",
-    image: "/images/misc/3.jpg",
+    image: "/images/misc/3.webp",
     mapEmbed:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59651.66197957352!2d106.6510736!3d20.8628232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7be3b26b7f15%3A0xfb767616d10e5e50!2zVHJ1bmcgdMOibSB0aeG7h2MgY8aw4bubaSBI4bqjaSDEkMSDbmcgUGxhemEgSOG6o2kgUGjDsm5n!5e0!3m2!1svi!2s!4v1726651008685!5m2!1svi!2s",
   },
@@ -105,31 +105,31 @@ export const timeline: readonly TimelineItem[] = [
   {
     year: "2017",
     title: "Chúng tôi gặp nhau như nào?",
-    image: "/images/story/1.jpg",
+    image: "/images/story/1.webp",
     body: "Năm 2017, chúng tôi gặp nhau lần đầu tiên tại trường THPT Ngô Quyền. Cả hai đều học cùng khóa và cùng trải qua những kỳ thi căng thẳng của những năm cuối cấp. Ban đầu chỉ là những lần gặp gỡ ngắn ngủi khi cùng tham gia các buổi ôn thi, nhưng dần dần mối quan hệ trở nên gần gũi hơn. Từ những cái nhìn thoáng qua, chúng tôi bắt đầu những cuộc trò chuyện nhỏ, và từ đó tình cảm nhẹ nhàng chớm nở — bắt đầu hành trình yêu thương kéo dài cho đến ngày hôm nay.",
   },
   {
     year: "2017",
     title: "Lần hẹn hò đầu tiên",
-    image: "/images/story/2.jpg",
+    image: "/images/story/2.webp",
     body: "Bữa hẹn hò đầu tiên của chúng tôi diễn ra vào thời học sinh, khi cùng nhau khám phá những góc phố quen thuộc. Địa điểm hẹn hò là quán bánh mì chảo đối diện cổng trường. Trong không khí của buổi chiều nhẹ nhàng, chúng tôi cùng thưởng thức những chiếc bánh mì thơm ngon, trò chuyện và cười đùa. Những con phố nhỏ, ánh đèn vàng ấm áp đã tạo nên một ký ức đáng nhớ — và từ đó, mối quan hệ của chúng tôi dần trở nên sâu sắc hơn.",
   },
   {
     year: "2018 – 2024",
     title: "Cuộc sống trên Hà Nội",
-    image: "/images/story/3.jpg",
+    image: "/images/story/3.webp",
     body: "Năm 2018 đánh dấu một bước ngoặt khi chúng tôi chính thức đính hôn. Sau đó chúng tôi chuyển đến Hà Nội, tiếp tục học tập và làm việc trong suốt 6 năm. Chúng tôi cùng khám phá những góc phố, thưởng thức món ngon và trải nghiệm cuộc sống đô thị sôi động. Những năm tháng ấy giúp chúng tôi gắn bó hơn, hiểu nhau sâu sắc hơn. Những khó khăn đã vượt qua càng làm cho tình yêu và sự đồng cảm trở nên mạnh mẽ hơn.",
   },
   {
     year: "Tháng 8, 2024",
     title: "Cầu hôn",
-    image: "/images/story/4.jpg",
+    image: "/images/story/4.webp",
     body: "Vào một ngày không có sự kiện đặc biệt nào, tôi quyết định thực hiện một kế hoạch cầu hôn bất ngờ tại chính căn nhà của chúng tôi. Tôi chuẩn bị một bữa tối đơn giản nhưng ấm cúng, rồi quỳ xuống cầu hôn bằng chiếc nhẫn PNJ — biểu tượng của tình yêu và sự gắn bó. Cô ấy hoàn toàn bất ngờ, và niềm vui của cô ấy đã làm cho khoảnh khắc ấy trở nên thật đặc biệt.",
   },
   {
     year: "10 · 11 · 2024",
     title: "Chúng tôi cưới nhau",
-    image: "/images/story/5.jpg",
+    image: "/images/story/5.webp",
     body: "Ngày 10 tháng 11 năm 2024, chúng tôi chính thức bước vào hành trình mới với một buổi lễ cưới đầy ý nghĩa. Chúng tôi cùng nhau trao lời thề, cam kết sẽ yêu thương và đồng hành cùng nhau suốt đời. Những lời chúc phúc, nụ cười và nước mắt hạnh phúc của mọi người đã làm cho ngày cưới trở nên hoàn hảo. Ngày cưới không chỉ là sự kết hợp của hai trái tim, mà còn là khởi đầu của một hành trình mới đầy hy vọng và yêu thương.",
   },
 ] as const;
@@ -139,7 +139,7 @@ export const bios = {
   bride: {
     name: "Quỳnh Trâm",
     role: "Cô dâu",
-    hero: "/images/background/subheader-2.jpg",
+    hero: "/images/background/subheader-2.webp",
     paragraphs: [
       {
         heading: "Đôi điều về cô dâu",
@@ -162,7 +162,7 @@ export const bios = {
   groom: {
     name: "Anh Trường",
     role: "Chú rể",
-    hero: "/images/background/subheader-1.jpg",
+    hero: "/images/background/subheader-1.webp",
     paragraphs: [
       {
         heading: "Đôi điều về chú rể",
@@ -217,7 +217,7 @@ export type GiftAccount = {
 export const gifts: readonly GiftAccount[] = [
   {
     label: "Mừng cưới đến Chú Rể",
-    qr: "/images/qrcode_chure.png",
+    qr: "/images/qrcode_chure.webp",
     stk: "02315915901",
     bank: "Ngân hàng của Chú Rể",
     messenger:
@@ -226,7 +226,7 @@ export const gifts: readonly GiftAccount[] = [
   },
   {
     label: "Mừng cưới đến Cô Dâu",
-    qr: "/images/qrcode_codau.png",
+    qr: "/images/qrcode_codau.webp",
     stk: "0031000378125",
     bank: "Ngân hàng của Cô Dâu",
     messenger: "https://m.me/100006943964259",
@@ -240,35 +240,35 @@ export const galleryCategories: readonly GalleryCategory[] = [
   {
     key: "phong",
     label: "Ảnh phóng",
-    images: ["/images/gallery/category-0/1.jpg", "/images/gallery/category-0/2.jpg"],
+    images: ["/images/gallery/category-0/1.webp", "/images/gallery/category-0/2.webp"],
   },
   {
     key: "cuoi-1",
     label: "Ảnh cưới 1",
-    images: Array.from({ length: 9 }, (_, i) => `/images/gallery/category-1/${i + 1}.jpg`),
+    images: Array.from({ length: 9 }, (_, i) => `/images/gallery/category-1/${i + 1}.webp`),
   },
   {
     key: "cuoi-2",
     label: "Ảnh cưới 2",
-    images: Array.from({ length: 9 }, (_, i) => `/images/gallery/category-2/${i + 1}.jpg`),
+    images: Array.from({ length: 9 }, (_, i) => `/images/gallery/category-2/${i + 1}.webp`),
   },
   {
     key: "cuoi-3",
     label: "Ảnh cưới 3",
-    images: Array.from({ length: 9 }, (_, i) => `/images/gallery/category-3/${i + 1}.jpg`),
+    images: Array.from({ length: 9 }, (_, i) => `/images/gallery/category-3/${i + 1}.webp`),
   },
 ] as const;
 
 /** Ảnh nổi bật cho khối gallery ở trang chủ. */
 export const galleryHighlights: string[] = [
-  "/images/gallery/category-1/1.jpg",
-  "/images/gallery/category-1/3.jpg",
-  "/images/gallery/category-2/2.jpg",
-  "/images/gallery/category-2/5.jpg",
-  "/images/gallery/category-3/1.jpg",
-  "/images/gallery/category-3/4.jpg",
-  "/images/gallery/category-1/7.jpg",
-  "/images/gallery/category-3/6.jpg",
+  "/images/gallery/category-1/1.webp",
+  "/images/gallery/category-1/3.webp",
+  "/images/gallery/category-2/2.webp",
+  "/images/gallery/category-2/5.webp",
+  "/images/gallery/category-3/1.webp",
+  "/images/gallery/category-3/4.webp",
+  "/images/gallery/category-1/7.webp",
+  "/images/gallery/category-3/6.webp",
 ];
 
 /** Cấu hình EmailJS cho RSVP (public key — an toàn để lộ phía client). */
@@ -283,6 +283,7 @@ export const nav: readonly { href: string; label: string }[] = [
   { href: "/about-her", label: "Cô dâu" },
   { href: "/about-him", label: "Chú rể" },
   { href: "/story", label: "Câu chuyện" },
+  { href: "/con-gai", label: "Con gái" },
   { href: "/events", label: "Sự kiện" },
   { href: "/gallery", label: "Bộ sưu tập" },
 ] as const;

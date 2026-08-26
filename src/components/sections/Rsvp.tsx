@@ -60,7 +60,7 @@ export default function Rsvp() {
   }
 
   return (
-    <section id="rsvp" className="relative overflow-hidden bg-gradient-to-b from-forest-pale/60 to-mist py-24 sm:py-28">
+    <section id="rsvp" className="relative overflow-hidden bg-gradient-to-b from-sage-pale/60 to-mist py-24 sm:py-28">
       <div className="container-wed">
         <SectionTitle eyebrow="R.S.V.P" script="Bạn sẽ đến chứ?" title="Xác nhận tham dự" />
 
@@ -68,7 +68,7 @@ export default function Rsvp() {
           <div className="grid gap-2 font-serif text-lg text-muted sm:grid-cols-2">
             {events.map((ev) => (
               <p key={ev.key}>
-                <span className="font-semibold text-forest">{ev.label}:</span> {ev.time}h ·{" "}
+                <span className="font-semibold text-ink">{ev.label}:</span> {ev.time}h ·{" "}
                 {ev.dateText}
               </p>
             ))}
@@ -147,7 +147,7 @@ export default function Rsvp() {
             {message && (
               <p
                 className={`text-center font-serif text-lg ${
-                  status === "success" ? "text-forest" : "text-red-600"
+                  status === "success" ? "text-sage-deep" : "text-red-600"
                 }`}
               >
                 {message}

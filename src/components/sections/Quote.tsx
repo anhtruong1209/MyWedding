@@ -21,7 +21,7 @@ export default function Quote() {
       <motion.div style={{ y }} className="absolute inset-0 scale-110">
         <Image src="/images/background/5.webp" alt="" fill sizes="100vw" className="object-cover" />
         {/* Phủ sáng hơn nhiều: xanh rừng nhạt + nắng vàng */}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/55 via-forest/35 to-forest-deep/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-deep/55 via-ink/35 to-ink-deep/55" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,240,184,0.35),transparent_60%)]" />
       </motion.div>
 

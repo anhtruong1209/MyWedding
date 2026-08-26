@@ -10,7 +10,7 @@ import { useInViewport } from "@/lib/useInViewport";
 const ForestCanvas = dynamic(() => import("./ForestCanvas"), { ssr: false });
 
 /**
- * Lớp rừng cổ tích 3D: cây, sương, tia nắng, đom đóm, lá & cánh hoa rơi.
+ * Lớp rừng cổ tích 3D: sương, tia nắng, đom đóm, lá & cánh hoa rơi.
  * - `density="full"` cho hero, `"light"` cho banner trang con.
  * - Tự hạ mật độ trên mobile, tạm dừng khi cuộn ra ngoài, tắt khi reduce-motion.
  */
@@ -61,7 +61,7 @@ export default function Forest3D({
             "absolute inset-0",
             theme === "blush"
               ? "bg-[radial-gradient(circle_at_25%_15%,rgba(251,213,222,0.6),transparent_60%),radial-gradient(circle_at_80%_70%,rgba(244,169,184,0.4),transparent_60%)]"
-              : "bg-[radial-gradient(circle_at_25%_15%,rgba(255,240,184,0.55),transparent_60%),radial-gradient(circle_at_80%_70%,rgba(169,198,174,0.45),transparent_60%)]",
+              : "bg-[radial-gradient(circle_at_25%_15%,rgba(255,240,184,0.55),transparent_60%),radial-gradient(circle_at_80%_70%,rgba(92,138,110,0.28),transparent_60%)]",
           )}
         />
       ) : (

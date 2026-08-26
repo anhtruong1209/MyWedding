@@ -13,113 +13,6 @@ import {
 } from "./forest-lib";
 
 /* ------------------------------------------------------------------ *
- * Cây rừng — thân + tán lá low-poly, dựng ở hai bên để "đóng khung"
- * ------------------------------------------------------------------ */
-
-type Tree = { x: number; z: number; h: number; r: number };
-
-function useTrees(count: number): Tree[] {
-  return useMemo(() => {
-    const trees: Tree[] = [];
-    for (let i = 0; i < count; i++) {
-      // Chỉ mọc ở rìa trái/phải để giữa khung hình vẫn sáng, thoáng.
-      const side = i % 2 === 0 ? -1 : 1;
-      const x = side * (6.5 + Math.random() * 8);
-      const z = -2 - Math.random() * 14;
-      trees.push({
-        x,
-        z,
-        h: 6 + Math.random() * 5,
-        r: 0.14 + Math.random() * 0.12,
-      });
-    }
-    return trees;
-  }, [count]);
-}
-
-function Trees({ trees }: { trees: Tree[] }) {
-  const trunkRef = useRef<THREE.InstancedMesh>(null);
-  const dummy = useMemo(() => new THREE.Object3D(), []);
-
-  // Mỗi cây có 3 khối tán lá → gom thành 2 cụm màu để tránh instanceColor.
-  const blobs = useMemo(() => {
-    const a: { x: number; y: number; z: number; s: number; tint: number }[] = [];
-    trees.forEach((t) => {
-      for (let k = 0; k < 3; k++) {
-        a.push({
-          x: t.x + (Math.random() - 0.5) * 2.2,
-          y: -6 + t.h + k * 1.15 + Math.random() * 0.6,
-          z: t.z + (Math.random() - 0.5) * 1.8,
-          s: 2.4 - k * 0.45 + Math.random() * 0.5,
-          tint: Math.random(),
-        });
-      }
-    });
-    return a;
-  }, [trees]);
-
-  const light = useMemo(() => blobs.filter((b) => b.tint > 0.5), [blobs]);
-  const dark = useMemo(() => blobs.filter((b) => b.tint <= 0.5), [blobs]);
-
-  useEffect(() => {
-    const mesh = trunkRef.current;
-    if (!mesh) return;
-    trees.forEach((t, i) => {
-      dummy.position.set(t.x, -6 + t.h / 2, t.z);
-      dummy.rotation.set(0, Math.random() * Math.PI, (Math.random() - 0.5) * 0.08);
-      dummy.scale.set(t.r / 0.16, t.h / 8, t.r / 0.16);
-      dummy.updateMatrix();
-      mesh.setMatrixAt(i, dummy.matrix);
-    });
-    mesh.instanceMatrix.needsUpdate = true;
-  }, [trees, dummy]);
-
-  return (
-    <group>
-      <instancedMesh ref={trunkRef} args={[undefined, undefined, trees.length]} frustumCulled={false}>
-        <cylinderGeometry args={[0.16, 0.26, 8, 7]} />
-        <meshStandardMaterial color="#6b5a44" roughness={0.95} flatShading />
-      </instancedMesh>
-
-      <FoliageCluster blobs={light} color="#5FAE83" />
-      <FoliageCluster blobs={dark} color="#37805F" />
-    </group>
-  );
-}
-
-function FoliageCluster({
-  blobs,
-  color,
-}: {
-  blobs: { x: number; y: number; z: number; s: number }[];
-  color: string;
-}) {
-  const ref = useRef<THREE.InstancedMesh>(null);
-  const dummy = useMemo(() => new THREE.Object3D(), []);
-
-  useEffect(() => {
-    const mesh = ref.current;
-    if (!mesh) return;
-    blobs.forEach((b, i) => {
-      dummy.position.set(b.x, b.y, b.z);
-      dummy.rotation.set(Math.random(), Math.random(), Math.random());
-      dummy.scale.setScalar(b.s);
-      dummy.updateMatrix();
-      mesh.setMatrixAt(i, dummy.matrix);
-    });
-    mesh.instanceMatrix.needsUpdate = true;
-  }, [blobs, dummy]);
-
-  if (!blobs.length) return null;
-  return (
-    <instancedMesh ref={ref} args={[undefined, undefined, blobs.length]} frustumCulled={false}>
-      <icosahedronGeometry args={[1, 0]} />
-      <meshStandardMaterial color={color} roughness={0.9} flatShading transparent opacity={0.95} />
-    </instancedMesh>
-  );
-}
-
-/* ------------------------------------------------------------------ *
  * Lá / cánh hoa rơi xoay 3D
  * ------------------------------------------------------------------ */
 
@@ -318,34 +211,34 @@ type Density = "full" | "light";
 export type SceneTheme = "forest" | "blush";
 
 /**
- * Hai thế giới của site.
+ * Hai thế giới của site — không dựng cây 3D (khối low-poly nhìn thô khi lên khung
+ * hình lớn); không gian cổ tích đến từ ánh sáng: tia nắng, đom đóm, lá/cánh hoa rơi.
  *
- * forest — rừng cổ tích của bố mẹ: cây low-poly hai bên, nắng vàng, đom đóm.
- * blush  — chương của con: KHÔNG có cây (cây che mất mặt bé ở ảnh hero),
- *          thay bằng mưa cánh hoa hồng dày và bụi lấp lánh trắng hồng.
+ * forest — rừng cổ tích của bố mẹ: nắng vàng, đom đóm, lá rơi điểm xanh rêu.
+ * blush  — chương của con: mưa cánh hoa hồng dày và bụi lấp lánh trắng hồng.
  */
 const THEMES = {
   forest: {
-    trees: true,
-    fog: "#E6F1E4",
-    ambient: "#EAF6E6",
-    hemi: ["#FFF3C8", "#88B79A"] as const,
+    fog: "#F3EAD3",
+    ambient: "#FFF3D9",
+    hemi: ["#FFF3C8", "#4F7A5C"] as const,
     directional: "#FFF0C4",
-    point: "#CFE8D4",
+    point: "#9FCBAE",
     ray: "#FFF3C8",
-    leaves: ["#5FAE83", "#D4AF6A"] as const,
-    petals: ["#E39BA0", "#F6DAD6"] as const,
+    driftShape: "leaf",
+    leaves: ["#5C8A6E", "#D4AF6A"] as const,
+    petals: ["#A8834A", "#F1DDA6"] as const,
     firefly: "#FFF0B8",
     sparkle: "#FFF0B8",
   },
   blush: {
-    trees: false,
     fog: "#FDEBF0",
     ambient: "#FFF4F7",
     hemi: ["#FFF7F9", "#F4A9B8"] as const,
     directional: "#FFE8EE",
     point: "#FBD5DE",
     ray: "#FFE2EA",
+    driftShape: "petal",
     // Không có lá; dùng cánh hoa hai sắc hồng cho cả bốn cụm rơi.
     leaves: ["#F4A9B8", "#FBD5DE"] as const,
     petals: ["#E8879B", "#FFF0F4"] as const,
@@ -362,19 +255,13 @@ function Scene({ density, theme }: { density: Density; theme: SceneTheme }) {
   const leafGeo = useMemo(() => makeLeafGeometry(), []);
   const petalGeo = useMemo(() => makePetalGeometry(), []);
 
-  const trees = useTrees(t.trees ? (full ? 16 : 8) : 0);
+  // Không còn cây 3D đóng khung nên tăng lượng lá/cánh hoa rơi để khung hình không trống.
+  const leavesA = useMemo(() => makeDrifters(full ? 34 : 18), [full]);
+  const leavesB = useMemo(() => makeDrifters(full ? 28 : 15), [full]);
+  const petalsA = useMemo(() => makeDrifters(full ? 28 : 15), [full]);
+  const petalsB = useMemo(() => makeDrifters(full ? 22 : 12), [full]);
 
-  // Chương hồng không có cây, nên tăng lượng cánh hoa để khung hình không trống.
-  const boost = t.trees ? 1 : 1.6;
-  const n = (base: number) => Math.round(base * boost);
-
-  const leavesA = useMemo(() => makeDrifters(n(full ? 22 : 12)), [full, boost]);
-  const leavesB = useMemo(() => makeDrifters(n(full ? 18 : 10)), [full, boost]);
-  const petalsA = useMemo(() => makeDrifters(n(full ? 18 : 10)), [full, boost]);
-  const petalsB = useMemo(() => makeDrifters(n(full ? 14 : 8)), [full, boost]);
-
-  // Chương hồng dùng hình cánh hoa cho cả cụm "lá" — không có lá cây nào ở đây.
-  const driftGeo = t.trees ? leafGeo : petalGeo;
+  const driftGeo = t.driftShape === "leaf" ? leafGeo : petalGeo;
 
   useEffect(() => {
     return () => {
@@ -394,7 +281,6 @@ function Scene({ density, theme }: { density: Density; theme: SceneTheme }) {
       <pointLight position={[9, 3, 4]} intensity={26} color={t.point} />
 
       <GodRays texture={glow} color={t.ray} />
-      {t.trees && <Trees trees={trees} />}
 
       <FallingCluster geometry={driftGeo} color={t.leaves[0]} items={leavesA} />
       <FallingCluster geometry={driftGeo} color={t.leaves[1]} items={leavesB} opacity={0.95} />

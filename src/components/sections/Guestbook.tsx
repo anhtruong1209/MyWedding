@@ -20,7 +20,7 @@ export default function Guestbook() {
                 <blockquote className="mt-2 font-serif text-lg italic text-ink/90">{t.body}</blockquote>
                 <figcaption className="mt-5 flex items-center gap-3">
                   <span className="h-px w-8 bg-gold" />
-                  <span className="font-sans text-sm font-semibold uppercase tracking-wide text-forest">
+                  <span className="font-sans text-sm font-semibold uppercase tracking-wide text-ink">
                     {t.author}
                   </span>
                 </figcaption>

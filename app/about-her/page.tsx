@@ -11,7 +11,13 @@ export const metadata: Metadata = {
 export default function AboutHerPage() {
   return (
     <>
-      <PageHeader image={bios.bride.hero} script="Cô dâu" title="Quỳnh Trâm" subtitle="Người con gái của những giấc mơ cổ tích." />
+      <PageHeader
+        image={bios.bride.hero}
+        imagePosition="center 30%"
+        script="Cô dâu"
+        title="Quỳnh Trâm"
+        subtitle="Người con gái của những giấc mơ cổ tích."
+      />
       <BioContent person="bride" />
     </>
   );

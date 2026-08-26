@@ -47,10 +47,11 @@ export const babyMilestones: readonly Milestone[] = [
     body: "Những đêm không ngủ, những lần thay tã lúc ba giờ sáng, những cái ngáp bé xíu làm tan chảy mọi mệt mỏi. Bố học cách bế con thật khẽ, mẹ học cách nghe tiếng khóc mà đoán được con đang cần gì. Chúng ta học làm bố mẹ, cùng lúc con học làm người.",
   },
   {
-    when: "27 · 02 · 2026",
-    title: "Con tròn một tháng",
+    // Ngày lấy từ tấm bảng "14.2 · Special day" nhìn thấy trong chính bức ảnh.
+    when: "14 · 02 · 2026",
+    title: "Ngày đặc biệt đầu tiên",
     image: "/images/baby/12.webp",
-    body: "Một tháng trôi qua nhanh như một giấc mơ. Con đã cứng cáp hơn, đã biết nhìn theo ánh sáng, đã có những cái nhếch mép mà bố mẹ cứ khăng khăng gọi là nụ cười. Cam của bố mẹ — chào mừng con đến với cột mốc đầu tiên.",
+    body: "Cái Tết đầu tiên, ngày lễ đầu tiên, tấm bảng nhỏ đề tên con — Cam · Hằng Châu. Con còn chưa biết gì, chỉ nằm ngoan cho bố mẹ chụp ảnh. Nhưng với bố mẹ, đó là ngày đặc biệt nhất mà mình từng có.",
   },
   {
     when: "Mùa xuân 2026",

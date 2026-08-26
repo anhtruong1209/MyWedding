@@ -11,7 +11,13 @@ export const metadata: Metadata = {
 export default function AboutHimPage() {
   return (
     <>
-      <PageHeader image={bios.groom.hero} script="Chú rể" title="Anh Trường" subtitle="Chàng lập trình viên yêu đời và say mê phiêu lưu." />
+      <PageHeader
+        image={bios.groom.hero}
+        imagePosition="center 25%"
+        script="Chú rể"
+        title="Anh Trường"
+        subtitle="Chàng lập trình viên yêu đời và say mê phiêu lưu."
+      />
       <BioContent person="groom" />
     </>
   );

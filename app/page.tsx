@@ -4,6 +4,7 @@ import Quote from "@/components/sections/Quote";
 import Invitation from "@/components/sections/Invitation";
 import EventsSection from "@/components/sections/EventsSection";
 import AnniversaryCounter from "@/components/sections/AnniversaryCounter";
+import BabyTeaser from "@/components/sections/BabyTeaser";
 import Guestbook from "@/components/sections/Guestbook";
 import Gift from "@/components/sections/Gift";
 import GalleryPreview from "@/components/sections/GalleryPreview";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Invitation />
       <EventsSection />
       <AnniversaryCounter />
+      <BabyTeaser />
       <Guestbook />
       <Gift />
       <GalleryPreview />

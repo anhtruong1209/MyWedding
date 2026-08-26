@@ -44,8 +44,8 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "group relative font-sans text-sm font-medium uppercase tracking-wide text-ink/80 transition-colors hover:text-forest",
-                    active && "text-forest",
+                    "group relative font-sans text-sm font-medium uppercase tracking-wide text-ink/80 transition-colors hover:text-ink",
+                    active && "text-ink",
                   )}
                 >
                   {item.label}
@@ -72,9 +72,9 @@ export default function Navbar() {
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={cn("h-0.5 w-6 bg-forest transition", open && "translate-y-2 rotate-45")} />
-          <span className={cn("h-0.5 w-6 bg-forest transition", open && "opacity-0")} />
-          <span className={cn("h-0.5 w-6 bg-forest transition", open && "-translate-y-2 -rotate-45")} />
+          <span className={cn("h-0.5 w-6 bg-ink transition", open && "translate-y-2 rotate-45")} />
+          <span className={cn("h-0.5 w-6 bg-ink transition", open && "opacity-0")} />
+          <span className={cn("h-0.5 w-6 bg-ink transition", open && "-translate-y-2 -rotate-45")} />
         </button>
       </nav>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 font-sans text-sm uppercase tracking-wide text-ink/80 hover:bg-rose-petal/60 hover:text-forest"
+                  className="block rounded-xl px-4 py-3 font-sans text-sm uppercase tracking-wide text-ink/80 hover:bg-gold-light/25 hover:text-ink"
                 >
                   {item.label}
                 </Link>

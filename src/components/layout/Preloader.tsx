@@ -23,7 +23,7 @@ export default function Preloader() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,240,184,0.55),transparent_60%)]" />
 
           <motion.div
-            className="relative grid h-24 w-24 place-items-center rounded-full border-2 border-forest-sage/50"
+            className="relative grid h-24 w-24 place-items-center rounded-full border-2 border-sage/50"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

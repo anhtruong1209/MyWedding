@@ -14,7 +14,7 @@ const silk = [0.22, 1, 0.36, 1] as const;
  */
 const TONES = {
   forest: {
-    veil: "bg-gradient-to-b from-forest-deep/50 via-forest-deep/15 to-mist",
+    veil: "bg-gradient-to-b from-ink-deep/50 via-ink-deep/15 to-mist",
     bloom: "bg-[radial-gradient(circle_at_25%_20%,rgba(255,240,184,0.4),transparent_58%)]",
     script: "text-gold-light text-halo",
     title: "text-white text-halo",

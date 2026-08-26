@@ -19,7 +19,7 @@ export default function BioContent({ person }: { person: "bride" | "groom" }) {
             <TiltCard max={7} className="overflow-hidden rounded-[2rem] shadow-soft">
               <div className="relative aspect-[3/4] w-full">
                 <Image src={info.photo} alt={bio.name} fill sizes="(max-width:1024px) 90vw, 40vw" className="object-cover" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest-deep/80 to-transparent p-6 text-center">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-deep/80 to-transparent p-6 text-center">
                   <p className="heading-script text-4xl text-white">{bio.name}</p>
                   <p className="font-sans text-xs uppercase tracking-widest2 text-gold-light">{bio.role}</p>
                 </div>
@@ -32,7 +32,7 @@ export default function BioContent({ person }: { person: "bride" | "groom" }) {
           {bio.paragraphs.map((p, i) => (
             <Reveal key={p.heading} delay={i * 0.08} direction="left">
               <article>
-                <h3 className="flex items-center gap-3 font-display text-2xl text-forest-deep">
+                <h3 className="flex items-center gap-3 font-display text-2xl text-ink-deep">
                   <span className="text-gold">❦</span>
                   {p.heading}
                 </h3>

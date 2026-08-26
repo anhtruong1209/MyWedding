@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Slides />
         {/* Lớp phủ SÁNG: sương xanh nhạt + nắng vàng, hoà xuống nền trang */}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/45 via-forest-deep/10 to-mist" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-deep/45 via-ink-deep/10 to-mist" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(255,240,184,0.42),transparent_55%)]" />
       </div>
 

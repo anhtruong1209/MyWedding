@@ -19,7 +19,7 @@ export default function Timeline() {
         <div ref={ref} className="relative">
           {/* Đường trục giữa */}
           <div className="absolute left-6 top-0 h-full w-0.5 -translate-x-1/2 bg-gold/20 md:left-1/2">
-            <motion.div style={{ height }} className="w-full bg-gradient-to-b from-gold to-rose" />
+            <motion.div style={{ height }} className="w-full bg-gradient-to-b from-gold to-ink-deep" />
           </div>
 
           <ul className="space-y-16">
@@ -28,7 +28,7 @@ export default function Timeline() {
               return (
                 <li key={item.title} className="relative">
                   {/* Huy hiệu trái tim */}
-                  <span className="absolute left-6 top-6 z-10 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full border-2 border-cream bg-forest text-sm text-white shadow-glow md:left-1/2">
+                  <span className="absolute left-6 top-6 z-10 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full border-2 border-cream bg-ink text-sm text-white shadow-glow md:left-1/2">
                     ♥
                   </span>
 
@@ -58,8 +58,8 @@ export default function Timeline() {
                       direction={left ? "left" : "right"}
                       className={cn(left ? "md:col-start-2 md:row-start-1" : "md:col-start-1 md:row-start-1", left ? "md:text-left" : "md:text-right")}
                     >
-                      <p className="eyebrow text-forest">{item.year}</p>
-                      <h3 className="mt-2 font-display text-3xl text-forest-deep">{item.title}</h3>
+                      <p className="eyebrow text-ink">{item.year}</p>
+                      <h3 className="mt-2 font-display text-3xl text-ink-deep">{item.title}</h3>
                       <div className={cn("ornament my-4 !justify-start text-sm", !left && "md:!justify-end")}>♥</div>
                       <p className="font-serif text-lg leading-relaxed text-ink/90">{item.body}</p>
                     </Reveal>

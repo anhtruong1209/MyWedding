@@ -2,7 +2,8 @@ import type { Config } from "tailwindcss";
 
 /**
  * Concept: "Câu chuyện cổ tích trong rừng rậm".
- * Tông SÁNG: sương mai, ngà, xanh ngọc/rêu, nắng vàng xuyên tán lá, cánh hoa hồng phấn.
+ * Tông SÁNG: nền ngà ấm, chữ & hoạ tiết đen mực, nắng vàng làm điểm nhấn chủ đạo,
+ * xanh rêu chỉ xuất hiện như một chút điểm xuyết (ánh sáng, viền, hoạ tiết nhỏ).
  */
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
@@ -10,37 +11,31 @@ const config: Config = {
     extend: {
       colors: {
         // Nền sáng
-        mist: "#F3F8F1",
+        mist: "#F8F4E8",
         ivory: "#FDFBF5",
         cream: "#FAF6EC",
 
-        // Chữ (xanh rêu đậm thay vì đen)
-        ink: "#33453B",
-        muted: "#6F8377",
+        // Chữ & hoạ tiết — mực đen ấm thay vì xanh rêu
+        ink: {
+          DEFAULT: "#1C1A16",
+          deep: "#0D0C0A",
+          soft: "#3D372E",
+        },
+        muted: "#6B6459",
 
-        // Rừng
-        forest: {
-          DEFAULT: "#2F7A5C",
-          deep: "#1F5744",
-          soft: "#4F9E7A",
-          moss: "#6E9B70",
-          sage: "#A9C6AE",
+        // Xanh rêu — chỉ dùng làm điểm nhấn nhỏ (viền, hoạ tiết, nền mờ)
+        sage: {
+          DEFAULT: "#A9C6AE",
+          deep: "#5C8A6E",
           pale: "#D9E9DB",
         },
 
-        // Nắng / đom đóm
+        // Nắng / đom đóm — màu chủ đạo
         gold: {
           DEFAULT: "#D4AF6A",
           light: "#F1DDA6",
           deep: "#A8834A",
           glow: "#FFF0B8",
-        },
-
-        // Cánh hoa
-        rose: {
-          DEFAULT: "#E39BA0",
-          soft: "#F2C7C7",
-          petal: "#FBE6E2",
         },
 
         /**
@@ -65,9 +60,9 @@ const config: Config = {
       },
       letterSpacing: { widest2: "0.35em" },
       boxShadow: {
-        soft: "0 24px 60px -28px rgba(31, 87, 68, 0.35)",
+        soft: "0 24px 60px -28px rgba(13, 12, 10, 0.32)",
         glow: "0 0 50px -8px rgba(212, 175, 106, 0.65)",
-        leaf: "0 18px 44px -22px rgba(47, 122, 92, 0.45)",
+        leaf: "0 18px 44px -22px rgba(92, 138, 110, 0.45)",
         petal: "0 24px 60px -28px rgba(184, 92, 116, 0.38)",
         "petal-glow": "0 0 50px -8px rgba(244, 169, 184, 0.75)",
       },

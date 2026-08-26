@@ -139,7 +139,7 @@ export const bios = {
   bride: {
     name: "Quỳnh Trâm",
     role: "Cô dâu",
-    hero: "/images/background/subheader-2.webp",
+    hero: "/images/gallery/category-1/1.webp",
     paragraphs: [
       {
         heading: "Đôi điều về cô dâu",
@@ -162,7 +162,7 @@ export const bios = {
   groom: {
     name: "Anh Trường",
     role: "Chú rể",
-    hero: "/images/background/subheader-1.webp",
+    hero: "/images/gallery/category-1/9.webp",
     paragraphs: [
       {
         heading: "Đôi điều về chú rể",

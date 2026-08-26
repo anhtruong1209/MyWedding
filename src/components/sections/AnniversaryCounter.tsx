@@ -41,7 +41,7 @@ export default function AnniversaryCounter() {
   const future = parts?.future ?? false;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-mist to-forest-pale/60 py-24 sm:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-b from-mist to-sage-pale/60 py-24 sm:py-28">
       <div className="container-wed">
         <SectionTitle
           eyebrow={future ? "Đếm ngược" : "Kỷ niệm"}
@@ -68,7 +68,7 @@ export default function AnniversaryCounter() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <p className="mt-10 text-center font-serif text-xl italic text-forest">
+          <p className="mt-10 text-center font-serif text-xl italic text-ink">
             {future
               ? "Từng giây phút trôi qua là một bước gần hơn đến ngày trọng đại. ♥"
               : "Và hành trình yêu thương vẫn đang tiếp tục, mỗi ngày một ngọt ngào hơn. ♥"}

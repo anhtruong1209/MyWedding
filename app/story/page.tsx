@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/layout/PageHeader";
+import StoryPlayer from "@/components/sections/StoryPlayer";
 import Timeline from "@/components/sections/Timeline";
 
 export const metadata: Metadata = {
@@ -16,6 +17,9 @@ export default function StoryPage() {
         title="Câu chuyện tình yêu"
         subtitle="Từ ánh mắt đầu tiên nơi sân trường đến ngày nắm tay nhau trọn đời."
       />
+      <div className="container-wed pt-14 sm:pt-16">
+        <StoryPlayer />
+      </div>
       <Timeline />
     </>
   );

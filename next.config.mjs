@@ -8,6 +8,10 @@ const nextConfig = {
   },
   // three.js transpile không bắt buộc với @react-three/fiber v8, nhưng để an toàn:
   transpilePackages: ["three"],
+  // "Câu chuyện" đã gộp thẳng vào trang chủ (mục #story) — giữ link cũ khỏi bị 404.
+  async redirects() {
+    return [{ source: "/story", destination: "/#story", permanent: false }];
+  },
 };
 
 export default nextConfig;

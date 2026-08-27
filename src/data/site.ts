@@ -282,7 +282,6 @@ export const nav: readonly { href: string; label: string }[] = [
   { href: "/", label: "Trang chủ" },
   { href: "/about-her", label: "Cô dâu" },
   { href: "/about-him", label: "Chú rể" },
-  { href: "/story", label: "Câu chuyện" },
   { href: "/con-gai", label: "Con gái" },
   { href: "/events", label: "Sự kiện" },
   { href: "/gallery", label: "Bộ sưu tập" },

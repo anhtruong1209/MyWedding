@@ -71,22 +71,29 @@ export default function Hero() {
           {site.hero.kicker}
         </motion.p>
 
-        <div className="mt-5 flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-6">
+        <div className="mt-5 grid grid-cols-1 items-center justify-items-center gap-1 sm:grid-cols-[1fr_auto_1fr] sm:gap-6">
           <motion.h1
             initial={{ opacity: 0, x: -50, filter: "blur(8px)" }}
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             transition={{ duration: 1.3, delay: 0.5, ease: silk }}
-            className="font-display text-5xl text-white text-halo sm:text-6xl lg:text-7xl"
+            className="font-display text-5xl text-white text-halo sm:text-6xl sm:justify-self-end lg:text-7xl"
           >
             Quỳnh Trâm
           </motion.h1>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 120, damping: 14, delay: 0.9 }}
-            className="relative h-28 w-28 shrink-0 sm:h-36 sm:w-36"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="relative h-36 w-36 shrink-0 sm:h-44 sm:w-44 lg:h-56 lg:w-56"
           >
+            {/*
+              Không dùng transform "scale" để vào-hình ở đây: nó khiến canvas 3D
+              (đo kích thước bằng getBoundingClientRect lúc mount) đôi khi bắt trúng
+              thời điểm scale còn nhỏ, đóng băng canvas ở nửa kích thước thật —
+              lệch hẳn khi chuyển trang rồi quay lại (remount nhanh, animation
+              chưa kịp chạy xong lúc đo). Chỉ fade opacity là an toàn.
+            */}
             <Rings3D className="absolute inset-0" />
           </motion.div>
 
@@ -94,7 +101,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             transition={{ duration: 1.3, delay: 0.5, ease: silk }}
-            className="font-display text-5xl text-white text-halo sm:text-6xl lg:text-7xl"
+            className="font-display text-5xl text-white text-halo sm:text-6xl sm:justify-self-start lg:text-7xl"
           >
             Anh Trường
           </motion.h1>

@@ -10,7 +10,7 @@ export default function Footer() {
         <p className="heading-script mt-3 text-5xl text-gold-light sm:text-6xl">Trâm &amp; Trường</p>
         <p className="mx-auto mt-5 max-w-md font-serif text-lg text-cream/80">
           Cảm ơn bạn đã ghé thăm và chung vui cùng chúng tôi. Sự hiện diện của bạn là niềm hạnh phúc
-          lớn lao trong ngày trọng đại này. ♥
+          trong ngày trọng đại này. ♥
         </p>
 
         <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">

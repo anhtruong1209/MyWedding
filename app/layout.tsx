@@ -5,6 +5,7 @@ import { site } from "@/data/site";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MusicToggle from "@/components/layout/MusicToggle";
+import AutoScrollToggle from "@/components/layout/AutoScrollToggle";
 import Preloader from "@/components/layout/Preloader";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2F7A5C",
+  themeColor: "#D4AF6A",
   width: "device-width",
   initialScale: 1,
 };
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <MusicToggle />
+        <AutoScrollToggle />
       </body>
     </html>
   );

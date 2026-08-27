@@ -7,6 +7,7 @@ import { timeline } from "@/data/site";
 import { cn } from "@/lib/utils";
 import Reveal from "@/components/ui/Reveal";
 import TiltCard from "@/components/ui/TiltCard";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function Timeline() {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,9 +15,11 @@ export default function Timeline() {
   const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="section">
+    <section id="story" className="section">
       <div className="container-wed">
-        <div ref={ref} className="relative">
+        <SectionTitle eyebrow="Our story" script="Chuyện của chúng tôi" title="Câu chuyện tình yêu" />
+
+        <div ref={ref} className="relative mt-16">
           {/* Đường trục giữa */}
           <div className="absolute left-6 top-0 h-full w-0.5 -translate-x-1/2 bg-gold/20 md:left-1/2">
             <motion.div style={{ height }} className="w-full bg-gradient-to-b from-gold to-ink-deep" />

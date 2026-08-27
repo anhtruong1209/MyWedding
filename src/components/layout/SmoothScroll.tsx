@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 import { useReducedMotion } from "framer-motion";
+import { setLenisInstance } from "@/lib/lenis";
 
 /**
  * Cuộn mượt (inertia) toàn trang bằng Lenis.
@@ -20,6 +21,8 @@ export default function SmoothScroll() {
       smoothWheel: true,
       touchMultiplier: 1.6,
     });
+
+    setLenisInstance(lenis);
 
     let raf = 0;
     const loop = (time: number) => {
@@ -44,6 +47,7 @@ export default function SmoothScroll() {
     return () => {
       document.removeEventListener("click", onHashClick);
       cancelAnimationFrame(raf);
+      setLenisInstance(null);
       lenis.destroy();
     };
   }, [reduce]);
